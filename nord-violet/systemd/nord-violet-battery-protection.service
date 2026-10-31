@@ -1,0 +1,12 @@
+[Unit]
+Description=Nord Violet - protection batterie Lenovo Long_Life
+ConditionPathExists=/sys/class/power_supply/BAT1/charge_types
+
+[Service]
+Type=oneshot
+ExecStart=/bin/sh -c 'printf "Long_Life\n" > /sys/class/power_supply/BAT1/charge_types'
+ExecStartPost=/usr/bin/grep -Fq [Long_Life] /sys/class/power_supply/BAT1/charge_types
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

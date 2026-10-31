@@ -1,0 +1,13 @@
+singleton Colors 1.0 Colors.qml
+AudioFlyout 1.0 AudioFlyout.qml
+ControlCenter 1.0 ControlCenter.qml
+Osd 1.0 Osd.qml
+SettingsWindow 1.0 SettingsWindow.qml
+SettingsWindowV2 1.0 SettingsWindowV2.qml
+WifiFlyout 1.0 WifiFlyout.qml
+CalendarHub 1.0 CalendarHub.qml
+WorkspaceRibbon 1.0 WorkspaceRibbon.qml
+Calculator 1.0 Calculator.qml
+CalendarClock 1.0 CalendarClock.qml
+CalendarCard 1.0 CalendarCard.qml
+CalendarButton 1.0 CalendarButton.qml

@@ -1,0 +1,85 @@
+/* ~/.config/waybar/style.css */
+@import "colors.css";
+
+* {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 13px;
+    font-weight: 600;
+    min-height: 0;
+}
+
+#custom-workspaces-hdmi,
+#custom-workspaces-edp {
+    opacity: 0;
+    min-width: 108px;
+}
+
+window#waybar {
+    background-color: alpha(@bg1, 0.94);
+    color: @fg0;
+    border: 1px solid alpha(@accent, 0.25);
+    border-radius: 9px;
+}
+
+#workspaces {
+    background: transparent;
+    padding: 0 6px;
+    margin: 4px 2px;
+}
+
+/* border/outline/box-shadow resetés le 22/08 (v4) : sans ça GTK affiche sa
+   bordure de bouton par défaut autour de chaque workspace, visible surtout
+   sur l'actif -> effet "carré autour du point". */
+#workspaces button {
+    padding: 0 6px;
+    color: @fg2;
+    background: transparent;
+    font-size: 10px;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    transition: color 0.15s;
+}
+
+#workspaces button.active {
+    color: @accent;
+}
+
+#workspaces button:hover {
+    color: @fg0;
+    background: transparent;
+}
+
+#clock {
+    color: @fg0;
+    font-weight: 700;
+    padding: 0 12px;
+}
+
+#pulseaudio,
+#custom-focus,
+#custom-audio,
+#network,
+#battery,
+#tray {
+    padding: 0 10px;
+    margin: 4px 2px;
+    color: @fg1;
+    background: alpha(@bg2, 0.6);
+    border-radius: 6px;
+}
+
+#battery.warning {
+    color: @accent;
+}
+
+#custom-focus { color: @accent; font-family: "JetBrains Mono"; }
+#custom-focus.paused { color: @fg1; }
+
+#battery.critical {
+    color: #bf616a;
+}
+
+#tray {
+    background: transparent;
+}

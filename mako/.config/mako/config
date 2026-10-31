@@ -1,0 +1,55 @@
+# ~/.config/mako/config — Nord Violet.
+#
+# Repris directement des tokens de theme/Theme.qml pour rester cohérent
+# avec le reste du panneau (background, surface, border, texte) :
+#   background = Theme.surface   (#121219)
+#   border     = Theme.border    (#24242d) au repos, Theme.accent en urgent
+#   texte      = Theme.textPrimary (#f4f4f6)
+#   radius     = Theme.radiusLarge (18, même arrondi que le CC/les flyouts)
+#
+# Accent synchronisé par les Réglages du Control Center (accentctl.sh).
+# Les couleurs de priorité basse/critique restent indépendantes.
+
+font=Inter 11
+background-color=#121219
+text-color=#f4f4f6
+border-color=#24242d
+border-size=1
+border-radius=18
+padding=14
+margin=10,14
+default-timeout=5000
+ignore-timeout=0
+max-visible=5
+layer=overlay
+anchor=top-right
+width=320
+height=110
+icons=1
+max-icon-size=48
+icon-location=left
+markup=1
+
+[urgency=low]
+border-color=#24242d
+text-color=#8d8d98
+
+[urgency=normal]
+border-color=#9b7cff
+
+[urgency=critical]
+border-color=#e2666f
+background-color=#191216
+default-timeout=0
+
+[mode=dnd]
+invisible=1
+
+[mode=dnd app-name="Nord Violet Focus"]
+invisible=0
+
+[mode=dnd]
+invisible=1
+
+[mode=dnd app-name="Nord Violet Focus"]
+invisible=0

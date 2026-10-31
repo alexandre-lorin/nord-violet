@@ -1,0 +1,66 @@
+[app]
+overall = { fg = "#c4cad4", bg = "#0e1015" }
+
+[mgr]
+cwd = { fg = "#9b7cff", bold = true }
+border_style = { fg = "#322d42" }
+symlink_target = { fg = "#8995a6", italic = true }
+find_keyword = { fg = "#0e1015", bg = "#9b7cff", bold = true }
+marker_copied = { fg = "#79d6a3", bg = "#79d6a3" }
+marker_cut = { fg = "#e2666f", bg = "#e2666f" }
+marker_selected = { fg = "#9b7cff", bg = "#9b7cff" }
+
+[indicator]
+current = { fg = "#f4f4f6", bg = "#29233b", bold = true }
+parent = { fg = "#b8b8c2", bg = "#1f232d" }
+preview = { fg = "#b8b8c2", bg = "#1f232d" }
+
+[tabs]
+active = { fg = "#0e1015", bg = "#9b7cff", bold = true }
+inactive = { fg = "#8995a6", bg = "#171a21" }
+
+[status]
+overall = { fg = "#8995a6", bg = "#171a21" }
+perm_type = { fg = "#b7a5ff" }
+perm_read = { fg = "#8995a6" }
+perm_write = { fg = "#b7a5ff" }
+perm_exec = { fg = "#79d6a3" }
+perm_sep = { fg = "#3b4252" }
+
+[icon]
+prepend_dirs = [
+  { name = ".config", text = "", fg = "#b7a5ff" },
+  { name = "dotfiles", text = "", fg = "#b7a5ff" },
+  { name = "01 - Dev", text = "󰲋", fg = "#b7a5ff" },
+  { name = "00 - Inbox", text = "󰉍", fg = "#b7a5ff" },
+  { name = "08 - Outils", text = "", fg = "#b7a5ff" },
+]
+prepend_conds = [
+  { if = "dir", text = "", fg = "#b7a5ff" },
+]
+
+[which]
+border = { fg = "#9b7cff" }
+cand = { fg = "#b7a5ff" }
+desc = { fg = "#c4cad4" }
+
+[input]
+border = { fg = "#9b7cff" }
+title = { fg = "#9b7cff" }
+
+[help]
+border = { fg = "#3b4252" }
+chord = { fg = "#9b7cff", bold = true }
+
+[mode]
+normal_main = { fg = "#0e1015", bg = "#9b7cff", bold = true }
+normal_alt = { fg = "#c4cad4", bg = "#29233b" }
+select_main = { fg = "#0e1015", bg = "#79d6a3", bold = true }
+select_alt = { fg = "#c4cad4", bg = "#1f232d" }
+unset_main = { fg = "#0e1015", bg = "#e2666f", bold = true }
+unset_alt = { fg = "#c4cad4", bg = "#1f232d" }
+
+[filetype]
+prepend_rules = [
+  { url = "*/", fg = "#b7a5ff" },
+]

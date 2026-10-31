@@ -1,0 +1,21 @@
+[mgr]
+
+prepend_keymap = [
+    { on = "e", run = "shell --orphan -- zeditor %s", desc = "Modifier dans Zed" },
+    { on = "<A-n>", run = "shell --block -- nvim %s", desc = "Modifier dans Neovim" },
+    { on = ["g", "c"], run = "cd ~/.config", desc = "Configurations" },
+    { on = ["g", "h"], run = "cd ~/.config/hypr", desc = "Configuration Hyprland" },
+    { on = ["g", "y"], run = "cd ~/.config/yazi", desc = "Configuration Yazi" },
+    { on = ["g", "w"], run = "cd ~/.config/waybar", desc = "Configuration Waybar" },
+    { on = ["g", "s"], run = "cd ~/.config/quickshell/nord-violet-cc", desc = "Shell Nord Violet" },
+    { on = ["g", "f"], run = "cd ~/dotfiles", desc = "Dotfiles (Git)" },
+    { on = ["g", "p"], run = 'cd "/home/toubi/01 - Dev"', desc = "Projets de développement" },
+    { on = ["g", "d"], run = 'cd "/home/toubi/00 - Inbox/00 - Downloads"', desc = "Téléchargements" },
+    { on = "<Up>",    run = "arrow -1", desc = "Move up" },
+    { on = "<Down>",  run = "arrow 1",  desc = "Move down" },
+
+    { on = "<Left>",  run = "leave", desc = "Parent directory" },
+    { on = "<Right>", run = "enter", desc = "Enter directory" },
+
+    { on = "<Enter>", run = "quit", desc = "Use this directory and quit" },
+]

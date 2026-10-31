@@ -1,0 +1,3 @@
+# Nord Violet — palette commune au bureau.
+[general]
+import = ["~/.config/alacritty/colors.toml"]

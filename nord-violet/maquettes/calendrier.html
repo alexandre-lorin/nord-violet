@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nord Violet — Date & calendrier</title>
+<style>
+:root{color-scheme:dark;--bg:#0b0b10;--surface:#121219;--hover:#181821;--border:#24242d;--fg:#f4f4f6;--secondary:#b8b8c2;--muted:#8d8d98;--accent:#9b7cff;--soft:rgba(155,124,255,.12);font-family:Inter,"Noto Sans",sans-serif;font-size:14px}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg)}button,input{font:inherit}button{cursor:pointer;color:inherit}button:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-offset:4px}button:disabled{cursor:default}button{transition:background 120ms,border-color 120ms,color 120ms}main{max-width:1410px;margin:auto;padding:42px 44px 26px}.eyebrow{font-size:10px;font-weight:650;letter-spacing:.18em;color:var(--muted);display:flex;align-items:center;gap:10px}.brand-dot{width:7px;height:7px;border-radius:50%;background:var(--accent)}.intro{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin:20px 0 28px}h1{font-size:clamp(27px,3vw,40px);letter-spacing:-1.5px;margin:0 0 10px;font-weight:600}.subtitle{color:var(--muted);line-height:1.7;margin:0;max-width:650px}.subtitle strong{font-weight:500;color:var(--secondary)}.status{flex:none;border:1px solid var(--border);border-radius:20px;padding:9px 14px;color:var(--muted);font-size:11px}.toolbar{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:20px}.segment{display:flex;padding:4px;border:1px solid var(--border);background:var(--surface);border-radius:11px;gap:4px}.segment button{border:1px solid transparent;background:transparent;padding:8px 16px;border-radius:7px;font-size:12px;color:var(--muted)}.segment button[aria-pressed=true]{color:var(--fg);background:var(--hover);border-color:#373340}.option{display:flex;align-items:center;gap:9px;font-size:12px;color:var(--secondary);cursor:pointer}.option input{accent-color:var(--accent);width:15px;height:15px;margin:0}.proposals{display:grid;grid-template-columns:1fr 1fr;gap:24px}.proposal-title{display:flex;justify-content:space-between;align-items:center;margin:0 0 13px;gap:12px}.proposal-title h2{font-size:14px;font-weight:550;margin:0;display:flex;gap:11px;align-items:center}.letter{font:11px "JetBrains Mono",monospace;color:var(--muted);border:1px solid var(--border);border-radius:6px;padding:4px 7px}.proposal-title span.aside{font-size:11px;color:var(--muted)}.scene{height:590px;position:relative;overflow:hidden;border:1px solid var(--border);border-radius:18px;background:#101218;isolation:isolate}.scene-label{position:absolute;top:20px;left:20px;font-size:9px;letter-spacing:.14em;color:#747782;pointer-events:none}.scene:has(.calendar:not([hidden])) .scene-label,.scene:has(.calendar:not([hidden])) .scene-guide{visibility:hidden}.scene-guide{position:absolute;top:49px;left:20px;color:#626571;font-size:11px;pointer-events:none}.bar{height:38px;position:absolute;bottom:12px;left:12px;right:12px;border:1px solid rgba(155,124,255,.25);border-radius:9px;background:#171a21;display:flex;align-items:center;justify-content:space-between;padding:0 12px;z-index:3}.dots{display:flex;gap:7px;align-items:center}.dots i{width:4px;height:4px;background:#626b7b;border-radius:50%;display:block}.dots i:first-child{background:var(--accent);width:5px;height:5px}.bar-right{color:#8995a6;display:flex;align-items:center;gap:11px;font:10px "JetBrains Mono",monospace}.bar-right svg{width:12px;height:12px}.clock{position:absolute;left:50%;transform:translateX(-50%);height:30px;min-width:80px;padding:0 13px;border:1px solid transparent;border-radius:7px;background:transparent;color:var(--accent);font:600 13px "JetBrains Mono",monospace;letter-spacing:.03em}.clock:hover,.clock[aria-expanded=true]{background:var(--soft);border-color:rgba(155,124,255,.18)}.calendar{position:absolute;bottom:64px;left:50%;width:332px;transform:translateX(-50%);padding:20px;background:var(--surface);border:1px solid #383043;border-radius:18px;z-index:2;animation:appear 160ms ease-out}.calendar[hidden],.date-tip[hidden]{display:none}.large .calendar{width:352px;padding:22px}.calendar-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:18px}.month-title{font-size:15px;font-weight:600;letter-spacing:-.3px;margin:0}.month-title::first-letter{text-transform:uppercase}.month-nav{display:flex;gap:4px}.icon-btn{display:grid;place-items:center;width:28px;height:28px;background:transparent;border:1px solid transparent;border-radius:7px;color:var(--muted)}.icon-btn:hover{background:var(--hover);border-color:var(--border);color:var(--fg)}.icon-btn svg{width:14px;height:14px}.weekdays,.days{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px}.with-weeks .weekdays,.with-weeks .days{grid-template-columns:24px repeat(7,minmax(0,1fr))}.weekdays{margin-bottom:8px}.weekdays span{font-size:10px;text-align:center;color:var(--muted);padding:4px 0}.day{height:33px;min-width:0;background:transparent;border:1px solid transparent;border-radius:8px;position:relative;font-size:12px;color:var(--secondary);font-variant-numeric:tabular-nums}.day:hover{background:var(--hover);border-color:#33313d;color:var(--fg)}.day.outside{color:#62616e}.day.selected{background:var(--soft);border-color:rgba(155,124,255,.65);color:var(--fg);font-weight:600}.day.today::after{content:"";position:absolute;bottom:3px;left:calc(50% - 1.5px);width:3px;height:3px;background:var(--accent);border-radius:50%}.week-number{font:9px "JetBrains Mono",monospace;color:#767180;display:grid;place-items:center}.calendar-foot{margin-top:18px;border-top:1px solid var(--border);padding-top:14px;display:flex;align-items:center;justify-content:space-between;gap:10px}.today-btn{font-size:11px;border:1px solid #393243;background:transparent;color:var(--secondary);border-radius:7px;padding:7px 10px}.today-btn:hover{background:var(--soft);color:var(--accent);border-color:var(--accent)}.selection{color:var(--muted);font-size:10px;line-height:1.5;text-align:right}.date-hero{display:flex;align-items:center;gap:18px;padding-bottom:20px;margin-bottom:20px;border-bottom:1px solid var(--border)}.date-number{font-size:56px;letter-spacing:-3px;line-height:1;font-weight:550;font-variant-numeric:tabular-nums}.hero-kicker{color:var(--muted);font-size:9px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:7px}.hero-weekday{font-size:15px;font-weight:550;margin-bottom:4px;text-transform:capitalize}.hero-month{color:var(--secondary);font-size:12px}.hero-week{color:var(--muted);font-size:10px;margin-top:7px}.date-tip{position:absolute;bottom:64px;left:50%;transform:translateX(-50%);z-index:4;border:1px solid #383043;border-radius:12px;padding:13px 18px;background:var(--surface);white-space:nowrap;animation:appear 120ms ease-out;pointer-events:none}.tip-simple .tip-day{color:var(--muted);font-size:10px;letter-spacing:.11em;text-transform:uppercase;margin-bottom:6px}.tip-simple .tip-date{font-size:14px;font-weight:550}.tip-editorial{display:flex;align-items:center;gap:15px;padding:15px 19px}.tip-number{font-size:34px;font-weight:550;letter-spacing:-1px;line-height:1;color:var(--fg)}.tip-editorial .tip-day{color:var(--secondary);text-transform:capitalize;font-size:12px;margin-bottom:4px}.tip-editorial .tip-date{font-size:11px;color:var(--muted)}.caption{color:var(--muted);font-size:12px;line-height:1.7;margin:14px 2px 0}.caption strong{font-weight:500;color:var(--secondary)}.bottom-note{margin-top:26px;border-top:1px solid var(--border);padding-top:18px;display:flex;justify-content:space-between;gap:20px;color:var(--muted);font-size:11px;line-height:1.6}.key{border:1px solid #33303c;padding:2px 5px;border-radius:4px;font-size:10px;color:var(--secondary);margin:0 3px}@keyframes appear{from{opacity:0}to{opacity:1}}@media(max-width:950px){main{padding:28px 22px}.proposals{gap:16px}.status{display:none}.proposal-title span.aside{display:none}.scene{height:575px}}@media(max-width:740px){.proposals{grid-template-columns:1fr}.intro{display:block}.toolbar{flex-wrap:wrap}.scene{height:560px}.bottom-note{display:block}.bottom-note div+div{margin-top:9px}.large .calendar{width:min(352px,calc(100% - 24px))}.calendar{width:min(332px,calc(100% - 24px))}.bar-right{gap:6px}}@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<main>
+<div class="eyebrow"><span class="brand-dot"></span>NORD VIOLET <span aria-hidden="true">/</span> MAQUETTES</div>
+<div class="intro"><div><h1>Date & calendrier</h1><p class="subtitle">Une date lisible au survol. Un calendrier au <strong>clic droit sur l’horloge</strong>.<br>Deux propositions à essayer, avec les couleurs de votre bureau.</p></div><div class="status">Aperçu interactif · configuration inchangée</div></div>
+<div class="toolbar"><div class="segment" role="group" aria-label="Aperçu"><button type="button" data-mode="hover" aria-pressed="false">Survol de la date</button><button type="button" data-mode="calendar" aria-pressed="true">Calendrier ouvert</button></div><label class="option"><input type="checkbox" id="weeks">Numéros de semaine</label></div>
+<div class="proposals">
+<section class="proposal" data-variant="compact"><div class="proposal-title"><h2><span class="letter">A</span> Compact</h2><span class="aside">Le mois, simplement.</span></div><div class="scene"><div class="scene-label">BUREAU · APERÇU</div><div class="scene-guide">Clic à l’extérieur pour fermer</div><div class="date-tip tip-simple" role="tooltip" hidden><div class="tip-day"></div><div class="tip-date"></div></div><section class="calendar" role="dialog" aria-label="Calendrier compact"></section><div class="bar"><div class="dots" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div><button class="clock" type="button" aria-label="Horloge, clic droit pour ouvrir le calendrier" aria-haspopup="dialog" aria-expanded="true"></button><div class="bar-right" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M11 5 6 9H3v6h3l5 4V5Zm4 3a7 7 0 0 1 0 8m3-11a11 11 0 0 1 0 14"/></svg><span>CC</span></div></div></div><p class="caption"><strong>Le plus discret.</strong> Une date sur deux lignes au survol, puis un calendrier compact. La place est donnée au mois.</p></section>
+<section class="proposal large" data-variant="editorial"><div class="proposal-title"><h2><span class="letter">B</span> Date mise en avant</h2><span class="aside">Dans l’esprit du CC.</span></div><div class="scene"><div class="scene-label">BUREAU · APERÇU</div><div class="scene-guide">Clic à l’extérieur pour fermer</div><div class="date-tip tip-editorial" role="tooltip" hidden><div class="tip-number"></div><div><div class="tip-day"></div><div class="tip-date"></div></div></div><section class="calendar" role="dialog" aria-label="Calendrier avec grande date"></section><div class="bar"><div class="dots" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div><button class="clock" type="button" aria-label="Horloge, clic droit pour ouvrir le calendrier" aria-haspopup="dialog" aria-expanded="true"></button><div class="bar-right" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M11 5 6 9H3v6h3l5 4V5Zm4 3a7 7 0 0 1 0 8m3-11a11 11 0 0 1 0 14"/></svg><span>CC</span></div></div></div><p class="caption"><strong>Le plus expressif.</strong> Le numéro du jour devient le repère principal, comme le volume dans le CC. La grille reste sobre.</p></section>
+</div>
+<div class="bottom-note"><div>Essayez les flèches, sélectionnez un jour, puis revenez à « Aujourd’hui ».<br><span class="key">Échap</span> ferme le calendrier. Les flèches du clavier parcourent les jours.</div><div>On peut aussi combiner <strong>le survol B et le calendrier A</strong>.<br>Maquette locale · aucune connexion à un agenda.</div></div>
+</main>
+<script>
+'use strict';
+const today = new Date(); today.setHours(12,0,0,0);
+const format = (date, options) => new Intl.DateTimeFormat('fr-FR', options).format(date);
+const sameDay = (a,b) => a.getFullYear()===b.getFullYear() && a.getMonth()===b.getMonth() && a.getDate()===b.getDate();
+const dayKey = date => `${date.getFullYear()}-${String(date.getMonth()+1).padStart(2,'0')}-${String(date.getDate()).padStart(2,'0')}`;
+function isoWeek(date) {
+  const d = new Date(Date.UTC(date.getFullYear(),date.getMonth(),date.getDate()));
+  d.setUTCDate(d.getUTCDate()+4-(d.getUTCDay()||7));
+  return Math.ceil((((d-new Date(Date.UTC(d.getUTCFullYear(),0,1)))/86400000)+1)/7);
+}
+function monthDays(year, month) {
+  const start = new Date(year,month,1,12);
+  start.setDate(start.getDate()-((start.getDay()+6)%7));
+  return Array.from({length:42},(_,i)=>new Date(start.getFullYear(),start.getMonth(),start.getDate()+i,12));
+}
+const arrow = direction => `<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="${direction==='previous'?'M12 5 7 10l5 5':'m8 5 5 5-5 5'}"/></svg>`;
+let showWeeks = false;
+class Preview {
+  constructor(root) {
+    this.root=root; this.scene=root.querySelector('.scene'); this.popup=root.querySelector('.calendar'); this.clock=root.querySelector('.clock'); this.tip=root.querySelector('.date-tip');
+    this.editorial=root.dataset.variant==='editorial'; this.selected=new Date(today); this.month=new Date(today.getFullYear(),today.getMonth(),1,12); this.open=true; this.previewHover=false;
+    const tipDate=this.editorial?{month:'long',year:'numeric'}:{day:'numeric',month:'long',year:'numeric'};
+    this.tip.querySelector('.tip-day').textContent=format(today,{weekday:'long'});
+    this.tip.querySelector('.tip-date').textContent=format(today,tipDate);
+    if(this.editorial)this.tip.querySelector('.tip-number').textContent=today.getDate();
+    this.clock.addEventListener('contextmenu',event=>{event.preventDefault();this.setOpen(!this.open,true);});
+    this.clock.addEventListener('mouseenter',()=>{if(!this.open)this.tip.hidden=false;});
+    this.clock.addEventListener('mouseleave',()=>{if(!this.previewHover)this.tip.hidden=true;});
+    this.clock.addEventListener('focus',()=>{if(!this.open)this.tip.hidden=false;});
+    this.clock.addEventListener('blur',()=>{if(!this.previewHover)this.tip.hidden=true;});
+    this.clock.addEventListener('keydown',event=>{if(event.key==='Enter'||event.key===' '||event.key==='ArrowUp'){event.preventDefault();this.setOpen(true,true);}});
+    this.scene.addEventListener('click',event=>{if(!event.target.closest('.calendar')&&!event.target.closest('.clock'))this.setOpen(false);});
+    this.popup.addEventListener('click',event=>{
+      const button=event.target.closest('button'); if(!button)return;
+      if(button.dataset.action==='previous'||button.dataset.action==='next') {
+        this.month=new Date(this.month.getFullYear(),this.month.getMonth()+(button.dataset.action==='next'?1:-1),1,12);
+        const action=button.dataset.action;this.render();this.popup.querySelector(`[data-action="${action}"]`).focus();
+      } else if(button.dataset.action==='today') {
+        this.selected=new Date(today);this.month=new Date(today.getFullYear(),today.getMonth(),1,12);this.render();this.focusSelected();
+      } else if(button.dataset.date) {
+        const [y,m,d]=button.dataset.date.split('-').map(Number);this.choose(new Date(y,m-1,d,12));
+      }
+    });
+    this.popup.addEventListener('keydown',event=>{
+      if(!event.target.matches('[data-date]'))return;
+      const delta={ArrowLeft:-1,ArrowRight:1,ArrowUp:-7,ArrowDown:7}[event.key];
+      if(delta!==undefined){event.preventDefault();const [y,m,d]=event.target.dataset.date.split('-').map(Number);this.choose(new Date(y,m-1,d+delta,12));}
+    });
+    this.render();
+  }
+  choose(date){this.selected=date;this.month=new Date(date.getFullYear(),date.getMonth(),1,12);this.render();this.focusSelected();}
+  focusSelected(){this.popup.querySelector('.selected')?.focus({preventScroll:true});}
+  setOpen(open,focus=false){this.open=open;this.previewHover=false;this.tip.hidden=true;this.popup.hidden=!open;this.clock.setAttribute('aria-expanded',String(open));if(open&&focus)this.focusSelected();}
+  render(){
+    this.popup.classList.toggle('with-weeks',showWeeks);
+    const hero=this.editorial?`<div class="date-hero"><div class="date-number">${this.selected.getDate()}</div><div><div class="hero-kicker">${sameDay(this.selected,today)?'Aujourd’hui':'Date sélectionnée'}</div><div class="hero-weekday">${format(this.selected,{weekday:'long'})}</div><div class="hero-month">${format(this.selected,{month:'long',year:'numeric'})}</div>${showWeeks?`<div class="hero-week">Semaine ${isoWeek(this.selected)}</div>`:''}</div></div>`:'';
+    let cells='';
+    monthDays(this.month.getFullYear(),this.month.getMonth()).forEach((date,index)=>{
+      if(showWeeks&&index%7===0)cells+=`<span class="week-number" aria-label="Semaine ${isoWeek(date)}">${isoWeek(date)}</span>`;
+      const selected=sameDay(date,this.selected),current=sameDay(date,today);
+      cells+=`<button type="button" class="day${date.getMonth()!==this.month.getMonth()?' outside':''}${selected?' selected':''}${current?' today':''}" data-date="${dayKey(date)}" aria-label="${format(date,{dateStyle:'full'})}" aria-pressed="${selected}"${current?' aria-current="date"':''} tabindex="${selected?0:-1}">${date.getDate()}</button>`;
+    });
+    this.popup.innerHTML=hero+`<div class="calendar-head"><h3 class="month-title">${format(this.month,{month:'long',year:'numeric'})}</h3><div class="month-nav"><button class="icon-btn" type="button" data-action="previous" aria-label="Mois précédent">${arrow('previous')}</button><button class="icon-btn" type="button" data-action="next" aria-label="Mois suivant">${arrow('next')}</button></div></div><div class="weekdays">${showWeeks?'<span aria-label="Semaine">S.</span>':''}${['L','M','M','J','V','S','D'].map(day=>`<span>${day}</span>`).join('')}</div><div class="days">${cells}</div><div class="calendar-foot"><button class="today-btn" type="button" data-action="today">Aujourd’hui</button><span class="selection" aria-live="polite">${format(this.selected,{weekday:'short',day:'numeric',month:'short'})}${showWeeks?`<br>Semaine ${isoWeek(this.selected)}`:''}</span></div>`;
+    // La navigation au clavier reste possible même si la sélection est hors du mois affiché.
+    if(!this.popup.querySelector('.selected'))this.popup.querySelector('.day:not(.outside)').tabIndex=0;
+  }
+}
+const previews=Array.from(document.querySelectorAll('.proposal'),root=>new Preview(root));
+document.querySelectorAll('[data-mode]').forEach(button=>button.addEventListener('click',()=>{
+  document.querySelectorAll('[data-mode]').forEach(other=>other.setAttribute('aria-pressed',String(other===button)));
+  previews.forEach(preview=>{preview.setOpen(button.dataset.mode==='calendar');if(button.dataset.mode==='hover'){preview.previewHover=true;preview.tip.hidden=false;}});
+}));
+document.querySelector('#weeks').addEventListener('change',event=>{showWeeks=event.target.checked;previews.forEach(preview=>preview.render());});
+document.addEventListener('keydown',event=>{if(event.key==='Escape'){const owner=previews.find(p=>p.root.contains(document.activeElement));previews.forEach(p=>p.setOpen(false));owner?.clock.focus({preventScroll:true});}});
+function updateClock(){const time=format(new Date(),{hour:'2-digit',minute:'2-digit'});previews.forEach(p=>p.clock.textContent=time);}
+updateClock();setInterval(updateClock,10000);
+</script>
+</body>
+</html>

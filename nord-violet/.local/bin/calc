@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+if [ "$#" -gt 0 ]; then
+    qs -c nord-violet-cc ipc call calculator open || exit "$?"
+    exec qs -c nord-violet-cc ipc call calculator evaluate "$*"
+fi
+exec qs -c nord-violet-cc ipc call calculator toggle

@@ -1,0 +1,12 @@
+const fs = require('node:fs');
+const vm = require('node:vm');
+const assert = require('node:assert/strict');
+const path = require('node:path');
+const context = vm.createContext({});
+vm.runInContext(fs.readFileSync(path.join(__dirname, '../../quickshell-cc/.config/quickshell/nord-violet-cc/scripts/BluetoothState.js'), 'utf8'), context);
+const plain = value => JSON.parse(JSON.stringify(value));
+assert.deepEqual(plain(context.parseDevices('Device aa:bb:cc:dd:ee:ff Casque bureau\nDevice AA:BB:CC:DD:EE:FF doublon\nDevice invalid test')), [{address:'AA:BB:CC:DD:EE:FF', name:'Casque bureau'}]);
+assert.deepEqual(plain(context.connectedAddresses('Device 01:02:03:04:05:06 Manette')), ['01:02:03:04:05:06']);
+assert.deepEqual(plain(context.parseDevices('No default controller available')), []);
+assert.deepEqual(plain(context.parseDevices('')), []);
+console.log('Bluetooth : 4 tests passent');

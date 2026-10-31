@@ -1,0 +1,12 @@
+[Unit]
+Description=Nord Violet control center (Quickshell)
+After=graphical-session.target
+PartOf=graphical-session.target
+
+[Service]
+ExecStart=/usr/bin/qs -c nord-violet-cc
+Restart=on-failure
+RestartSec=2
+
+[Install]
+WantedBy=graphical-session.target

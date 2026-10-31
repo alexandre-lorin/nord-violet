@@ -1,0 +1,3 @@
+#!/usr/bin/env sh
+# Open the rice's network panel, not NetworkManager's stock TUI.
+exec /home/toubi/.config/waybar/flyout-trigger.sh wifi

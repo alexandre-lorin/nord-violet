@@ -1,0 +1,189 @@
+/* Nord Violet — couleurs communes GTK 3 et GTK 4. */
+
+@define-color bg0 #0e1015;
+@define-color bg1 #171a21;
+@define-color bg2 #1f232d;
+@define-color fg0 #c4cad4;
+@define-color fg1 #8995a6;
+@define-color accent #9b7cff;
+@define-color border_inactive #3b4252;
+
+/* Accents Breeze et libadwaita ; fond de sélection discret. */
+@define-color theme_view_hover_decoration_color_breeze @accent;
+@define-color theme_view_active_decoration_color_breeze @accent;
+@define-color theme_button_decoration_focus_breeze @accent;
+@define-color theme_button_decoration_hover_breeze @accent;
+@define-color theme_selected_bg_color_breeze alpha(@accent, 0.25);
+@define-color theme_hovering_selected_bg_color_breeze alpha(@accent, 0.18);
+@define-color theme_unfocused_selected_bg_color_breeze alpha(@accent, 0.18);
+@define-color theme_unfocused_selected_bg_color_alt_breeze alpha(@accent, 0.18);
+@define-color link_color_breeze @accent;
+@define-color accent_color @accent;
+@define-color accent_bg_color alpha(@accent, 0.25);
+@define-color accent_fg_color @fg0;
+
+window, .background {
+    background-color: @bg0;
+    color: @fg0;
+}
+
+headerbar, .titlebar {
+    background-color: @bg1;
+    border-bottom: 1px solid @border_inactive;
+    box-shadow: none;
+}
+
+sidebar, .sidebar {
+    background-color: @bg1;
+    border-right: 1px solid @border_inactive;
+}
+
+button {
+    background-color: @bg2;
+    border: 1px solid @border_inactive;
+    border-radius: 6px;
+    color: @fg0;
+}
+
+button:hover {
+    border-color: alpha(@accent, 0.5);
+}
+
+button:checked, button:active {
+    background-color: alpha(@accent, 0.18);
+    border-color: @accent;
+}
+
+entry {
+    background-color: @bg2;
+    border: 1px solid @border_inactive;
+    border-radius: 6px;
+    color: @fg0;
+}
+
+entry:focus {
+    border-color: @accent;
+}
+
+selection, *:selected {
+    background-color: alpha(@accent, 0.35);
+    color: @fg0;
+}
+
+scrollbar slider {
+    background-color: @border_inactive;
+    border-radius: 6px;
+}
+
+scrollbar slider:hover {
+    background-color: @accent;
+}
+
+/* Thunar spécifique */
+.thunar .view {
+    background-color: @bg0;
+}
+
+/* Thunar : chrome compact, surfaces mates, accent Nord Violet. */
+.thunar toolbar {
+    background-color: #13151d;
+    border-bottom: 1px solid #292536;
+    padding: 10px 12px;
+}
+
+.thunar toolbar button {
+    min-height: 26px;
+    min-width: 24px;
+    background-color: transparent;
+    border-color: transparent;
+    box-shadow: none;
+}
+
+.thunar toolbar button:hover {
+    background-color: alpha(@accent, 0.12);
+    border-color: alpha(@accent, 0.35);
+}
+
+.thunar statusbar {
+    background-color: #11131a;
+    border-top: 1px solid #282432;
+    color: @fg1;
+    padding: 6px 14px;
+    font-size: 10px;
+}
+
+/* Prototype A : liste atelier, sans modifier les autres applications. */
+.thunar .standard-view .view {
+    -GtkTreeView-vertical-separator: 12;
+    -GtkTreeView-horizontal-separator: 18;
+    background-color: #0e1017;
+    color: #d0d2de;
+    font-size: 12px;
+}
+
+.thunar .standard-view .view:selected {
+    background-color: #252033;
+    color: #e5d9ff;
+}
+
+.thunar treeview header button {
+    background-image: none;
+    background-color: #14131c;
+    border-radius: 0;
+    border-width: 0 0 1px;
+    border-color: #30283f;
+    box-shadow: none;
+    padding: 12px 14px;
+    color: #a098b2;
+    font-size: 10px;
+}
+
+.thunar .shortcuts-pane,
+.thunar .shortcuts-pane .view {
+    -GtkTreeView-vertical-separator: 12;
+    -GtkTreeView-horizontal-separator: 12;
+    background-color: #14121b;
+    color: #a19aaf;
+    font-size: 12px;
+}
+
+.thunar .shortcuts-pane:selected,
+.thunar .shortcuts-pane .view:selected {
+    background-color: #2c223e;
+    color: #e0caff;
+}
+
+.thunar .location-button {
+    margin: 0 3px;
+    padding: 4px 10px;
+    border-radius: 6px;
+    color: #9d96ad;
+}
+
+.thunar .location-button:checked {
+    background-color: #292035;
+    border-color: #624887;
+    color: #e0caff;
+}
+
+.thunar .location-button image {
+    color: #b498dc;
+}
+
+.thunar paned > separator {
+    background-color: #30263e;
+    min-width: 1px;
+    background-image: none;
+}
+
+.thunar scrollbar {
+    background-color: transparent;
+}
+
+.thunar scrollbar slider {
+    background-color: #40324f;
+    min-width: 4px;
+    min-height: 32px;
+    border: 0;
+    border-radius: 3px;
+}

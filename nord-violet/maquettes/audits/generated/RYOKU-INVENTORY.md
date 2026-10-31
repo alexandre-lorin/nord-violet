@@ -1,0 +1,1847 @@
+# Ryoku — inventaire extrait du code
+
+Source locale : `/home/toubi/01 - Dev/00 - Projets à tester/qml-go--ryoku`  
+Révision : `06091d40d742552e85ab0745152b4b07f6ff2201`
+
+## Pages du Hub
+
+- AddonsPage.qml
+- AnimationsPage.qml
+- AppOverridesPage.qml
+- BarStudioPage.qml
+- ConnectionsPage.qml
+- CreditsPage.qml
+- DesktopPage.qml
+- DictationPage.qml
+- DisplaysPage.qml
+- FastfetchPage.qml
+- GlobalPage.qml
+- GpuPage.qml
+- HeroEditor.qml
+- ImportPage.qml
+- InputPage.qml
+- KeybindsPage.qml
+- LauncherPage.qml
+- LayerRulesPage.qml
+- LightingTab.qml
+- LockscreenPage.qml
+- PerformancePage.qml
+- PluginsPage.qml
+- ProfilePage.qml
+- ProfileToolbar.qml
+- RashinPage.qml
+- RecordingPage.qml
+- SessionPage.qml
+- StoreWidgetCard.qml
+- UpdatesPage.qml
+- WidgetsPage.qml
+- WindowManagerPage.qml
+- WindowRulesPage.qml
+
+## Réglages déclarés dans les schémas
+
+### AddonsPage
+
+- `"tab": "detail"`
+- `"group": "Placement"`
+- `"key": "<pluginId>.enabled"`
+- `"label": "Enabled"`
+- `"desc": "Runs the add-on; off keeps it installed but idle"`
+- `"tab": "detail"`
+- `"group": "Placement"`
+- `"key": "<pluginId>.host"`
+- `"label": "Show as"`
+- `"desc": "Where it appears: popout, wallpaper tile or bar glyph"`
+- `"tab": "detail"`
+- `"group": "(plugin-declared, from manifest.metadata.settings[].group - group headers are rendered by PluginSettingsForm itself, one per distinct `group` string, in schema order; fields with group \"\" get no header)"`
+- `"key": "<pluginId>.settings.<field.key>"`
+- `"label": "(plugin-declared, field.label, falling back to field.key)"`
+- `"desc": "Each add-on defines its own; applied live"`
+- `"tab": "Plugins"`
+- `"group": "Management"`
+- `"key": ""`
+- `"label": "Update / Remove"`
+- `"desc": "Refreshes or removes it; placement stays as set"`
+- `"tab": "Bundles"`
+- `"group": "Management"`
+- `"key": ""`
+- `"label": "Remove component / bundle"`
+- `"desc": "Shows every component state, with a terminal"`
+- `"tab": ""`
+- `"group": "OTHER"`
+- `"key": ""`
+- `"label": "Browse RyoStore"`
+- `"desc": "Opens the matching plugin or bundle catalogue"`
+
+### AnimationsPage
+
+- `"tab": ""`
+- `"group": "GLOBAL"`
+- `"key": "desktop.appearance.animations"`
+- `"label": "Animations"`
+- `"desc": "Master switch for desktop motion"`
+
+### AppOverridesPage
+
+- `"tab": ""`
+- `"group": "Match row (card header, above the LOOK divider - no SettingSection)"`
+- `"key": "desktop.appOverrides"`
+- `"label": "App overrides"`
+- `"desc": "Per-app look on top of the global Appearance"`
+
+### BarStudioPage
+
+
+### DesktopPage
+
+- `"tab": "General"`
+- `"group": "BRAND"`
+- `"key": "name"`
+- `"label": "Name"`
+- `"desc": "The name the shell calls this desktop"`
+- `"tab": "General"`
+- `"group": "BRAND"`
+- `"key": "markText"`
+- `"label": "Text mark"`
+- `"desc": "The glyph the shell uses as its mark"`
+- `"tab": "General"`
+- `"group": "BRAND"`
+- `"key": "markImage"`
+- `"label": "Logo image"`
+- `"desc": "An image mark, used instead of the glyph"`
+- `"tab": "General"`
+- `"group": "BRAND"`
+- `"key": "markTint"`
+- `"label": "Tint image to accent"`
+- `"tab": "General"`
+- `"group": "SHELL RELOAD"`
+- `"key": "reloadCover"`
+- `"label": "Reload cover"`
+- `"desc": "Shown while the desktop shell restarts"`
+- `"tab": "Visualizer"`
+- `"group": "STYLE"`
+- `"key": "enabled"`
+- `"label": "Enabled"`
+- `"desc": "Paint the audio spectrum on the desktop"`
+- `"tab": "Visualizer"`
+- `"group": "STYLE"`
+- `"key": "style"`
+- `"label": "Style"`
+- `"desc": "How the spectrum is drawn"`
+- `"tab": "Visualizer"`
+- `"group": "STYLE"`
+- `"key": "shape"`
+- `"label": "Shape"`
+- `"desc": "Rounded or flat ends on each band"`
+- `"tab": "Visualizer"`
+- `"group": "STYLE"`
+- `"key": "mirror"`
+- `"label": "Mirror"`
+- `"desc": "Mirror the spectrum around its centre"`
+- `"tab": "Visualizer"`
+- `"group": "COLOUR"`
+- `"key": "color"`
+- `"label": "Colour"`
+- `"desc": "Pin an exact colour; clear to follow the wallpaper"`
+- `"tab": "Visualizer"`
+- `"group": "COLOUR"`
+- `"key": "gradient"`
+- `"label": "Gradient"`
+- `"desc": "Sweep from the colour above to a second one"`
+- `"tab": "Visualizer"`
+- `"group": "COLOUR"`
+- `"key": "color2"`
+- `"label": "Second colour"`
+- `"desc": "The far end of the gradient"`
+- `"tab": "Visualizer"`
+- `"group": "PLACEMENT"`
+- `"key": "spin"`
+- `"label": "Rotation"`
+- `"desc": "How fast the shape spins"`
+- `"tab": "Visualizer"`
+- `"group": "PLACEMENT"`
+- `"key": "vizPlace"`
+- `"label": "Place on the desktop"`
+- `"desc": "Drag and size it directly on screen"`
+- `"tab": "Visualizer"`
+- `"group": "PLACEMENT"`
+- `"key": "grow"`
+- `"label": "Grows"`
+- `"desc": "Which edge of its box the bands rise from"`
+- `"tab": "Visualizer"`
+- `"group": "PLACEMENT"`
+- `"key": "angle"`
+- `"label": "Angle"`
+- `"desc": "Turn the whole look about its centre"`
+- `"tab": "Visualizer"`
+- `"group": "PLACEMENT"`
+- `"key": "tiltX"`
+- `"label": "Lean back"`
+- `"desc": "Tip the far edge away from you"`
+- `"tab": "Visualizer"`
+- `"group": "PLACEMENT"`
+- `"key": "tiltY"`
+- `"label": "Lean aside"`
+- `"desc": "Tip one side away from you"`
+- `"tab": "Visualizer"`
+- `"group": "PLACEMENT"`
+- `"key": "x"`
+- `"label": "Left"`
+- `"desc": "Where its box starts across the screen"`
+- `"tab": "Visualizer"`
+- `"group": "PLACEMENT"`
+- `"key": "y"`
+- `"label": "Top"`
+- `"desc": "Where its box starts down the screen"`
+- `"tab": "Visualizer"`
+- `"group": "PLACEMENT"`
+- `"key": "w"`
+- `"label": "Width"`
+- `"desc": "How wide its box is"`
+- `"tab": "Visualizer"`
+- `"group": "PLACEMENT"`
+- `"key": "h"`
+- `"label": "Height"`
+- `"desc": "How tall its box is"`
+- `"tab": "Visualizer"`
+- `"group": "SPECTRUM"`
+- `"key": "bars"`
+- `"label": "Bars"`
+- `"desc": "How many bars the spectrum is cut into"`
+- `"tab": "Visualizer"`
+- `"group": "SPECTRUM"`
+- `"key": "segments"`
+- `"label": "Segments"`
+- `"desc": "How many segments a bar is cut into"`
+- `"tab": "Visualizer"`
+- `"group": "SPECTRUM"`
+- `"key": "thickness"`
+- `"label": "Bar width"`
+- `"desc": "How wide each bar is against its gap"`
+- `"tab": "Visualizer"`
+- `"group": "SPECTRUM"`
+- `"key": "gain"`
+- `"label": "Sensitivity"`
+- `"tab": "Visualizer"`
+- `"group": "SPECTRUM"`
+- `"key": "peaks"`
+- `"label": "Peak caps"`
+- `"desc": "Hold a mark at each bar's peak"`
+- `"tab": "Visualizer"`
+- `"group": "SPECTRUM"`
+- `"key": "reflection"`
+- `"label": "Reflection"`
+- `"desc": "How much of the spectrum mirrors below it"`
+- `"tab": "Visualizer"`
+- `"group": "SPECTRUM"`
+- `"key": "bloom"`
+- `"label": "Bloom"`
+- `"desc": "How much the spectrum glows"`
+- `"tab": "Visualizer"`
+- `"group": "MOTION"`
+- `"key": "smoothing"`
+- `"label": "Smoothing"`
+- `"desc": "How much motion is smoothed between frames"`
+- `"tab": "Visualizer"`
+- `"group": "MOTION"`
+- `"key": "fps"`
+- `"label": "Frame rate"`
+- `"desc": "How often the spectrum redraws"`
+- `"tab": "Visualizer"`
+- `"group": "MOTION"`
+- `"key": "adaptive"`
+- `"label": "Adaptive quality"`
+- `"desc": "Drop the frame rate when nothing is playing"`
+- `"tab": "Visualizer"`
+- `"group": "MOTION"`
+- `"key": "idleWave"`
+- `"label": "Idle wave"`
+- `"desc": "Keep a slow wave moving when nothing is playing"`
+- `"tab": "General"`
+- `"group": "QUICK SETTINGS"`
+- `"key": "frameBars.menus.quick-settings.anchor"`
+- `"label": "Sidebar edge"`
+- `"desc": "Which edge the Super+Esc sidebar opens from"`
+- `"tab": "General"`
+- `"group": "QUICK SETTINGS"`
+- `"key": "frameBars.menus.quick-settings.expansion"`
+- `"label": "Fill the edge"`
+- `"desc": "Stretch to the edge, or fit its content"`
+- `"tab": "General"`
+- `"group": "QUICK SETTINGS"`
+- `"key": "frameBars.menus.quick-settings.minWidth"`
+- `"label": "Minimum width"`
+- `"desc": "How wide the sidebar is at its narrowest"`
+- `"tab": "Clipboard"`
+- `"group": "LAYOUT"`
+- `"key": "clipboard.widthPercent"`
+- `"label": "Width"`
+- `"desc": "How much of the screen the clipboard panel spans"`
+- `"tab": "Clipboard"`
+- `"group": "LAYOUT"`
+- `"key": "clipboard.heightPercent"`
+- `"label": "Height"`
+- `"desc": "How tall the clipboard panel can be"`
+- `"tab": "Clipboard"`
+- `"group": "LAYOUT"`
+- `"key": "clipboard.bottomPercent"`
+- `"label": "Bottom offset"`
+- `"desc": "How far the panel rests above the screen edge; zero sits it on the edge"`
+- `"tab": "Clipboard"`
+- `"group": "CORNERS"`
+- `"key": "clipboard.panelRadius"`
+- `"label": "Panel rounding"`
+- `"desc": "Roundness of the outer clipboard panel"`
+- `"tab": "Clipboard"`
+- `"group": "CORNERS"`
+- `"key": "clipboard.paneRadius"`
+- `"label": "Pane rounding"`
+- `"desc": "Roundness of the Clipboard and Starred panes"`
+- `"tab": "Clipboard"`
+- `"group": "CORNERS"`
+- `"key": "clipboard.cardRadius"`
+- `"label": "Card rounding"`
+- `"desc": "Roundness of individual clipboard cards"`
+
+### DictationPage
+
+- `"tab": ""`
+- `"group": "DICTATION"`
+- `"key": "enabled"`
+- `"label": "Voice typing"`
+- `"desc": "Tap Super+` to dictate into the focused app"`
+- `"tab": ""`
+- `"group": "ENGINE & MODEL"`
+- `"key": "# ryoku-preset: <key>"`
+- `"label": "Speech engine"`
+- `"desc": "Which engine turns speech into text"`
+- `"tab": ""`
+- `"group": "ENGINE & MODEL"`
+- `"key": "whisper.model = \"base.en\" + whisper.language = \"en\""`
+- `"label": "Whisper - Fast"`
+- `"desc": "English, offline, small model, quick to load"`
+- `"tab": ""`
+- `"group": "ENGINE & MODEL"`
+- `"key": "whisper.model = \"large-v3-turbo\" + whisper.language = \"auto\""`
+- `"label": "Whisper - Accurate"`
+- `"desc": "Any language, offline, a 1.6 GB download"`
+- `"tab": ""`
+- `"group": "ENGINE & MODEL"`
+- `"key": "whisper.mode = \"remote\" + whisper.remote_model = \"whisper-1\" + whisper.remote_endpoint = \"https://api.openai.com/v1\""`
+- `"label": "OpenAI API"`
+- `"desc": "Cloud transcription; audio leaves your machine"`
+- `"tab": ""`
+- `"group": "API KEY"`
+- `"key": "remote_api_key"`
+- `"label": "OpenAI API key"`
+- `"desc": "Your OpenAI key, kept in config.toml"`
+- `"tab": ""`
+- `"group": "API KEY"`
+- `"key": "remote_api_key"`
+- `"label": "Save key"`
+- `"desc": "Writes the key and checks that it works"`
+- `"tab": ""`
+- `"group": "(install empty-state, not a SettingSection)"`
+- `"key": ""`
+- `"label": "Install Voxtype"`
+- `"desc": ""`
+- `"tab": ""`
+- `"group": "PACKAGE"`
+- `"key": ""`
+- `"label": "Remove Voxtype"`
+- `"desc": ""`
+
+### DisplaysPage
+
+- `"tab": ""`
+- `"group": "<selected monitor name> (SettingSection title is dynamic: page.sel.name; literal fallback \"DISPLAY\")"`
+- `"key": "position (Set as main re-bases the layout so this display sits at the 0,0 origin; not a per-display disk key)"`
+- `"label": "Main display"`
+- `"desc": "Makes this the primary display, at the global origin"`
+- `"tab": ""`
+- `"group": "<selected monitor name> (SettingSection title is dynamic: page.sel.name; literal fallback \"DISPLAY\" when no selection)"`
+- `"key": "disabled"`
+- `"label": "Enabled"`
+- `"desc": "Off turns the display dark; takes effect only when you Apply"`
+- `"tab": ""`
+- `"group": "<selected monitor name> (dynamic; fallback \"DISPLAY\")"`
+- `"key": "mode"`
+- `"label": "Resolution"`
+- `"desc": "Size and refresh rate together; Custom takes any W\u00d7H@Hz."`
+- `"tab": ""`
+- `"group": "<selected monitor name> (dynamic; fallback \"DISPLAY\")"`
+- `"key": "scale"`
+- `"label": "Scale"`
+- `"desc": "Larger renders everything bigger, with less room"`
+- `"tab": ""`
+- `"group": "<selected monitor name> (dynamic; fallback \"DISPLAY\")"`
+- `"key": "transform"`
+- `"label": "Rotation"`
+- `"desc": "Turns the picture; 90 and 270 swap its sides"`
+- `"tab": ""`
+- `"group": "<selected monitor name> (dynamic; fallback \"DISPLAY\")"`
+- `"key": "vrr"`
+- `"label": "Adaptive sync"`
+- `"desc": "Refresh follows the frame rate; Fullscreen only there"`
+- `"tab": ""`
+- `"group": "<selected monitor name> (dynamic; fallback \"DISPLAY\")"`
+- `"key": "cm"`
+- `"label": "Colour"`
+- `"desc": "sRGB is standard; HDR needs a capable display"`
+- `"tab": ""`
+- `"group": "<selected monitor name> (dynamic; fallback \"DISPLAY\")"`
+- `"key": "sdrbrightness"`
+- `"label": "SDR brightness"`
+- `"desc": "Brightness of non-HDR content while in HDR"`
+- `"tab": ""`
+- `"group": "<selected monitor name> (dynamic; fallback \"DISPLAY\")"`
+- `"key": "mirror"`
+- `"label": "Mirror of"`
+- `"desc": "Shows a copy of another display here"`
+- `"tab": ""`
+- `"group": "POSITION"`
+- `"key": "position (serialised jointly as \"<x>x<y>\", e.g. \"2560x0\" - X and Y are NOT separate disk keys)"`
+- `"label": "X"`
+- `"desc": "Distance from the layout's left edge"`
+- `"tab": ""`
+- `"group": "POSITION"`
+- `"key": "position (serialised jointly as \"<x>x<y>\" - X and Y are NOT separate disk keys)"`
+- `"label": "Y"`
+- `"desc": "Distance from the layout's top edge"`
+- `"tab": ""`
+- `"group": "PROFILES"`
+- `"key": "filename - becomes ~/.config/ryoku/monitors/<name>.json"`
+- `"label": "Profile name"`
+- `"desc": "Name for the new profile; Enter saves it"`
+- `"tab": ""`
+- `"group": "PROFILES"`
+- `"key": ""`
+- `"label": "Save (profile)"`
+- `"desc": ""`
+- `"tab": ""`
+- `"group": "(header quick-actions Row - outside any SettingSection, top-right, aligned to the \"N displays detected\" text)"`
+- `"key": ""`
+- `"label": "Mirror (quick action)"`
+- `"desc": ""`
+- `"tab": ""`
+- `"group": "(header quick-actions Row - outside any SettingSection)"`
+- `"key": ""`
+- `"label": "Extend (quick action)"`
+- `"desc": ""`
+- `"tab": ""`
+- `"group": "(header quick-actions Row - outside any SettingSection)"`
+- `"key": ""`
+- `"label": "DPI auto-scale (quick action)"`
+- `"desc": ""`
+- `"tab": ""`
+- `"group": "(bottom action bar - outside any SettingSection)"`
+- `"key": ""`
+- `"label": "Apply (action bar)"`
+- `"desc": ""`
+- `"tab": ""`
+- `"group": "(bottom action bar - outside any SettingSection)"`
+- `"key": ""`
+- `"label": "Revert (action bar)"`
+- `"desc": ""`
+
+### FastfetchPage
+
+- `"tab": ""`
+- `"group": "EMBLEM"`
+- `"key": "logo.type"`
+- `"label": "Emblem kind"`
+- `"desc": "Art beside the readout: image, ASCII, logo or none"`
+- `"tab": ""`
+- `"group": "EMBLEM"`
+- `"key": "logo.source"`
+- `"label": "Emblem file"`
+- `"desc": "Image or ASCII file to draw; SVG is converted"`
+- `"tab": ""`
+- `"group": "EMBLEM"`
+- `"key": "logo.width"`
+- `"label": "Width"`
+- `"desc": "Character columns the art spans"`
+- `"tab": ""`
+- `"group": "EMBLEM"`
+- `"key": "logo.height"`
+- `"label": "Height"`
+- `"desc": "Lines of text the art covers"`
+- `"tab": ""`
+- `"group": "EMBLEM"`
+- `"key": "logo.padding.left"`
+- `"label": "Pad"`
+- `"desc": "Blank columns between the terminal edge and the art"`
+- `"tab": ""`
+- `"group": "EMBLEM"`
+- `"key": "logo.dither"`
+- `"label": "Dither"`
+- `"desc": "Draws the emblem as 1-bit stipple"`
+- `"tab": ""`
+- `"group": "ACCENT"`
+- `"key": "display.color.keys"`
+- `"label": "Readout accent"`
+- `"desc": "Tints the label column of every info line"`
+- `"tab": ""`
+- `"group": "INFO"`
+- `"key": "modules"`
+- `"label": "Info rows"`
+- `"desc": "The readout's lines: reorder, rename, remove"`
+- `"tab": ""`
+- `"group": "INFO"`
+- `"key": "(none - derived, not persisted)"`
+- `"label": "Row name"`
+- `"desc": "Name shown in this list; nothing is stored"`
+
+### GlobalPage
+
+- `"tab": ""`
+- `"group": "LANGUAGE & REGION"`
+- `"key": "language"`
+- `"label": "Language"`
+- `"desc": "Interface language; Auto follows your system locale."`
+- `"tab": ""`
+- `"group": "LANGUAGE & REGION"`
+- `"key": "formatLocale"`
+- `"label": "Regional formats"`
+- `"desc": "Dates, numbers and month names use this region."`
+- `"tab": ""`
+- `"group": "LOCATION"`
+- `"key": "weatherLocation"`
+- `"label": "Location"`
+- `"desc": "Search a city; empty reads it from your IP."`
+- `"tab": ""`
+- `"group": "LOCATION"`
+- `"key": "timezone"`
+- `"label": "Time zone"`
+- `"desc": "The system clock's time zone; applied live."`
+- `"tab": ""`
+- `"group": "LOCATION"`
+- `"key": "weatherUnit"`
+- `"label": "Temperature units"`
+- `"desc": "Auto follows your locale."`
+- `"tab": ""`
+- `"group": "FONT"`
+- `"key": "fontFamily"`
+- `"label": "System font"`
+- `"desc": "One font for the shell, apps and terminal."`
+- `"tab": ""`
+- `"group": "FONT"`
+- `"key": "fontSize"`
+- `"label": "Font size"`
+- `"desc": "Base text size in points for apps and the terminal."`
+
+### GpuPage
+
+- `"tab": ""`
+- `"group": "RYOKU RENDERS ON"`
+- `"key": "AQ_DRM_DEVICES"`
+- `"label": "Graphics mode"`
+- `"desc": "Which GPU renders the desktop; next login"`
+- `"tab": ""`
+- `"group": "CPU POWER PROFILES"`
+- `"key": ""`
+- `"label": "Editing profile"`
+- `"desc": "Which profile you're editing, not the live one."`
+- `"tab": ""`
+- `"group": "CPU POWER PROFILES"`
+- `"key": ""`
+- `"label": "Governor"`
+- `"desc": "CPU scaling governor for the edited profile."`
+- `"tab": ""`
+- `"group": "CPU POWER PROFILES"`
+- `"key": ""`
+- `"label": "Energy preference"`
+- `"desc": "Energy or performance hint"`
+- `"tab": ""`
+- `"group": "CPU POWER PROFILES"`
+- `"key": ""`
+- `"label": "Max frequency"`
+- `"desc": "Ceiling for the CPU clock, in percent"`
+- `"tab": ""`
+- `"group": "CPU POWER PROFILES"`
+- `"key": ""`
+- `"label": "Thermal profile"`
+- `"desc": "Fan and power envelope for the edited profile."`
+- `"tab": ""`
+- `"group": "CPU POWER PROFILES"`
+- `"key": ""`
+- `"label": "CPU boost and PPT/TDP limits"`
+- `"desc": "Not exposed: firmware governs boost and PPT here."`
+- `"tab": ""`
+- `"group": "TUNING \u00b7 THIS SESSION"`
+- `"key": ""`
+- `"label": "Power limit / TDP"`
+- `"desc": "GPU power budget in watts, live for this session."`
+- `"tab": ""`
+- `"group": "TUNING \u00b7 THIS SESSION"`
+- `"key": ""`
+- `"label": "Performance level"`
+- `"desc": "AMD performance level: auto, low, or high."`
+- `"tab": ""`
+- `"group": "TUNING \u00b7 THIS SESSION"`
+- `"key": ""`
+- `"label": "Persistence mode"`
+- `"desc": "Keeps the NVIDIA driver loaded"`
+- `"tab": ""`
+- `"group": "TUNING \u00b7 THIS SESSION"`
+- `"key": ""`
+- `"label": "Overclock, undervolt and fan control"`
+- `"desc": "GPU clock and fan control; resets on reboot"`
+- `"tab": ""`
+- `"group": "TUNING \u00b7 THIS SESSION"`
+- `"key": ""`
+- `"label": "Tuning presets"`
+- `"desc": "Save and apply named tuning bundles."`
+- `"tab": ""`
+- `"group": "BATTERY"`
+- `"key": ""`
+- `"label": "Charge limit"`
+- `"desc": "Stop charging here to preserve battery health."`
+- `"tab": ""`
+- `"group": "BATTERY"`
+- `"key": ""`
+- `"label": "PCIe ASPM"`
+- `"desc": "PCIe power policy: trade idle power for latency."`
+- `"tab": ""`
+- `"group": "GPU PASSTHROUGH \u00b7 ADVANCED"`
+- `"key": ""`
+- `"label": "Readiness checks"`
+- `"desc": ""`
+- `"tab": ""`
+- `"group": "GPU PASSTHROUGH \u00b7 ADVANCED"`
+- `"key": ""`
+- `"label": "Disable passthrough"`
+- `"desc": ""`
+- `"tab": ""`
+- `"group": "GPU PASSTHROUGH \u00b7 ADVANCED"`
+- `"key": ""`
+- `"label": "Review changes"`
+- `"desc": ""`
+- `"tab": ""`
+- `"group": "GPU PASSTHROUGH \u00b7 ADVANCED"`
+- `"key": ""`
+- `"label": "Enable passthrough"`
+- `"desc": ""`
+- `"tab": ""`
+- `"group": "GPU PASSTHROUGH \u00b7 ADVANCED"`
+- `"key": ""`
+- `"label": "Close"`
+- `"desc": ""`
+- `"tab": ""`
+- `"group": "GPU PASSTHROUGH \u00b7 ADVANCED"`
+- `"key": ""`
+- `"label": "Recheck"`
+- `"desc": ""`
+- `"tab": ""`
+- `"group": "(no SettingSection - floating error column under the hero card)"`
+- `"key": ""`
+- `"label": "Retry"`
+- `"desc": ""`
+- `"tab": ""`
+- `"group": "GPU PASSTHROUGH \u00b7 ADVANCED"`
+- `"key": ""`
+- `"label": "Passthrough status"`
+- `"desc": ""`
+- `"tab": ""`
+- `"group": "GPU PASSTHROUGH \u00b7 ADVANCED"`
+- `"key": ""`
+- `"label": "Readiness check details"`
+- `"desc": ""`
+- `"tab": ""`
+- `"group": "RYOKU RENDERS ON"`
+- `"key": ""`
+- `"label": "Graphics mode explainer"`
+- `"desc": ""`
+- `"tab": ""`
+- `"group": "GPU PASSTHROUGH \u00b7 ADVANCED"`
+- `"key": ""`
+- `"label": "Passthrough section intro"`
+- `"desc": ""`
+- `"tab": ""`
+- `"group": "IDLE"`
+- `"key": "idle.enabled"`
+- `"label": "Idle timeouts"`
+- `"desc": "Dim, lock, blank and suspend the machine when it sits idle."`
+- `"tab": ""`
+- `"group": "IDLE"`
+- `"key": "idle.onDesktops"`
+- `"label": "Also on desktops"`
+- `"desc": "Run these timeouts on this desktop too, not only on laptops."`
+- `"tab": ""`
+- `"group": "ON BATTERY"`
+- `"key": "idle.battery.dimSec"`
+- `"label": "Dim"`
+- `"desc": "Minutes idle on battery before the backlight dims; 0 never dims."`
+- `"tab": ""`
+- `"group": "ON BATTERY"`
+- `"key": "idle.battery.lockSec"`
+- `"label": "Lock"`
+- `"desc": "Minutes idle on battery before the session locks; 0 never locks."`
+- `"tab": ""`
+- `"group": "ON BATTERY"`
+- `"key": "idle.battery.screenOffSec"`
+- `"label": "Screen off"`
+- `"desc": "Minutes idle on battery before the screen powers off; 0 keeps it on."`
+- `"tab": ""`
+- `"group": "ON BATTERY"`
+- `"key": "idle.battery.suspendSec"`
+- `"label": "Suspend"`
+- `"desc": "Minutes idle on battery before the machine suspends; 0 never suspends."`
+- `"tab": ""`
+- `"group": "PLUGGED IN"`
+- `"key": "idle.ac.dimSec"`
+- `"label": "Dim"`
+- `"desc": "Minutes idle on AC before the backlight dims; 0 never dims."`
+- `"tab": ""`
+- `"group": "PLUGGED IN"`
+- `"key": "idle.ac.lockSec"`
+- `"label": "Lock"`
+- `"desc": "Minutes idle on AC before the session locks; 0 never locks."`
+- `"tab": ""`
+- `"group": "PLUGGED IN"`
+- `"key": "idle.ac.screenOffSec"`
+- `"label": "Screen off"`
+- `"desc": "Minutes idle on AC before the screen powers off; 0 keeps it on."`
+- `"tab": ""`
+- `"group": "PLUGGED IN"`
+- `"key": "idle.ac.suspendSec"`
+- `"label": "Suspend"`
+- `"desc": "Minutes idle on AC before the machine suspends; 0 never suspends."`
+
+### InputPage
+
+- `"tab": ""`
+- `"group": "KEYBOARD"`
+- `"key": "desktop.input.kbLayout"`
+- `"label": "Layout"`
+- `"desc": "What your keys type: QWERTY, AZERTY, Dvorak."`
+- `"tab": ""`
+- `"group": "KEYBOARD"`
+- `"key": "desktop.input.kbVariant"`
+- `"label": "Style"`
+- `"desc": "A tweak on the layout, like intl or Colemak."`
+- `"tab": ""`
+- `"group": "KEYBOARD"`
+- `"key": "desktop.input.kbLayout"`
+- `"label": "Second layout"`
+- `"desc": "A spare layout kept loaded; a chord switches to it."`
+- `"tab": ""`
+- `"group": "KEYBOARD"`
+- `"key": "desktop.input.kbOptions"`
+- `"label": "Switch layouts"`
+- `"desc": "The chord that flips between your two layouts."`
+- `"tab": ""`
+- `"group": "KEYBOARD"`
+- `"key": "desktop.input.numlockByDefault"`
+- `"label": "Numlock on at login"`
+- `"desc": "Start each session with the keypad typing digits."`
+- `"tab": ""`
+- `"group": "KEY REMAPS"`
+- `"key": "desktop.input.kbOptions"`
+- `"label": "Caps Lock"`
+- `"desc": "Remap it to Escape, Ctrl, or switch it off."`
+- `"tab": ""`
+- `"group": "KEY REMAPS"`
+- `"key": "desktop.input.kbOptions"`
+- `"label": "Swap Alt and Super"`
+- `"desc": "Trade the two keys for macOS-style shortcuts."`
+- `"tab": ""`
+- `"group": "KEY REMAPS"`
+- `"key": "desktop.input.kbOptions"`
+- `"label": "Compose key"`
+- `"desc": "Starts a sequence for accents like é and ñ."`
+- `"tab": ""`
+- `"group": "KEY REMAPS"`
+- `"key": "desktop.input.kbOptions"`
+- `"label": "Extra options"`
+- `"desc": "Raw xkb options, comma separated, for power users."`
+- `"tab": ""`
+- `"group": "KEY REMAPS"`
+- `"key": ""`
+- `"label": "Apply system-wide"`
+- `"desc": "Match the login screen, TTYs, and boot prompt too."`
+- `"tab": ""`
+- `"group": "KEY REMAPS"`
+- `"key": ""`
+- `"label": "Login screen and TTY keymap status"`
+- `"desc": "Result of the last apply; each keeps its own keymap."`
+- `"tab": ""`
+- `"group": "POINTER"`
+- `"key": "desktop.input.sensitivity"`
+- `"label": "Sensitivity"`
+- `"desc": "Pointer speed offset; 0 is the device default."`
+- `"tab": ""`
+- `"group": "POINTER"`
+- `"key": "desktop.input.followMouse"`
+- `"label": "Focus behavior"`
+- `"desc": "How windows take focus as the pointer moves."`
+- `"tab": ""`
+- `"group": "POINTER"`
+- `"key": "desktop.input.accelProfile"`
+- `"label": "Acceleration"`
+- `"desc": "Flat ties travel to the hand; Adaptive speeds quick moves."`
+- `"tab": ""`
+- `"group": "POINTER"`
+- `"key": "desktop.input.leftHanded"`
+- `"label": "Left-handed buttons"`
+- `"desc": "Swap the left and right mouse buttons."`
+- `"tab": ""`
+- `"group": "POINTER"`
+- `"key": "desktop.input.mouseNaturalScroll"`
+- `"label": "Natural scroll"`
+- `"desc": "Roll the wheel up and the page moves up."`
+- `"tab": ""`
+- `"group": "POINTER"`
+- `"key": "desktop.input.mouseScrollFactor"`
+- `"label": "Scroll speed"`
+- `"desc": "Multiplier on each wheel notch."`
+- `"tab": ""`
+- `"group": "POINTER"`
+- `"key": "desktop.input.middleClickPaste"`
+- `"label": "Middle-click pastes"`
+- `"desc": "Press the wheel to insert the last highlighted text."`
+- `"tab": ""`
+- `"group": "TOUCHPAD"`
+- `"key": "desktop.input.naturalScroll"`
+- `"label": "Natural scroll"`
+- `"desc": "Two fingers drag the content like a touchscreen."`
+- `"tab": ""`
+- `"group": "TOUCHPAD"`
+- `"key": "desktop.input.tapToClick"`
+- `"label": "Tap to click"`
+- `"desc": "A tap counts as a click; two fingers right, three middle."`
+- `"tab": ""`
+- `"group": "TOUCHPAD"`
+- `"key": "desktop.input.tapAndDrag"`
+- `"label": "Tap and drag"`
+- `"desc": "Tap, then hold the finger down to drag what you tapped."`
+- `"tab": ""`
+- `"group": "TOUCHPAD"`
+- `"key": "desktop.input.disableWhileTyping"`
+- `"label": "Disable while typing"`
+- `"desc": "Ignore the pad while typing so a palm can't nudge it."`
+- `"tab": ""`
+- `"group": "TOUCHPAD"`
+- `"key": "desktop.input.clickfinger"`
+- `"label": "Click by finger count"`
+- `"desc": "One finger clicks left, two right, three middle."`
+- `"tab": ""`
+- `"group": "TOUCHPAD"`
+- `"key": "desktop.input.middleEmulation"`
+- `"label": "Emulate middle click"`
+- `"desc": "Pressing left and right together counts as a middle click"`
+- `"tab": ""`
+- `"group": "TOUCHPAD"`
+- `"key": "desktop.input.touchScrollFactor"`
+- `"label": "Scroll speed"`
+- `"desc": "Multiplier on two-finger scroll distance."`
+- `"tab": ""`
+- `"group": "TOUCHPAD"`
+- `"key": "desktop.input.workspaceSwipe"`
+- `"label": "Swipe between workspaces"`
+- `"desc": "A horizontal swipe slides to the next workspace."`
+- `"tab": ""`
+- `"group": "TOUCHPAD"`
+- `"key": "desktop.input.swipeFingers"`
+- `"label": "Swipe fingers"`
+- `"desc": "How many fingers count as a workspace swipe."`
+- `"tab": ""`
+- `"group": "TOUCHPAD"`
+- `"key": "desktop.input.swipeInvert"`
+- `"label": "Natural swipe direction"`
+- `"desc": "The workspace row follows your fingers."`
+- `"tab": ""`
+- `"group": "TOUCHPAD"`
+- `"key": "desktop.input.swipeCreateNew"`
+- `"label": "Swipe past the last workspace to add one"`
+- `"desc": "Swiping past the end opens a fresh workspace."`
+- `"tab": ""`
+- `"group": "TOUCHPAD"`
+- `"key": "desktop.input.swipeDistance"`
+- `"label": "Swipe distance"`
+- `"desc": "Finger travel for a full switch; lower flips sooner."`
+- `"tab": ""`
+- `"group": "KEY REPEAT"`
+- `"key": "desktop.input.repeatRate"`
+- `"label": "Repeat rate"`
+- `"desc": "Characters per second while a key is held."`
+- `"tab": ""`
+- `"group": "KEY REPEAT"`
+- `"key": "desktop.input.repeatDelay"`
+- `"label": "Repeat delay"`
+- `"desc": "Pause before a held key starts repeating."`
+- `"tab": ""`
+- `"group": "CURSOR"`
+- `"key": "desktop.cursor.theme"`
+- `"label": "Theme"`
+- `"desc": "The installed pointer set; applies now and to new apps."`
+- `"tab": ""`
+- `"group": "CURSOR"`
+- `"key": "desktop.cursor.size"`
+- `"label": "Size"`
+- `"desc": "How large the pointer is drawn."`
+- `"tab": ""`
+- `"group": "CURSOR"`
+- `"key": "desktop.cursor.inactiveTimeout"`
+- `"label": "Hide after idle"`
+- `"desc": "Seconds of stillness before it hides; 0 never hides."`
+- `"tab": ""`
+- `"group": "CURSOR"`
+- `"key": "desktop.cursor.hideOnKeyPress"`
+- `"label": "Hide while typing"`
+- `"desc": "It vanishes on a keypress and returns when moved."`
+
+### KeybindsPage
+
+- `"tab": "Shortcuts", "group": "WINDOWS"`
+- `"label": "Window shortcuts"`
+- `"desc": "Close, float, fullscreen, resize and tab the focused window"`
+- `"tab": "Shortcuts", "group": "FOCUS"`
+- `"label": "Focus shortcuts"`
+- `"desc": "Move focus between windows and columns"`
+- `"tab": "Shortcuts", "group": "MOVE"`
+- `"label": "Move shortcuts"`
+- `"desc": "Move and merge windows across columns"`
+- `"tab": "Shortcuts", "group": "RESIZE"`
+- `"label": "Resize shortcuts"`
+- `"desc": "Grow, shrink and reset the focused window"`
+- `"tab": "Shortcuts", "group": "WORKSPACES"`
+- `"label": "Workspace shortcuts"`
+- `"desc": "Focus and move windows across workspaces, on the keys and the number pad"`
+- `"tab": "Shortcuts", "group": "DISPLAYS"`
+- `"label": "Display shortcuts"`
+- `"desc": "Move focus, windows and workspaces between screens"`
+- `"tab": "Shortcuts", "group": "SHELL"`
+- `"label": "Shell shortcuts"`
+- `"desc": "Launcher, cheatsheet, lock, clipboard, screenshot, wallpaper and more"`
+- `"tab": "Shortcuts", "group": "MEDIA"`
+- `"label": "Media and hardware keys"`
+- `"desc": "Volume, playback, brightness and touchpad keys"`
+- `"tab": "Apps", "group": "APPS"`
+- `"label": "App shortcuts"`
+- `"desc": "Which app each launcher key opens, and the key itself"`
+- `"tab": "Custom", "group": "CUSTOM"`
+- `"label": "Custom shortcuts"`
+- `"desc": "Add your own key combos layered over the ones Ryoku ships"`
+
+### LauncherPage
+
+- `"tab": ""`
+- `"group": "LAUNCHER"`
+- `"key": "variant"`
+- `"label": "Style"`
+- `"desc": "Selects Main, Hero, or OkShell for Super+Space"`
+- `"tab": ""`
+- `"group": "SHAPE"`
+- `"key": "radius"`
+- `"label": "Corner radius"`
+- `"desc": "Rounds the palette corners; inner cards 4 px tighter"`
+- `"tab": ""`
+- `"group": "BACKGROUND"`
+- `"key": "bgBlur"`
+- `"label": "Local frost"`
+- `"desc": "Frosts the frozen desktop behind the result drawer"`
+- `"tab": ""`
+- `"group": "RESULT MOTION"`
+- `"key": "resultSettleMs"`
+- `"label": "Type settle"`
+- `"desc": "Pause before the result deck fades in; higher is calmer"`
+- `"tab": ""`
+- `"group": "HERO"`
+- `"key": "weatherUnit"`
+- `"label": "Weather units"`
+- `"desc": "Temperature scale on the hero, Auto follows your locale"`
+- `"tab": ""`
+- `"group": "HERO"`
+- `"key": "showWeather"`
+- `"label": "Show weather"`
+- `"desc": "Weather and temperature on the hero; off shows the date"`
+- `"tab": ""`
+- `"group": "HERO"`
+- `"key": "showGreeting"`
+- `"label": "Show greeting"`
+- `"desc": "Time-of-day greeting above the hero clock"`
+- `"tab": ""`
+- `"group": "HERO IMAGE"`
+- `"key": "heroImage"`
+- `"label": "Hero image"`
+- `"desc": "Wide banner behind the palette; drag to reframe it"`
+- `"tab": ""`
+- `"group": "HERO IMAGE"`
+- `"key": "heroStrength"`
+- `"label": "Strength"`
+- `"desc": "How visible the hero image is; 0 hides it completely"`
+- `"tab": ""`
+- `"group": "HERO IMAGE"`
+- `"key": "heroPosX"`
+- `"label": "Hero focal point X"`
+- `"desc": "Horizontal crop point; 0 left, 1 right; drag preview"`
+- `"tab": ""`
+- `"group": "HERO IMAGE"`
+- `"key": "heroPosY"`
+- `"label": "Hero focal point Y"`
+- `"desc": "Vertical crop point; 0 top, 1 bottom; drag preview"`
+- `"tab": ""`
+- `"group": "HERO"`
+- `"key": "horizonMode"`
+- `"label": "Solar line"`
+- `"desc": "Warm line under the clock: Palette, Fixed or Off"`
+- `"tab": ""`
+- `"group": "HERO"`
+- `"key": "horizonColor"`
+- `"label": "Line colour"`
+- `"desc": "Colour of the solar line when it is set to Fixed"`
+
+### LayerRulesPage
+
+
+### LockscreenPage
+
+- `"tab": ""`
+- `"group": "OTHER"`
+- `"key": ""`
+- `"label": "Lock skin"`
+- `"desc": "Reskins the lock and sign-in screens"`
+- `"tab": ""`
+- `"group": "OTHER"`
+- `"key": ""`
+- `"label": "At sign-in (keyring)"`
+- `"desc": "How the keyring unlocks your saved passwords"`
+- `"tab": ""`
+- `"group": "OTHER"`
+- `"key": ""`
+- `"label": "Browse RyoStore"`
+- `"desc": "Opens the RyoStore lockscreen catalogue"`
+
+### PerformancePage
+
+- `"tab": "", "group": "POWER", "key": "powerProfileEffects", "ctl": "sw", "src": "performance.json"`
+- `"label": "Follow the power profile"`
+- `"desc": "Power Saver strips motion, blur and shadows"`
+- `"tab": "", "group": "POWER", "key": "autoPowerSaverOnBattery", "ctl": "sw", "src": "performance.json"`
+- `"label": "Auto power saver on battery"`
+- `"desc": "Switches to Power Saver when you unplug"`
+- `"tab": "", "group": "EFFECTS", "key": "lowPowerMode", "ctl": "sw", "src": "performance.json", "caps": "liveConfigEval"`
+- `"label": "Low power mode"`
+- `"desc": "Turns every effect switch here on at once"`
+- `"tab": "", "group": "EFFECTS", "key": "reduceMotion", "ctl": "sw", "src": "performance.json"`
+- `"label": "Reduce motion"`
+- `"desc": "Shell transitions land instantly"`
+- `"tab": "", "group": "EFFECTS", "key": "disableBlur", "ctl": "sw", "src": "performance.json", "caps": "liveConfigEval"`
+- `"label": "Disable blur"`
+- `"desc": "Drops the frosted-glass look everywhere"`
+- `"tab": "", "group": "EFFECTS", "key": "disableShadows", "ctl": "sw", "src": "performance.json", "caps": "liveConfigEval"`
+- `"label": "Disable shadows"`
+- `"desc": "Surfaces draw without a shadow pass"`
+- `"tab": "", "group": "MOTION", "key": "liveWallpaper60", "ctl": "sw", "src": "performance.json"`
+- `"label": "60fps live wallpaper"`
+- `"desc": "Smoother video wallpaper, at a decode cost"`
+- `"tab": "", "group": "MOTION", "key": "pauseLiveWallpaperWhenFullscreen", "ctl": "sw", "src": "performance.json"`
+- `"label": "Pause video wallpaper"`
+- `"desc": "Stops the video behind a fullscreen window"`
+- `"tab": "", "group": "MOTION", "key": "ambientBarMotion", "ctl": "sw", "src": "performance.json"`
+- `"label": "Bar drifts when silent"`
+- `"desc": "The bar keeps drifting while nothing plays"`
+- `"tab": "", "group": "MEMORY", "key": "unloadWidgetsWhenCovered", "ctl": "sw", "src": "performance.json"`
+- `"label": "Hide covered widgets"`
+- `"desc": "Parks widgets while every monitor is covered"`
+- `"tab": "", "group": "MEMORY", "key": "unloadVisualizerWhenSilent", "ctl": "sw", "src": "performance.json"`
+- `"label": "Unload the visualiser"`
+- `"desc": "Frees ~250 MB after 30s of silence"`
+- `"tab": "", "group": "MEMORY", "key": "unloadLauncherWhenIdle", "ctl": "sw", "src": "performance.json"`
+- `"label": "Unload the launcher"`
+- `"desc": "Frees ~250 MB a minute after closing"`
+- `"tab": "", "group": "MEMORY", "key": "unloadOverviewWhenIdle", "ctl": "sw", "src": "performance.json"`
+- `"label": "Unload the overview"`
+- `"desc": "Frees ~250 MB a minute after Super+Tab closes"`
+
+### PluginsPage
+
+- `{ "id": "hyprbars", "tab": "Title bars" }`
+- `{ "id": "hyprglass", "tab": "Glass" }`
+- `{ "id": "imgborders", "tab": "Image borders" }`
+- `{ "id": "dynamic-cursors", "tab": "Cursor motion" }`
+- `{ "id": "hyprfocus", "tab": "Focus flash" }`
+- `{ "id": "keysounds", "tab": "Key sounds" }`
+
+### RecordingPage
+
+- `"tab": ""`
+- `"group": "KEY PRESSES"`
+- `"key": "keypressTheme"`
+- `"label": "Keycap style"`
+- `"desc": "Dark keycaps use white type; Light keycaps use black type"`
+- `"tab": ""`
+- `"group": "KEY PRESSES"`
+- `"key": "keypressMode"`
+- `"label": "Visible keys"`
+- `"desc": "Show every key, or hide ordinary typing and keep shortcuts."`
+- `"tab": ""`
+- `"group": "QUALITY"`
+- `"key": "fps"`
+- `"label": "Framerate"`
+- `"desc": "Frames per second; higher is smoother but larger."`
+- `"tab": ""`
+- `"group": "QUALITY"`
+- `"key": "framerateMode"`
+- `"label": "Framerate mode"`
+- `"desc": "Constant plays everywhere; variable is smaller but choppier."`
+- `"tab": ""`
+- `"group": "QUALITY"`
+- `"key": "quality"`
+- `"label": "Quality"`
+- `"desc": "Higher settings look crisper but make larger files"`
+- `"tab": ""`
+- `"group": "QUALITY"`
+- `"key": "codec"`
+- `"label": "Codec"`
+- `"desc": "H.264 plays anywhere; AV1 is crisper but needs a newer GPU."`
+- `"tab": ""`
+- `"group": "ENCODER"`
+- `"key": "encoder"`
+- `"label": "Encoder"`
+- `"desc": "GPU barely loads the CPU; pick CPU if GPU encoding fails."`
+- `"tab": ""`
+- `"group": "ENCODER"`
+- `"key": "cursor"`
+- `"label": "Show the cursor in recordings"`
+- `"desc": "Draws the mouse pointer into the video."`
+
+### SessionPage
+
+- `"tab": ""`
+- `"group": "AT LOGIN"`
+- `"key": "desktop.autostart"`
+- `"label": "Autostart command"`
+- `"desc": "Runs once at login, on top of Ryoku's own autostart."`
+- `"tab": ""`
+- `"group": "ENVIRONMENT"`
+- `"key": "desktop.env"`
+- `"label": "Session variable"`
+- `"desc": "A NAME=value exported into your session at login."`
+
+### UpdatesPage
+
+- `"tab": ""`
+- `"group": "AUTOMATIC CHECKS"`
+- `"key": "update_interval"`
+- `"label": "Automatic checks"`
+- `"desc": "How often the hub checks for updates; off is manual only"`
+
+### WidgetsPage
+
+- `"tab": "clock"`
+- `"group": "WIDGET"`
+- `"key": "clockEnabled"`
+- `"label": "Enabled"`
+- `"desc": "Shows the clock; your settings are kept while off"`
+- `"tab": "clock"`
+- `"group": "WIDGET"`
+- `"key": "clockDesign"`
+- `"label": "Face"`
+- `"desc": "How the time is drawn: digits, analog, flip and more"`
+- `"tab": "clock"`
+- `"group": "WIDGET"`
+- `"key": "clockAccent"`
+- `"label": "Accent"`
+- `"desc": "Palette follows the wallpaper; mono stays grey"`
+- `"tab": "clock"`
+- `"group": "WIDGET"`
+- `"key": "widgetFont"`
+- `"label": "Widget font"`
+- `"desc": "Font for every desktop widget; blank uses Space Grotesk"`
+- `"tab": "clock"`
+- `"group": "TIME & DATE"`
+- `"key": "clock24h"`
+- `"label": "24-hour clock"`
+- `"desc": "Shows 14:30 rather than 2:30 pm on the face"`
+- `"tab": "clock"`
+- `"group": "TIME & DATE"`
+- `"key": "clockSeconds"`
+- `"label": "Show seconds"`
+- `"desc": "Adds seconds to the readout; the face ticks each second"`
+- `"tab": "clock"`
+- `"group": "TIME & DATE"`
+- `"key": "dateShow"`
+- `"label": "Show date"`
+- `"desc": "Adds today's date beside or under the time"`
+- `"tab": "clock"`
+- `"group": "TIME & DATE"`
+- `"key": "dateDesign"`
+- `"label": "Date style"`
+- `"desc": "How the date sits with the time: inline, badge or stacked"`
+- `"tab": "clock"`
+- `"group": "SIZE & SHAPE"`
+- `"key": "clockScale"`
+- `"label": "Size"`
+- `"desc": "Scales the clock; 100% is its designed size"`
+- `"tab": "clock"`
+- `"group": "SIZE & SHAPE"`
+- `"key": "clockBg"`
+- `"label": "Background"`
+- `"desc": "Panel behind the clock; none sits on the wallpaper"`
+- `"tab": "clock"`
+- `"group": "SIZE & SHAPE"`
+- `"key": "clockRadius"`
+- `"label": "Corner radius"`
+- `"desc": "Rounds the panel corners; needs a card or glass background"`
+- `"tab": "clock"`
+- `"group": "SIZE & SHAPE"`
+- `"key": "clockOpacity"`
+- `"label": "Opacity"`
+- `"desc": "Fades the clock; a floor keeps it from vanishing"`
+- `"tab": "clock"`
+- `"group": "PLACEMENT"`
+- `"key": "clockAnchor"`
+- `"label": "Anchor"`
+- `"desc": "Where the clock sits; Auto finds a calm spot, Free X/Y"`
+- `"tab": "clock"`
+- `"group": "PLACEMENT"`
+- `"key": "clockX"`
+- `"label": "X"`
+- `"desc": "Clock's distance from the left edge, in pixels"`
+- `"tab": "clock"`
+- `"group": "PLACEMENT"`
+- `"key": "clockY"`
+- `"label": "Y"`
+- `"desc": "Clock's distance from the top edge, in pixels"`
+- `"tab": "clock"`
+- `"group": "PLACEMENT"`
+- `"key": "clockLocked"`
+- `"label": "Lock on desktop"`
+- `"desc": "Blocks dragging the clock on the desktop"`
+- `"tab": "calendar"`
+- `"group": "WIDGET"`
+- `"key": "calendarEnabled"`
+- `"label": "Enabled"`
+- `"desc": "Shows the calendar; your settings are kept while off"`
+- `"tab": "calendar"`
+- `"group": "WIDGET"`
+- `"key": "calendarStyle"`
+- `"label": "Style"`
+- `"desc": "Glass follows the wallpaper tint; Paper is opaque"`
+- `"tab": "calendar"`
+- `"group": "CALENDAR"`
+- `"key": "calendarWeeks"`
+- `"label": "Minimum weeks"`
+- `"desc": "Fewest week rows; the view grows when a month needs more"`
+- `"tab": "calendar"`
+- `"group": "CALENDAR"`
+- `"key": "calendarWeekNumbers"`
+- `"label": "ISO week numbers"`
+- `"desc": "Adds the week-of-year column left of the grid"`
+- `"tab": "calendar"`
+- `"group": "CALENDAR"`
+- `"key": "calendarHolidayRegion"`
+- `"label": "Holiday region"`
+- `"desc": "Blank uses your locale; else a code like US or US-CA"`
+- `"tab": "calendar"`
+- `"group": "SIZE & SHAPE"`
+- `"key": "calendarScale"`
+- `"label": "Size"`
+- `"desc": "Scales the calendar; 100% is its designed size"`
+- `"tab": "calendar"`
+- `"group": "SIZE & SHAPE"`
+- `"key": "calendarOpacity"`
+- `"label": "Opacity"`
+- `"desc": "Fades the calendar while keeping it readable"`
+- `"tab": "calendar"`
+- `"group": "PLACEMENT"`
+- `"key": "calendarAnchor"`
+- `"label": "Anchor"`
+- `"desc": "Where the calendar sits; Auto finds a calm spot, Free X/Y"`
+- `"tab": "calendar"`
+- `"group": "PLACEMENT"`
+- `"key": "calendarX"`
+- `"label": "X"`
+- `"desc": "Calendar's distance from the left edge, in pixels"`
+- `"tab": "calendar"`
+- `"group": "PLACEMENT"`
+- `"key": "calendarY"`
+- `"label": "Y"`
+- `"desc": "Calendar's distance from the top edge, in pixels"`
+- `"tab": "calendar"`
+- `"group": "PLACEMENT"`
+- `"key": "calendarLocked"`
+- `"label": "Lock on desktop"`
+- `"desc": "Blocks dragging the calendar on the desktop"`
+- `"tab": "music"`
+- `"group": "WIDGET"`
+- `"key": "musicEnabled"`
+- `"label": "Enabled"`
+- `"desc": "Shows the now-playing sheet; settings are kept while off"`
+- `"tab": "music"`
+- `"group": "WIDGET"`
+- `"key": "musicStyle"`
+- `"label": "Style"`
+- `"desc": "Cover wears the album colour; Glass is a frosted pane"`
+- `"tab": "music"`
+- `"group": "WIDGET"`
+- `"key": "musicLyrics"`
+- `"label": "Lyrics"`
+- `"desc": "Shows synced lyrics beside the album when found"`
+- `"tab": "music"`
+- `"group": "WIDGET"`
+- `"key": "musicViz"`
+- `"label": "Visualiser"`
+- `"desc": "Shown when a track has no lyrics: Bars or Wave"`
+- `"tab": "music"`
+- `"group": "WIDGET"`
+- `"key": "musicApp"`
+- `"label": "Music app"`
+- `"desc": "App the corner button opens; blank uses ryotunes"`
+- `"tab": "music"`
+- `"group": "SIZE & SHAPE"`
+- `"key": "musicScale"`
+- `"label": "Size"`
+- `"desc": "Scales the music sheet; 100% is its designed size"`
+- `"tab": "music"`
+- `"group": "SIZE & SHAPE"`
+- `"key": "musicOpacity"`
+- `"label": "Opacity"`
+- `"desc": "Fades the music sheet while keeping it readable"`
+- `"tab": "music"`
+- `"group": "PLACEMENT"`
+- `"key": "musicAnchor"`
+- `"label": "Anchor"`
+- `"desc": "Where the music sheet sits; Auto picks, Free X/Y"`
+- `"tab": "music"`
+- `"group": "PLACEMENT"`
+- `"key": "musicX"`
+- `"label": "X"`
+- `"desc": "Music sheet's distance from the left edge, in pixels"`
+- `"tab": "music"`
+- `"group": "PLACEMENT"`
+- `"key": "musicY"`
+- `"label": "Y"`
+- `"desc": "Music sheet's distance from the top edge, in pixels"`
+- `"tab": "music"`
+- `"group": "PLACEMENT"`
+- `"key": "musicLocked"`
+- `"label": "Lock on desktop"`
+- `"desc": "Blocks dragging the music sheet on the desktop"`
+- `"tab": "aio", "group": "WIDGET", "key": "aioEnabled", "label": "Enabled"`
+- `"desc": "Shows the weather-and-clock card; settings kept while off"`
+- `"tab": "aio", "group": "WIDGET", "key": "aioStyle", "label": "Layout"`
+- `"desc": "Wide is a landscape card; Tall a portrait panel"`
+- `"tab": "aio", "group": "SIZE & SHAPE", "key": "aioScale", "label": "Size"`
+- `"desc": "Scales the card; 100% is its designed size"`
+- `"tab": "aio", "group": "SIZE & SHAPE", "key": "aioOpacity", "label": "Opacity"`
+- `"desc": "Fades the card while keeping it readable"`
+- `"tab": "aio", "group": "PLACEMENT", "key": "aioAnchor", "label": "Anchor"`
+- `"desc": "Where the card sits; Auto finds a calm spot, Free X/Y"`
+- `"tab": "aio", "group": "PLACEMENT", "key": "aioX", "label": "X"`
+- `"desc": "Card's distance from the left edge, in pixels"`
+- `"tab": "aio", "group": "PLACEMENT", "key": "aioY", "label": "Y"`
+- `"desc": "Card's distance from the top edge, in pixels"`
+- `"tab": "aio", "group": "PLACEMENT", "key": "aioLocked", "label": "Lock on desktop"`
+- `"desc": "Blocks dragging the card on the desktop"`
+- `"tab": "stats", "group": "WIDGET", "key": "statsEnabled", "label": "Enabled"`
+- `"desc": "Shows the system-stats panel; settings kept while off"`
+- `"tab": "stats", "group": "SIZE & SHAPE", "key": "statsScale", "label": "Size"`
+- `"desc": "Scales the stats panel; 100% is its designed size"`
+- `"tab": "stats", "group": "SIZE & SHAPE", "key": "statsOpacity", "label": "Opacity"`
+- `"desc": "Fades the stats panel while keeping it readable"`
+- `"tab": "stats", "group": "PLACEMENT", "key": "statsAnchor", "label": "Anchor"`
+- `"desc": "Where the panel sits; Auto finds a calm spot, Free X/Y"`
+- `"tab": "stats", "group": "PLACEMENT", "key": "statsX", "label": "X"`
+- `"desc": "Stats panel's distance from the left edge, in pixels"`
+- `"tab": "stats", "group": "PLACEMENT", "key": "statsY", "label": "Y"`
+- `"desc": "Stats panel's distance from the top edge, in pixels"`
+- `"tab": "stats", "group": "PLACEMENT", "key": "statsLocked", "label": "Lock on desktop"`
+- `"desc": "Blocks dragging the stats panel on the desktop"`
+- `"tab": "weather", "group": "WIDGET", "key": "weatherEnabled", "label": "Enabled"`
+- `"desc": "Shows the weather; your settings are kept while off"`
+- `"tab": "weather", "group": "WIDGET", "key": "weatherDesign", "label": "Layout"`
+- `"desc": "Compact is glyph, temp and city; Full adds much more"`
+- `"tab": "weather", "group": "SIZE & SHAPE", "key": "weatherScale", "label": "Size"`
+- `"desc": "Scales the weather widget; 100% is its designed size"`
+- `"tab": "weather", "group": "SIZE & SHAPE", "key": "weatherOpacity", "label": "Opacity"`
+- `"desc": "Fades the weather widget while keeping it readable"`
+- `"tab": "weather", "group": "PLACEMENT", "key": "weatherAnchor", "label": "Anchor"`
+- `"desc": "Where weather sits; Auto finds a calm spot, Free X/Y"`
+- `"tab": "weather", "group": "PLACEMENT", "key": "weatherX", "label": "X"`
+- `"desc": "Weather's distance from the left edge, in pixels"`
+- `"tab": "weather", "group": "PLACEMENT", "key": "weatherY", "label": "Y"`
+- `"desc": "Weather's distance from the top edge, in pixels"`
+- `"tab": "weather", "group": "PLACEMENT", "key": "weatherLocked", "label": "Lock on desktop"`
+- `"desc": "Blocks dragging weather on the desktop"`
+- `"tab": "notes", "group": "WIDGET", "key": "notesEnabled", "label": "Enabled"`
+- `"desc": "Shows the scratch pad; the note is kept while off"`
+- `"tab": "notes", "group": "SIZE & SHAPE", "key": "notesWidth", "label": "Width"`
+- `"desc": "Pad width in pixels, before Size scales it"`
+- `"tab": "notes", "group": "SIZE & SHAPE", "key": "notesHeight", "label": "Height"`
+- `"desc": "Pad height in pixels, before Size scales it"`
+- `"tab": "notes", "group": "SIZE & SHAPE", "key": "notesScale", "label": "Size"`
+- `"desc": "Scales the pad's width, height and text together"`
+- `"tab": "notes", "group": "SIZE & SHAPE", "key": "notesOpacity", "label": "Opacity"`
+- `"desc": "Fades the pad while keeping it readable"`
+- `"tab": "notes", "group": "PLACEMENT", "key": "notesAnchor", "label": "Anchor"`
+- `"desc": "Where the pad sits; Auto finds a calm spot, Free X/Y"`
+- `"tab": "notes", "group": "PLACEMENT", "key": "notesX", "label": "X"`
+- `"desc": "Notes pad's distance from the left edge, in pixels"`
+- `"tab": "notes", "group": "PLACEMENT", "key": "notesY", "label": "Y"`
+- `"desc": "Notes pad's distance from the top edge, in pixels"`
+- `"tab": "notes", "group": "PLACEMENT", "key": "notesLocked", "label": "Lock on desktop"`
+- `"desc": "Blocks dragging the pad on the desktop"`
+
+### WindowRulesPage
+
+- `"tab": ""`
+- `"group": "RULES"`
+- `"key": "desktop.windowRules"`
+- `"label": "Rule editor"`
+- `"desc": "Match a window by class or title, then apply one action"`
+
+### WindowSettings
+
+- `"tab": "Layout"`
+- `"group": "TILING"`
+- `"key": "desktop.appearance.layout"`
+- `"label": "Tiling layout"`
+- `"desc": "Binary splits, master and stack, or a scrolling strip"`
+- `"tab": "Layout"`
+- `"group": "TILING"`
+- `"label": ""`
+- `"desc": ""`
+- `"tab": "Layout"`
+- `"group": "GAPS"`
+- `"key": "desktop.appearance.gapsIn"`
+- `"label": "Inner (between windows)"`
+- `"desc": "Space between neighbouring tiled windows"`
+- `"tab": "Layout"`
+- `"group": "GAPS"`
+- `"key": "desktop.appearance.gapsOut"`
+- `"label": "Outer (screen edge)"`
+- `"desc": "Space between windows and the screen edge"`
+- `"tab": "Layout"`
+- `"group": "GAPS"`
+- `"key": "desktop.appearance.gapsWorkspaces"`
+- `"label": "Workspace gaps"`
+- `"desc": "Extra gap between workspaces while swiping between them"`
+- `"tab": "Layout"`
+- `"group": "BEHAVIOUR"`
+- `"key": "desktop.windows.tameMaximizeOnOpen"`
+- `"label": "Tame apps that open maximised"`
+- `"desc": "Open maximised apps as a windowed tile inside your gaps"`
+- `"tab": "Layout"`
+- `"group": "BEHAVIOUR"`
+- `"key": "desktop.appearance.resizeOnBorder"`
+- `"label": "Drag to resize at window edges"`
+- `"desc": "Grab a window's edge with the mouse to resize it"`
+- `"tab": "Layout"`
+- `"group": "BEHAVIOUR"`
+- `"key": "desktop.appearance.snapEnabled"`
+- `"label": "Snap floating windows"`
+- `"desc": "Floating windows stick to edges and other windows"`
+- `"tab": "Layout"`
+- `"group": "BEHAVIOUR"`
+- `"key": "desktop.appearance.extendBorderGrab"`
+- `"label": "Border grab area"`
+- `"desc": "How many pixels past the border still grab it for resizing"`
+- `"tab": "Layout"`
+- `"group": "BEHAVIOUR"`
+- `"key": "desktop.appearance.hoverIconOnBorder"`
+- `"label": "Resize cursor on border"`
+- `"desc": "Show the resize cursor when hovering a window border"`
+- `"tab": "Layout"`
+- `"group": "BEHAVIOUR"`
+- `"key": "desktop.appearance.noFocusFallback"`
+- `"label": "No focus fallback"`
+- `"desc": "On close, don't refocus the window under the cursor"`
+- `"tab": "Layout"`
+- `"group": "BEHAVIOUR"`
+- `"key": "desktop.appearance.resizeCorner"`
+- `"label": "Resize corner"`
+- `"desc": "Lock resizing to one corner; 0 off, 1-4 pick it"`
+- `"tab": "Look"`
+- `"group": "SHAPE"`
+- `"key": "desktop.appearance.rounding"`
+- `"label": "Corner radius"`
+- `"desc": "How rounded window corners are, 0 keeps them square"`
+- `"tab": "Look"`
+- `"group": "SHAPE"`
+- `"key": "desktop.appearance.roundingPower"`
+- `"label": "Corner softness"`
+- `"desc": "2 is a circle; higher flattens toward square"`
+- `"tab": "Look"`
+- `"group": "OPACITY"`
+- `"key": "desktop.appearance.activeOpacity"`
+- `"label": "Active"`
+- `"desc": "Solidity of the focused window; under 100% shows through"`
+- `"tab": "Look"`
+- `"group": "OPACITY"`
+- `"key": "desktop.appearance.inactiveOpacity"`
+- `"label": "Inactive"`
+- `"desc": "How solid unfocused windows are drawn"`
+- `"tab": "Look"`
+- `"group": "OPACITY"`
+- `"key": "desktop.appearance.dimInactive"`
+- `"label": "Dim inactive windows"`
+- `"desc": "Darkens every window except the focused one"`
+- `"tab": "Look"`
+- `"group": "OPACITY"`
+- `"key": "desktop.appearance.dimStrength"`
+- `"label": "Dim strength"`
+- `"desc": "How dark unfocused windows get while dimming is on"`
+- `"tab": "Look"`
+- `"group": "OPACITY"`
+- `"key": "desktop.appearance.fullscreenOpacity"`
+- `"label": "Fullscreen opacity"`
+- `"desc": "Opacity of a window while it is fullscreen"`
+- `"tab": "Look"`
+- `"group": "OPACITY"`
+- `"key": "desktop.appearance.dimSpecial"`
+- `"label": "Dim special workspaces"`
+- `"desc": "How much the scratchpad workspace dims the desktop"`
+- `"tab": "Look"`
+- `"group": "OPACITY"`
+- `"key": "desktop.appearance.dimAround"`
+- `"label": "Dim around floating"`
+- `"desc": "How strongly a dim-around window darkens the rest"`
+- `"tab": "Look"`
+- `"group": "OPACITY"`
+- `"key": "desktop.appearance.dimModal"`
+- `"label": "Dim modal dialogs"`
+- `"desc": "Darken the parent while a modal dialog is open"`
+- `"tab": "Look"`
+- `"group": "BLUR"`
+- `"key": "desktop.appearance.blurEnabled"`
+- `"label": "Enabled"`
+- `"desc": "Frosted-glass blur behind translucent windows and the shell"`
+- `"tab": "Look"`
+- `"group": "BLUR"`
+- `"key": "desktop.appearance.blurSize"`
+- `"label": "Size"`
+- `"desc": "How far each pass spreads; pair with passes"`
+- `"tab": "Look"`
+- `"group": "BLUR"`
+- `"key": "desktop.appearance.blurPasses"`
+- `"label": "Passes"`
+- `"desc": "Times the blur repeats, more is stronger but costs GPU time"`
+- `"tab": "Look"`
+- `"group": "BLUR"`
+- `"key": "desktop.appearance.blurXray"`
+- `"label": "X-ray (blur shows the wallpaper)"`
+- `"desc": "Ignores windows beneath when blurring, lighter on the GPU"`
+- `"tab": "Look"`
+- `"group": "BLUR"`
+- `"key": "desktop.appearance.blurVibrancy"`
+- `"label": "Vibrancy"`
+- `"desc": "Boosts colour saturation seen through the blur"`
+- `"tab": "Look"`
+- `"group": "BLUR"`
+- `"key": "desktop.appearance.blurNoise"`
+- `"label": "Noise"`
+- `"desc": "Grain over blurred areas, hides gradient banding"`
+- `"tab": "Look"`
+- `"group": "BLUR"`
+- `"key": "desktop.appearance.blurContrast"`
+- `"label": "Blur contrast"`
+- `"desc": "Contrast of the blurred backdrop"`
+- `"tab": "Look"`
+- `"group": "BLUR"`
+- `"key": "desktop.appearance.blurBrightness"`
+- `"label": "Blur brightness"`
+- `"desc": "Brightness of the blurred backdrop"`
+- `"tab": "Look"`
+- `"group": "BLUR"`
+- `"key": "desktop.appearance.blurSpecial"`
+- `"label": "Blur special workspace"`
+- `"desc": "Also blur behind the special (scratchpad) workspace"`
+- `"tab": "Look"`
+- `"group": "BLUR"`
+- `"key": "desktop.appearance.blurPopups"`
+- `"label": "Blur popups"`
+- `"desc": "Blur behind popups and menus, not just windows"`
+- `"tab": "Look"`
+- `"group": "BLUR"`
+- `"key": "desktop.appearance.blurIgnoreOpacity"`
+- `"label": "Blur ignores opacity"`
+- `"desc": "Blur the backdrop even under fully transparent regions"`
+- `"tab": "Look"`
+- `"group": "BLUR"`
+- `"key": "desktop.appearance.blurNewOptimizations"`
+- `"label": "Blur optimizations"`
+- `"desc": "Cache blur for speed; off only if you see artifacts"`
+- `"tab": "Look"`
+- `"group": "BLUR"`
+- `"key": "desktop.appearance.blurVibrancyDarkness"`
+- `"label": "Blur vibrancy darkness"`
+- `"desc": "How much vibrancy affects the dark parts of the blur"`
+- `"tab": "Look"`
+- `"group": "SHADOWS"`
+- `"key": "desktop.appearance.shadowEnabled"`
+- `"label": "Window shadows"`
+- `"desc": "A soft drop shadow under every window"`
+- `"tab": "Look"`
+- `"group": "SHADOWS"`
+- `"key": "desktop.appearance.shadowRange"`
+- `"label": "Shadow range"`
+- `"desc": "How far the shadow spreads from the window"`
+- `"tab": "Look"`
+- `"group": "SHADOWS"`
+- `"key": "desktop.appearance.shadowSpread"`
+- `"label": "Spread"`
+- `"desc": "Grows the shadow outward before its soft edge begins"`
+- `"tab": "Look"`
+- `"group": "SHADOWS"`
+- `"key": "desktop.appearance.shadowOffsetX"`
+- `"label": "Horizontal offset"`
+- `"desc": "Shifts the shadow sideways, as if lit from one side"`
+- `"tab": "Look"`
+- `"group": "SHADOWS"`
+- `"key": "desktop.appearance.shadowOffsetY"`
+- `"label": "Vertical offset"`
+- `"desc": "Shifts the shadow up or down; positive is below"`
+- `"tab": "Look"`
+- `"group": "SHADOWS"`
+- `"key": "desktop.appearance.shadowPower"`
+- `"label": "Shadow sharpness"`
+- `"desc": "Higher pulls the shadow in tight, lower leaves a wide haze"`
+- `"tab": "Look"`
+- `"group": "SHADOWS"`
+- `"key": "desktop.appearance.shadowSharp"`
+- `"label": "Sharp shadow"`
+- `"desc": "Draw the shadow with hard edges instead of a soft falloff"`
+- `"tab": "Look"`
+- `"group": "SHADOWS"`
+- `"key": "desktop.appearance.shadowScale"`
+- `"label": "Shadow scale"`
+- `"desc": "Scale of the drop shadow, 1 matches the window"`
+- `"tab": "Look"`
+- `"group": "SHADOWS"`
+- `"key": "desktop.appearance.shadowColor"`
+- `"label": "Shadow color"`
+- `"desc": ""`
+- `"tab": "Look"`
+- `"group": "GLOW"`
+- `"key": "desktop.appearance.glowEnabled"`
+- `"label": "Glow behind windows"`
+- `"desc": "A coloured halo cast behind every window"`
+- `"tab": "Look"`
+- `"group": "GLOW"`
+- `"key": "desktop.appearance.glowRange"`
+- `"label": "Range"`
+- `"desc": "How far the halo reaches past the window edge"`
+- `"tab": "Look"`
+- `"group": "GLOW"`
+- `"key": "desktop.appearance.glowColor"`
+- `"label": "Colour"`
+- `"desc": "The halo's tint, picked here, not taken from the theme"`
+- `"tab": "Borders"`
+- `"group": "THICKNESS"`
+- `"key": "desktop.appearance.borderSize"`
+- `"label": "Border thickness"`
+- `"desc": "Width of the frame around every window, 0 removes it"`
+- `"tab": "Borders"`
+- `"group": "THICKNESS"`
+- `"key": "desktop.appearance.borderPartOfWindow"`
+- `"label": "Border inside window"`
+- `"desc": "Count the border as part of the window size"`
+- `"tab": "Borders"`
+- `"group": "COLOUR"`
+- `"key": "desktop.appearance.borderFollowsPalette"`
+- `"label": "Follow the wallpaper"`
+- `"desc": "Colour the border from the wallpaper palette; off keeps the colours below"`
+- `"tab": "Borders"`
+- `"group": "COLOUR"`
+- `"key": "desktop.appearance.activeBorder"`
+- `"label": "Active border"`
+- `"desc": "Colour of the frame around the window you are using"`
+- `"tab": "Borders"`
+- `"group": "COLOUR"`
+- `"key": "desktop.appearance.inactiveBorder"`
+- `"label": "Inactive border"`
+- `"desc": "Colour of the frame around windows you are not using"`
+- `"tab": "Borders"`
+- `"group": "ANIMATED"`
+- `"key": "desktop.appearance.animatedBorder"`
+- `"label": "Rotating gradient border"`
+- `"desc": "Sweeps accent colours around the frame; needs a border"`
+- `"tab": "Borders"`
+- `"group": "ANIMATED"`
+- `"key": "desktop.appearance.borderAngleSpeed"`
+- `"label": "Rotation speed"`
+- `"desc": "How fast the gradient circles the window"`
+- `"tab": "Motion"`
+- `"group": "MOTION"`
+- `"key": "desktop.appearance.animations"`
+- `"label": "Animations"`
+- `"desc": "Motion for open, close, move, workspaces; off snaps"`
+- `"tab": "Motion"`
+- `"group": "MOTION"`
+- `"key": "desktop.appearance.wobblyWindows"`
+- `"label": "Wobbly windows"`
+- `"desc": "Dragged windows overshoot and spring back"`
+- `"tab": "Motion"`
+- `"group": "MOTION"`
+- `"key": "desktop.appearance.windowStyle"`
+- `"label": "Open / close"`
+- `"desc": "Open and close motion: pop, slide, or GNOME"`
+
+## Modules visibles du shell
+
+- bar
+- bar/barstyles
+- bar/framebars
+- bar/panel
+- bar/popouts
+- capture
+- clipboard
+- confirm
+- desktop
+- desktop/Singletons
+- desktop/aio
+- desktop/calendar
+- desktop/clock
+- desktop/music
+- desktop/notes
+- desktop/stats
+- desktop/weather
+- dock
+- launcher
+- launcher/qa
+- launcher/shared
+- launcher/variants
+- notifications
+- osd
+- overview
+- overview/Singletons
+- stage
+- stage/Singletons
+- visualizer
+- visualizer/Singletons
+- wallpaper
+- wallpaper/Singletons
+- wallpaper/skwd
+
+## Backends du Hub
+
+- apps.go
+- aura.go
+- clipboard.go
+- config.go
+- cputune.go
+- daemonclient.go
+- desktop.go
+- desktop_enum.go
+- fastfetch.go
+- gpu.go
+- gpuapply.go
+- gpudomain.go
+- gpuhook.go
+- gpumode.go
+- gpumux.go
+- gpupreset.go
+- gputune.go
+- gpuvm.go
+- hwcaps.go
+- import.go
+- import_apply.go
+- import_parse.go
+- import_types.go
+- import_undo.go
+- keybinds.go
+- lighting.go
+- lightingfx.go
+- lock.go
+- main.go
+- matugen.go
+- openrgb.go
+- outputs.go
+- palettebridge.go
+- profile.go
+- qmk.go
+- reloadcover.go
+- rice.go
+- ricepublish.go
+- schemes.go
+- sharestatus.go
+- shellpref.go
+- voxtype.go
+- wm.go
+
+## Sous-systèmes livrés
+
+- apps
+- apps/bash
+- apps/btop
+- apps/fastfetch
+- apps/fish
+- apps/ghostty
+- apps/hyprland-preview-share-picker
+- apps/kitty
+- apps/nautilus
+- apps/npm
+- apps/nvim
+- apps/pip
+- apps/ryostore
+- apps/ryovm
+- apps/starship
+- apps/terminal-shell
+- apps/tools
+- apps/wireplumber
+- apps/yazi
+- apps/zsh
+- assets
+- assets/brand
+- assets/ryodecors
+- assets/wallpapers
+- browser
+- browser/src
+- cli
+- cli/cmd
+- cli/internal
+- cli/plugin_template
+- cli/systemd
+- cli/vendor
+- hub
+- hub/backend
+- hub/quickshell
+- hyprland
+- hyprland/modules
+- hyprland/plugins
+- hyprland/scripts
+- hyprland/shaders
+- i18n
+- i18n/catalog
+- i18n/tools
+- lockscreen
+- lockscreen/qylock
+- lockscreen/sddm
+- niri
+- palette-bridge
+- palette-bridge/packaging
+- palette-bridge/spicetify
+- palette-bridge/templates
+- palette-bridge/vesktop
+- palette-bridge/zen-extension
+- rashin
+- rashin/backend
+- rashin/skills
+- rashin/systemd
+- shell
+- shell/bin
+- shell/environment.d
+- shell/framebars
+- shell/gtk-3.0
+- shell/gtk-4.0
+- shell/ipc
+- shell/livewall
+- shell/matugen
+- shell/plugin
+- shell/qt6ct
+- shell/quickshell
+- shell/ryogami
+- shell/scripts
+- shell/systemd
+- ui
+- ui/Singletons
+- ui/art
+- ui/lib
+- ui/shaders
+- wm
+- wm/hyprland
+- wm/niri
+- wm/vendor

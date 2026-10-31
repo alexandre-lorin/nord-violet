@@ -1,0 +1,91 @@
+/* ~/.config/waybar/style.css */
+@import "colors.css";
+
+* {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 13px;
+    font-weight: 600;
+    min-height: 0;
+}
+
+window#waybar {
+    /* background-color piloté par opacity.css (généré par wbctl.sh),
+       importé en bas de ce fichier -> ne pas remettre background-color
+       ici, ce serait écrasé de toute façon et ça créerait deux sources
+       de vérité pour la même valeur. */
+    color: @fg0;
+    border: 1px solid alpha(@accent, 0.25);
+    border-radius: 9px;
+    /* v16 : léger glow accent en bordure, seule "brillance" de la barre
+       (cf. mockup nord-violet-target) — pas de backdrop-filter, GTK CSS
+       ne le supporte pas, donc pas de vrai flou verre ici. */
+    box-shadow: 0 0 18px alpha(@accent, 0.06);
+}
+
+/* Ex-#workspaces (module natif hyprland/workspaces, remplacé par
+   custom/workspaces-hdmi et custom/workspaces-edp — un module texte
+   par écran, cf. config.jsonc + workspaces-dots.sh). Un module custom
+   est un simple label, pas des boutons : pas d'équivalent à
+   "#workspaces button.active" ici, la couleur du point actif est
+   posée directement en pango markup par le script. */
+#custom-workspaces-hdmi,
+#custom-workspaces-edp {
+    background: transparent;
+    padding: 0 6px 0 10px;
+    margin: 4px 2px;
+    color: @fg2;
+    font-size: 10px;
+    letter-spacing: 3px;
+}
+
+/* v16 : l'horloge devient l'unique élément "qui brille" au centre de la
+   barre, à l'image du point de workspace actif — même logique que
+   Theme.qml côté Control Center (l'accent seulement sur ce qui est
+   actif/sélection/focus, jamais en fond plein). */
+#clock {
+    color: @accent;
+    font-weight: 700;
+    padding: 0 12px;
+    text-shadow: 0 0 8px alpha(@accent, 0.45);
+}
+
+/* v15 : radius 6px -> 8px, aligné sur Theme.radiusSmall côté popup
+   (même langage visuel des deux côtés). Hover ajouté sur #custom-nvcc
+   uniquement : c'est le seul module ici qui est vraiment cliquable
+   (ouvre le Control Center), les autres sont juste des indicateurs. */
+#pulseaudio,
+#network,
+#battery,
+#tray,
+#custom-nvcc {
+    padding: 0 10px;
+    margin: 4px 2px;
+    color: @fg1;
+    background: alpha(@bg2, 0.6);
+    border-radius: 8px;
+    transition: background 120ms ease, color 120ms ease;
+}
+
+#custom-nvcc:hover {
+    background: alpha(@accent, 0.16);
+    color: @fg0;
+}
+
+#battery.warning {
+    color: @accent;
+}
+
+#battery.critical {
+    color: #bf616a;
+}
+
+#tray {
+    background: transparent;
+}
+
+/* Doit rester en dernier : opacity.css ne contient que la règle
+   window#waybar { background-color: ... }, régénérée par wbctl.sh à
+   chaque changement d'opacité depuis le control center. Importé ici
+   (et non en haut comme colors.css) pour gagner la cascade sur la
+   règle window#waybar déclarée plus haut dans ce fichier. */
+@import "opacity.css";

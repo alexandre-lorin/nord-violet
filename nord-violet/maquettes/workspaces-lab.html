@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nord Violet — Trois essais de bureaux</title>
+<style>
+:root{color-scheme:dark;--accent:#9b7cff;--bg:#0b0d12;--bar:#14171f;--muted:#858b9a;--line:#292d39}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:#ececf3;font:13px/1.5 "JetBrains Mono",monospace}main{max-width:1080px;margin:0 auto;padding:36px 24px}h1{font-size:22px;font-weight:500;margin:0 0 8px}p{color:var(--muted);margin:0 0 20px}.toolbar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:24px 0 30px}.control{border:1px solid var(--line);border-radius:6px;padding:8px 12px;color:#d8dbe6;background:#161922;cursor:pointer;font:inherit}.control:hover{border-color:var(--accent)}button:focus-visible{outline:2px solid var(--accent);outline-offset:3px}article{margin:0 0 32px}h2{font-size:14px;font-weight:500;margin:0 0 6px}article p{font-size:12px;margin-bottom:12px}.preview{padding:18px 8px 8px;background:#101218;border:1px solid var(--line);border-radius:10px;overflow:hidden}.app{height:62px;border:2px solid #9b7cff66;border-radius:9px;padding:12px 14px;color:#73798a;font-size:10px;margin-bottom:8px}.bar{height:34px;border:1px solid #9b7cff40;border-radius:9px;background:var(--bar);display:flex;align-items:center;padding:0 12px;position:relative}.time{position:absolute;left:50%;transform:translateX(-50%);color:#b39aff;font-size:12px}.status{margin-left:auto;color:#959aaa;font-size:11px;display:flex;gap:8px}.status span{border-radius:6px;background:#ffffff06;padding:2px 7px}.workspaces{position:relative;height:32px;display:flex;align-items:center;flex:none}.workspace{position:relative;width:24px;height:32px;display:flex;align-items:center;justify-content:center;background:none;border:0;padding:0;cursor:pointer;z-index:2}.dot{width:5px;height:5px;border-radius:50%;background:#646b7d;transition:opacity 180ms,color 180ms,background 180ms}.workspace:hover .dot{background:#a6aab7}.workspace[aria-pressed=true] .dot{opacity:0}.capsule{pointer-events:none;position:absolute;left:3px;top:13px;width:18px;height:5px;border-radius:99px;background:var(--accent);transform:translateX(calc(var(--active,0)*24px));transition:transform 260ms cubic-bezier(.25,.8,.25,1);z-index:3}
+/* B: the selected dot itself widens; neighbours slide to make room. */
+.morph{gap:14px;padding:0 3px}.morph .workspace{width:5px;transition:width 260ms cubic-bezier(.25,.8,.25,1)}.morph .workspace[aria-pressed=true]{width:18px}.morph .dot{width:100%;height:5px;flex:none;border-radius:99px;transition:background 180ms}.morph .workspace[aria-pressed=true] .dot{opacity:1;background:var(--accent)}
+/* C: original hollow dots, tighter capsule, fixed centres. */
+.outline .dot{background:transparent;border:1px solid #646b7d;width:5px;height:5px}.outline .capsule{width:14px;height:5px;left:5px}.outline .workspace:hover .dot{border-color:#b6bbc9;background:transparent}
+.zoom .bar{height:68px;padding:0 24px}.zoom .workspaces{transform:scale(2);transform-origin:left center;margin-right:120px}.zoom .time{font-size:20px}.zoom .status{font-size:16px}.zoom .status span{padding:4px 10px}.note{font-size:11px;color:#737989;margin-top:28px}@media(max-width:600px){main{padding:24px 12px}.status span:not(:last-child){display:none}.zoom .status{display:none}.zoom .time{left:auto;right:10px;transform:none}}@media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important}}
+</style>
+</head>
+<body>
+<main>
+<h1>Bureaux — trois propositions</h1>
+<p>Petits points au repos, capsule violette pour le bureau actif. Cliquez sur les points ou utilisez les flèches une fois un point sélectionné.</p>
+<div class="toolbar"><button class="control" id="play" aria-pressed="false">Lire l’animation</button><button class="control" id="zoom" aria-pressed="false">Agrandir ×2</button><span id="state" aria-live="polite">Bureau 1 / 5</span></div>
+<article><h2>A — Capsule qui glisse</h2><p>Les centres restent fixes. Une capsule de 18 × 5 px se déplace sur les points, sans déplacer ses voisins.</p><div class="preview"><div class="app">APPLICATION · marges alignées à 8 px</div><div class="bar"><div class="workspaces sliding" data-kind="slide"></div><span class="time">22:48</span><div class="status"><span>♪ 45%</span><span>80%</span><span>CC</span></div></div></div></article>
+<article><h2>B — Point qui s’allonge</h2><p>Le point actif s’étire en capsule. Les autres points se décalent doucement pour lui laisser la place.</p><div class="preview"><div class="app">APPLICATION · marges alignées à 8 px</div><div class="bar"><div class="workspaces morph" data-kind="morph"></div><span class="time">22:48</span><div class="status"><span>♪ 45%</span><span>80%</span><span>CC</span></div></div></div></article>
+<article><h2>C — Points creux, capsule courte</h2><p>Proche des points d’origine : anneaux discrets, capsule de 14 × 5 px, glissement horizontal sans changement de hauteur.</p><div class="preview"><div class="app">APPLICATION · marges alignées à 8 px</div><div class="bar"><div class="workspaces outline" data-kind="slide"></div><span class="time">22:48</span><div class="status"><span>♪ 45%</span><span>80%</span><span>CC</span></div></div></div></article>
+<p class="note">Maquettes uniquement : aucune modification de votre Waybar. Taille réelle par défaut ; ×2 pour examiner les détails. A correspond le plus directement au glissement de votre dessin ; B à l’idée d’un point qui s’étire.</p>
+</main>
+<script>
+const ribbons=[...document.querySelectorAll('.workspaces')];
+let active=0, timer=null, direction=1;
+function select(index){active=(index+5)%5;for(const ribbon of ribbons){ribbon.style.setProperty('--active',active);for(const [i,button] of [...ribbon.querySelectorAll('button')].entries()){button.setAttribute('aria-pressed',String(i===active));button.tabIndex=i===active?0:-1}}document.querySelector('#state').textContent=`Bureau ${active+1} / 5`}
+function stop(){clearInterval(timer);timer=null;const button=document.querySelector('#play');button.textContent='Lire l’animation';button.setAttribute('aria-pressed','false')}
+for(const ribbon of ribbons){for(let i=0;i<5;i++){const button=document.createElement('button');button.className='workspace';button.setAttribute('aria-label',`Bureau ${i+1}`);button.innerHTML='<span class="dot"></span>';button.addEventListener('click',()=>{stop();select(i)});button.addEventListener('keydown',event=>{let next=i;if(event.key==='ArrowRight')next=(i+1)%5;else if(event.key==='ArrowLeft')next=(i+4)%5;else if(event.key==='Home')next=0;else if(event.key==='End')next=4;else return;event.preventDefault();stop();select(next);ribbon.querySelectorAll('button')[next].focus()});ribbon.append(button)}if(ribbon.dataset.kind==='slide'){const capsule=document.createElement('span');capsule.className='capsule';ribbon.append(capsule)}}
+document.querySelector('#play').addEventListener('click',()=>{if(timer){stop();return}const button=document.querySelector('#play');button.textContent='Pause';button.setAttribute('aria-pressed','true');timer=setInterval(()=>{if(active===4)direction=-1;if(active===0)direction=1;select(active+direction)},1100)});
+document.querySelector('#zoom').addEventListener('click',event=>{const enabled=document.body.classList.toggle('zoom');event.currentTarget.setAttribute('aria-pressed',String(enabled));event.currentTarget.textContent=enabled?'Taille réelle':'Agrandir ×2'});
+select(0);
+</script>
+</body>
+</html>

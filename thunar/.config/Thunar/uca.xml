@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+<action>
+	<icon>utilities-terminal</icon>
+	<name>Ouvrir un terminal ici</name>
+	<submenu></submenu>
+	<unique-id>1786266842031585-1</unique-id>
+	<command>exo-open --working-directory %f --launch TerminalEmulator</command>
+	<description>Ouvrir un terminal dans ce dossier</description>
+	<range></range>
+	<patterns>*</patterns>
+	<startup-notify/>
+	<directories/>
+</action>
+<action>
+  <icon>accessories-text-editor</icon>
+  <name>Ouvrir dans Zed</name>
+  <unique-id>nord-violet-zed-20261005</unique-id>
+  <command>zeditor %F</command>
+  <description>Modifier les fichiers ou ouvrir le dossier dans Zed</description>
+  <patterns>*</patterns>
+  <directories/><text-files/><other-files/>
+</action>
+<action>
+  <icon>utilities-terminal</icon>
+  <name>Modifier dans Neovim</name>
+  <unique-id>nord-violet-neovim-20261005</unique-id>
+  <command>alacritty -e nvim -- %F</command>
+  <description>Modifier les fichiers dans Neovim, dans un terminal dédié</description>
+  <patterns>*</patterns>
+  <text-files/><other-files/>
+</action>
+<action>
+  <icon>system-file-manager</icon>
+  <name>Parcourir avec Yazi</name>
+  <unique-id>nord-violet-yazi-20261005</unique-id>
+  <command>alacritty --working-directory %f -e yazi %f</command>
+  <description>Ouvrir ce dossier dans Yazi</description>
+  <patterns>*</patterns>
+  <directories/>
+</action>
+</actions>

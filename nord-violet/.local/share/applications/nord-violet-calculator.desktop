@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Calculatrice Nord Violet
+Comment=Calculatrice scientifique terminal : Lambert W, Gamma et variables
+Exec=/home/toubi/.local/bin/calc
+Icon=accessories-calculator
+Terminal=false
+Categories=Utility;Calculator;
+Keywords=calculatrice;calculator;scientifique;Lambert;Gamma;

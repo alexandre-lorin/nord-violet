@@ -1,0 +1,70 @@
+// ~/.config/waybar/modules-common.jsonc
+//
+// Modules partagés entre les deux barres définies dans config.jsonc
+// (une par écran). Inclus via "include" pour éviter de dupliquer
+// horloge/audio/réseau/batterie/tray dans les deux blocs — seuls
+// "output" et le module de workspace (par nature spécifique à
+// l'écran) diffèrent entre les deux.
+{
+    "reload_style_on_change": true,
+    "layer": "top",
+    "position": "bottom",
+    "height": 34,
+    "spacing": 4,
+    "margin-bottom": 8,
+    "margin-left": 8,
+    "margin-right": 8,
+    "modules-center": ["clock"],
+    "modules-right": ["custom/focus", "pulseaudio", "network", "battery", "custom/nvcc"],
+    "custom/focus": {
+        "exec": "python3 ~/.config/quickshell/nord-violet-cc/scripts/focus-waybar.py",
+        "return-type": "json",
+        "interval": 1,
+        "on-click": "~/.config/quickshell/nord-violet-cc/scripts/focusctl.sh pause-toggle",
+        "on-click-right": "~/.config/quickshell/nord-violet-cc/scripts/focusctl.sh cancel",
+        "on-click-middle": "qs -c nord-violet-cc ipc call settings page profiles"
+    },
+    "clock": {
+        "format": "{:%H:%M}",
+        // Survol B et calendrier A fournis par CalendarHub (Quickshell).
+        "tooltip": false
+    },
+    "pulseaudio": {
+        "format": "󰕾 {volume}%",
+        "format-bluetooth": "󰕾 {volume}%",
+        "format-muted": "󰝟 muet",
+        "scroll-step": 1,
+        "max-volume": 100,
+        // Le clic gauche coupe/rétablit la sortie ; le clic molette ouvre
+        // le volet audio Nord Violet ; le clic droit garde pavucontrol.
+        "tooltip": false,
+        "on-click": "python3 ~/.config/quickshell/nord-violet-cc/scripts/audio-devices.py toggle-mute",
+        "on-click-right": "pavucontrol",
+        "on-click-middle": "~/.config/waybar/flyout-trigger.sh audio"
+    },
+    "network": {
+        "format-wifi": "󰖩 {signalStrength}%",
+        "format-ethernet": "LAN",
+        "format-disconnected": "󰖪 déconnecté",
+        "tooltip-format": "{ifname} · {essid}\nClic : panneau Wi-Fi · molette / clic droit : réglages",
+        "on-click": "~/.config/waybar/flyout-trigger.sh wifi",
+        "on-click-middle": "qs -c nord-violet-cc ipc call settings page connections",
+        "on-click-right": "qs -c nord-violet-cc ipc call settings page connections"
+    },
+    "battery": {
+        "format": "󰁹 {capacity}%",
+        "format-charging": "󰂄 {capacity}%",
+        "states": {
+            "warning": 20,
+            "critical": 10
+        }
+    },
+    "tray": {
+        "spacing": 8
+    },
+    "custom/nvcc": {
+        "format": "CC",
+        "tooltip-format": "Control Center",
+        "on-click": "qs -c nord-violet-cc ipc call cc toggle"
+    }
+}

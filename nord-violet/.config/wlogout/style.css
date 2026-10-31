@@ -1,0 +1,34 @@
+/* Nord Violet — typographique, mat, accent limité au focus et au survol. */
+* {
+    font-family: "Inter", sans-serif;
+    background-image: none;
+    box-shadow: none;
+    text-shadow: none;
+}
+window {
+    background-color: rgba(11, 11, 16, 0.93);
+}
+button {
+    color: #b8b8c2;
+    background-color: #121219;
+    border: 1px solid #24242d;
+    border-radius: 18px;
+    font-size: 15px;
+    font-weight: 500;
+    /* wlogout aligne ses labels en bas : cette réserve les recentre. */
+    padding: 18px 12px 56px;
+    outline: none;
+    transition: background-color 120ms ease, color 120ms ease, border-color 120ms ease;
+}
+button label {
+    padding: 0;
+}
+button:focus, button:hover {
+    color: #f4f4f6;
+    background-color: #181821;
+    /* Valeur synchronisée par accentctl.sh. */
+    border-color: #9b7cff;
+}
+button:active {
+    background-color: #24242d;
+}

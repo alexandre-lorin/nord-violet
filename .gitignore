@@ -1,0 +1,20 @@
+paru/
+backup-gtk-*/
+
+# Local-only data excluded from this source publication
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.keystore
+*.jks
+*.sqlite*
+*.db
+__pycache__/
+.venv*/
+node_modules/
+**/target/
+.runtime/
+output/
+models/

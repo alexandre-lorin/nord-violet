@@ -1,0 +1,25 @@
+[mgr]
+ratio = [1, 4, 3]
+sort_by = "natural"
+sort_dir_first = true
+show_hidden = true
+show_symlink = true
+linemode = "size"
+scrolloff = 5
+
+[preview]
+wrap = "yes"
+tab_size = 4
+
+[opener]
+edit = [
+  { run = "zeditor %s", orphan = true, desc = "Zed", for = "unix" },
+  { run = "nvim %s", block = true, desc = "Neovim (terminal)", for = "unix" },
+]
+
+[open]
+prepend_rules = [
+  { mime = "text/*", use = "edit" },
+  { mime = "application/{json,toml,yaml,x-yaml,x-shellscript,javascript,xml}", use = "edit" },
+  { url = "*.{conf,ini,toml,yaml,yml,json,jsonc,qml,lua,py,rs,md,sh,zsh,css,js,ts,tsx,jsx}", use = "edit" },
+]

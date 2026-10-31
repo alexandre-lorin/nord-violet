@@ -1,0 +1,13 @@
+/* ~/.config/waybar/colors.css
+   Miroir de palette.conf (hypr). Mêmes valeurs hex, format CSS.
+   Si tu changes une couleur, change-la aussi dans palette.conf. */
+
+@define-color bg0 #0e1015;
+@define-color bg1 #171a21;
+@define-color bg2 #1f232d;
+@define-color fg0 #c4cad4;
+@define-color fg1 #8995a6;
+@define-color fg2 #626b7b;
+@define-color border_inactive #3b4252;
+@define-color accent #9b7cff;
+@define-color grey #4c566a;

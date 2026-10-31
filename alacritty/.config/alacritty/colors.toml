@@ -1,0 +1,32 @@
+# ~/.config/alacritty/colors.toml — mêmes hex que hypr/palette.conf
+# À importer dans alacritty.toml avec :
+#   [general]
+#   import = ["~/.config/alacritty/colors.toml"]
+
+[colors.primary]
+background = "#0e1015"
+foreground = "#c4cad4"
+
+[colors.normal]
+black   = "#3b4252"
+red     = "#bf616a"
+green   = "#a3be8c"
+yellow  = "#ebcb8b"
+blue    = "#81a1c1"
+magenta = "#b48ead"
+cyan    = "#88c0d0"
+white   = "#c4cad4"
+
+[colors.bright]
+black   = "#4c566a"
+red     = "#bf616a"
+green   = "#a3be8c"
+yellow  = "#ebcb8b"
+blue    = "#81a1c1"
+magenta = "#b48ead"
+cyan    = "#8fbcbb"
+white   = "#e5e8ee"
+
+[colors.cursor]
+text   = "#0e1015"
+cursor = "#9b7cff"

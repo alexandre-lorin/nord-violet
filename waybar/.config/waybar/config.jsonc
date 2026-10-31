@@ -1,0 +1,46 @@
+// ~/.config/waybar/config.jsonc
+{
+    "layer": "top",
+    "position": "bottom",
+    "height": 34,
+    "spacing": 4,
+    "margin-bottom": 8,
+    "margin-left": 10,
+    "margin-right": 10,
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["clock"],
+    "modules-right": ["pulseaudio", "network", "battery", "tray"],
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "on-click": "activate",
+        "format-icons": {
+            "active": "●",
+            "default": "○"
+        }
+    },
+    "clock": {
+        "format": "{:%H:%M}",
+        "tooltip-format": "{:%A %d %B %Y}"
+    },
+    "pulseaudio": {
+        "format": "{volume}%",
+        "format-muted": "muet",
+        "on-click": "pavucontrol"
+    },
+    "network": {
+        "format-wifi": "{signalStrength}%",
+        "format-disconnected": "déconnecté",
+        "tooltip-format": "{ifname} via {gwaddr}"
+    },
+    "battery": {
+        "format": "{capacity}%",
+        "format-charging": "{capacity}% ⚡",
+        "states": {
+            "warning": 20,
+            "critical": 10
+        }
+    },
+    "tray": {
+        "spacing": 8
+    }
+}
