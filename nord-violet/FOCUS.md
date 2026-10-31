@@ -1,15 +1,15 @@
-# Focus — 8 octobre 2026
+# Focus — 8 October 2026
 
-## Utilisation
+## Usage
 
-- CC : clic Focus démarre 50 minutes ; clic suivant met en pause, puis reprend. Clic droit arrête.
-- Réglages → Profils : choisir 25 ou 50 minutes, pause/reprise et arrêt explicites.
-- Waybar : compteur visible seulement pendant la session ou sa pause. Clic gauche pause/reprise, clic droit arrêt, clic molette ouvre Profils.
-- Une pause fige le temps restant et restaure l'état DND initial. Reprendre active DND ; arrêter ou terminer restaure l'état initial.
-- Notification à la fin, soumise au mode Mako restauré : si DND était déjà activé avant la session, elle peut rester silencieuse.
+- CC: Focus click starts 50 minutes; Next click pauses, then resumes. Right click stops.
+- Settings → Profiles: choose 25 or 50 minutes, explicit pause/resume and shutdown.
+- Waybar: counter visible only during the session or its pause. Left click pause/resume, right click stop, wheel click opens Profiles.
+- A pause freezes the remaining time and restores the initial DND state. Resume active DND; stop or finish restores the initial state.
+- Notification at the end, subject to restored Mako mode: if DND was already activated before the session, it can remain silent.
 
-## Technique et validation
+## Technical and validation
 
-État compatible avec l'ancien format : `end_epoch previous_dnd`, échéance négative pour une pause. Verrou flock partagé ; workers libèrent le verrou pendant l'attente et ne terminent pas une session dont l'échéance a changé. Redémarrer une session conserve le DND initial. Le worker survit à la fermeture du CC ; il ne s'agit pas d'un service systemd persistant après redémarrage.
+State compatible with the old format: `end_epoch previous_dnd`, negative deadline for a break. Shared flock lock; workers release the lock while waiting and do not terminate a session whose deadline has changed. Restarting a session retains the initial DND. The worker survives the closure of the CC; This is not a persistent systemd service after reboot.
 
-8 tests Focus avec Mako et notifications simulés ; 58 tests Python au total passent. QML et syntaxe Bash vérifiés. Aucune session réelle démarrée pour ne pas modifier les notifications de Toubi. Validation physique des clics et du rendu du compteur à faire.
+8 Focus tests with simulated Mako and notifications; 58 Python tests in total pass. QML and Bash syntax checked. No actual session started so as not to modify notifications from Toubi. Physical validation of clicks and rendering of the counter to be done.

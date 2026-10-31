@@ -1,69 +1,69 @@
-# Bilan Hyprland — 2 octobre 2026
+# Review Hyprland — 2 October 2026
 
-## Terminé dans cette passe
+## Completed in this pass
 
-Retouche esthétique supplémentaire : marges de contenu 20 px, navigation
-224 px, inter-sections sans cumul de marges, titres plus lisibles, description
-compacte, indicateur de défilement, toggle avancé rectiligne. Vue générale :
-valeurs et contrôles ancrés sur le même bord droit, sans colonnes flottantes.
-Captures Son et Vue générale revérifiées après ces ajustements.
+Additional aesthetic touch-up: 20 px content margins, navigation
+224 px, inter-sections without cumulative margins, more readable titles, description
+compact, scroll indicator, advanced rectilinear toggle. General view:
+values and controls anchored to the same right edge, without floating columns.
+Sound and General View captures rechecked after these adjustments.
 
-- Ouverture Réglages avec activation de fenêtre ; navigation séparée de
-  l'ouverture. Ne pas appeler `show()`/`showNormal()` à chaque changement
-  de page : cela faisait alterner la taille entre normale et agrandie.
-- Navigation Son → Écrans → Fonds → Bureau vérifiée : une fenêtre unique,
-  1180 × 760 sur les quatre pages, après la correction.
-- Son : liste réelle des sorties/entrées, volume/mute, lecture commune,
-  événements audio, regroupement des écritures et relecture de secours.
-- Écrans : en-tête compact monospace, fréquences existantes conservées,
-  luminosité interne réelle avec relecture périodique (1,5 s).
-- Bureau : suppression du hero serif et de la miniature décorative,
-  états monospace et sections verticales.
-- Fonds : galerie conservée, surfaces/boutons monospace plus droits ;
-  options futures sans action retirées de l'interface.
-- CC : taille constatée 620 × 320 ; S ouvre Vue générale ; Échap ferme
-  le panneau si aucun sélecteur n'est ouvert. Écritures volume regroupées,
-  relecture après écriture et événements de changement de sortie suivis.
-- `clock` disponible dans ~/.local/bin : appelle exactement `chrono clock`.
-  Présentation verticale inchangée, aucune modification de chrono.py.
+- Opening Settings with window activation; separate navigation from
+  the opening. Do not call `show()`/`showNormal()` on every change
+  of page: this alternated the size between normal and enlarged.
+- Navigation Sound → Screens → Funds → Desktop checked: a single window,
+  1180 × 760 on all four pages, after correction.
+- Sound: actual list of outputs/inputs, volume/mute, common playback,
+  audio events, write consolidation, and backup replay.
+- Screens: compact minivan header, existing frequencies retained,
+  real internal brightness with periodic rereading (1,5 s).
+- Office: removal of the hero serif and the decorative thumbnail,
+  MPV states and vertical sections.
+- Funds: gallery preserved, straighter monospace surfaces/buttons;
+  No-action future options removed from the interface.
+- CC: observed size 620 × 320; Opens General view; Firm escape
+  the panel if no selector is open. Grouped volume entries,
+  reread after write and output change events tracked.
+- `clock` available in ~/.local/bin: calls exactly `chrono clock`.
+  Vertical presentation unchanged, no modification of chrono.py.
 
-## Vérifié
+## Verified
 
-- Captures locales Son, Écrans, Fonds et Bureau inspectées.
-- Données audio lues : quatre sorties, trois microphones, noms lisibles.
-- Luminosité lue sur `nvidia_0` ; OSD luminosité déclenché sans modifier
-  le matériel (test d'affichage uniquement).
-- CC : raccourcis S et Échap exercés en session réelle.
-- Une seule instance Quickshell après arrêt puis démarrage propre.
-- QML des fichiers touchés validé ; 27 tests Python et 9 tests calendrier.
-- `clock --help` et syntaxe du lanceur validés.
+- Local Sound, Screen, Background and Desktop captures inspected.
+- Audio data read: four outputs, three microphones, readable names.
+- Brightness read on `nvidia_0`; OSD brightness triggered without changing
+  hardware (display test only).
+- CC: S and Escape shortcuts exercised in real session.
+- A single instance Quickshell after shutdown then clean startup.
+- QML of affected files validated; 27 Python tests and 9 tests schedule.
+- `clock --help` and launcher syntax validated.
 
-## À valider avec Toubi
+## To be validated with Toubi
 
-- Esthétique et densité des quatre pages par rapport à la maquette A.
-- Glisser rapidement les curseurs audio/micro/luminosité, puis modifier
-  depuis Waybar/pavucontrol et observer les menus : les mécanismes sont
-  présents, mais aucun changement réel de volume/mute n'a été imposé
-  pendant cette passe. Ne pas confondre lecture des données et test
-  complet aller-retour de tous les contrôles.
-- Sélection de sortie/micro, import/application de fond et changement
-  de fréquence : commandes conservées, pas exercées sur le bureau.
-- Focus, profils, Wi-Fi et DND : pas de bascule réelle pendant la revue.
+- Aesthetics and density of the four pages compared to model A.
+- Quickly drag the audio/mic/brightness sliders, then edit
+  from Waybar/pavucontrol and observe the menus: the mechanisms are
+  present, but no real volume/mute change has been imposed
+  during this pass. Do not confuse reading data and testing
+  complete round trip of all controls.
+- Output/mic selection, import/background application and change
+  frequency: commands retained, not exercised on the desktop.
+- Focus, profiles, Wi-Fi and DND: no real toggle during review.
 
-## Restant hors de cette passe
+## Staying out of this pass
 
-- Passe du 3 octobre : Profils, Omni, Notifications, Connexions,
-  Raccourcis, Système et Hyprland harmonisés (espacement 8 px,
-  en-têtes réduits, suppression des titres serif, contours droits).
-  Sept pages ouvertes à 1180×760 et captures inspectées ; description
-  des profils non tronquée et version Hyprland abrégée après revue.
-  Validation esthétique utilisateur et tests des actions réelles restent
-  nécessaires ; ni bascule Wi-Fi, ni changement de profil imposés.
-- Décharge batterie après extinction : cause non établie, comparer une
-  extinction directe depuis le terminal au menu sans modifier le BIOS.
-- Vérifier `[Long_Life]` après un redémarrage : service préparé et mode
-  réactivé par Toubi ; persistance après redémarrage à confirmer.
-- Le crash Qt lié aux anciens Shortcut a un contournement clavier, pas
-  une correction interne de Qt.
+- October 3 pass: Profiles, Omni, Notifications, Connections,
+  Shortcuts, System and Hyprland harmonized (8 px spacing,
+  reduced headers, removal of serif titles, straight outlines).
+  Seven pages opened at 1180×760 and catches inspected; description
+  non-truncated profiles and abbreviated version Hyprland after review.
+  User aesthetic validation and testing of real actions remain
+  necessary; no Wi-Fi toggle or profile change imposed.
+- Battery discharge after switching off: cause not established, compare one
+  direct shutdown from the terminal to the menu without modifying the BIOS.
+- Check `[Long_Life]` after a reboot: prepared service and mode
+  reactivated by Toubi; persistence after restart to be confirmed.
+- The Qt crash linked to old Shortcuts has a keyboard bypass, not
+  an internal Qt fix.
 
-Nothing Link reste volontairement hors périmètre.
+Nothing Link voluntarily remains outside the scope.

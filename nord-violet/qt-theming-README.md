@@ -1,12 +1,12 @@
-# Qt theming — pas draftable en un fichier
+# Qt theming — not draftable into a file
 
-Contrairement à GTK, Qt n'a pas d'équivalent simple à gtk.css. Le chemin standard :
+Unlike GTK, Qt has no simple equivalent to gtk.css. The standard path:
 
-1. Installer `qt5ct` / `qt6ct` (ou `qt6gtk2` pour hériter direct du thème GTK, plus simple mais moins fin)
-2. Variables d'env nécessaires dans `hyprland.conf` ou `~/.config/environment.d/` :
+1. Install `qt5ct` / `qt6ct` (or `qt6gtk2` to directly inherit the GTK theme, simpler but less refined)
+2. Env variables needed in `hyprland.conf` or `~/.config/environment.d/`:
    ```
    env = QT_QPA_PLATFORMTHEME,qt5ct
    ```
-3. Pour un vrai match Nord Violet, il faut un thème Kvantum custom (fichier .kvconfig + .svg de la palette) — c'est un chantier à part entière, pas un simple override de couleurs.
+3. For a real Nord Violet match, you need a custom Kvantum theme (.kvconfig file + .svg of the palette) — it's a project in its own right, not a simple color override.
 
-Non draftable à distance sans risque de partir sur une fausse piste. À traiter en vrai session, pas ici.
+Undraftable from a distance without the risk of going off on the wrong track. To be dealt with in real session, not here.

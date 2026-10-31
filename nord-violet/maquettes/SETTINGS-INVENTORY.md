@@ -1,256 +1,256 @@
-# Nord Violet — inventaire des réglages
+# Nord Violet — settings inventory
 
-Inventaire de conception pour la future application de réglages. Il compare
-Nord Violet avec Ryoku Settings, Caelestia Nexus, Noctalia SettingsPanel et
-DankMaterialShell. Une entrée listée ici est une possibilité de produit, pas
-la confirmation qu'elle est déjà implémentée.
+Design inventory for future application of settings. He compares
+Nord Violet with Ryoku Settings, Caelestia Nexus, Noctalia SettingsPanel and
+DankMaterialShell. An entry listed here is a product possibility, not
+confirmation that it is already implemented.
 
-Références inspectées :
+References inspected:
 
-- <https://github.com/Ryoku-dev/ryoku>
-- <https://github.com/caelestia-dots/shell>
-- <https://github.com/NotWinder/noctalia-shell>
-- <https://github.com/AvengeMedia/DankMaterialShell>
+-<https://github.com/Ryoku-dev/ryoku>
+-<https://github.com/caelestia-dots/shell>
+-<https://github.com/NotWinder/noctalia-shell>
+-<https://github.com/AvengeMedia/DankMaterialShell>
 
-## Structure recommandée
+## Recommended structure
 
-### Accueil
+### Home
 
-- état global de la session et du shell ;
-- CPU, mémoire, température, batterie et stockage ;
-- mises à jour disponibles ;
-- profil énergétique actif ;
-- raccourcis vers les derniers réglages modifiés ;
-- diagnostic rapide de la configuration ;
-- import, export et restauration des réglages.
+- global state of the session and the shell;
+- CPU, memory, temperature, battery and storage;
+- updates available;
+- active energy profile;
+- shortcuts to the last modified settings;
+- rapid diagnosis of the configuration;
+- import, export and restore settings.
 
-### Apparence
+### Appearance
 
-- thème sombre, clair ou automatique ;
-- accent fixe ou extrait du fond d'écran ;
-- variantes de palette : tonale, expressive, fidèle, neutre, monochrome ;
-- couleurs des surfaces, textes, bordures et états ;
-- intensité du contraste ;
-- transparence et opacité ;
-- flou, bruit, saturation et ombres ;
-- rayon global des angles ;
-- épaisseur et couleur des bordures ;
-- police d'interface, police monospace et graisse ;
-- échelle globale de l'interface ;
-- densité compacte, normale ou confortable ;
-- thème des icônes et du curseur ;
-- aperçu en direct avant application ;
-- propagation vers Waybar, terminal, GTK, Qt, notifications et écran de
-  verrouillage.
+- dark, light or automatic theme;
+- fixed accent or extracted from the wallpaper;
+- palette variants: tonal, expressive, faithful, neutral, monochrome;
+- surface colors, texts, borders and states;
+- contrast intensity;
+- transparency and opacity;
+- blur, noise, saturation and shadows;
+- overall radius of the angles;
+- thickness and color of the borders;
+- interface font, monospace font and weight;
+- global scale of the interface;
+- compact, normal or comfortable density;
+- theme of icons and cursor;
+- live preview before application;
+- propagation to Waybar, terminal, GTK, Qt, notifications and screen
+  locking.
 
-### Fonds d'écran
+### Wallpapers
 
-- bibliothèque locale avec miniatures ;
-- recherche, favoris et catégories ;
-- import d'un fichier ou d'un dossier ;
-- aperçu temporaire avant validation ;
-- fond aléatoire ;
-- diaporama au démarrage, périodique ou quotidien ;
-- sélection depuis les favoris ou une catégorie ;
-- intervalle de rotation ;
-- transitions : fondu, glissement, croissance ou aléatoire ;
-- ajustement : remplir, adapter, centrer ou étirer ;
-- assombrissement du fond sous les widgets ;
-- fonds animés ou vidéo, facultatifs ;
-- même fond sur tous les écrans ou fond par écran ;
-- synchronisation avec l'écran de verrouillage ;
-- extraction automatique de palette ;
-- choix clair/sombre et variante colorimétrique dérivés de l'image ;
-- raccourci « fond suivant » et intégration au lanceur.
+- local library with miniatures;
+- search, favorites and categories;
+- import a file or folder;
+- temporary preview before validation;
+- random background;
+- slideshow at startup, periodic or daily;
+- selection from favorites or a category;
+- rotation interval;
+- transitions: fade, slide, grow or random;
+- adjustment: fill, adapt, center or stretch;
+- darkening of the background under the widgets;
+- animated or video backgrounds, optional;
+- same background on all screens or background per screen;
+- synchronization with the lock screen;
+- automatic pallet extraction;
+- light/dark choice and colorimetric variant derived from the image;
+- “next background” shortcut and launcher integration.
 
-### Bureau et barre
+### Desk and bar
 
-- position, taille, marges et écran de la barre ;
-- barre persistante ou masquage intelligent ;
-- transparence, arrondis et couche Wayland ;
-- composition par zones gauche, centre et droite ;
-- ordre des modules par glisser-déposer ;
-- espaces de travail, fenêtre active, applications ouvertes, média, horloge,
-  météo, batterie, réseau, Bluetooth, audio, clavier, moniteurs système,
-  mises à jour et tray ;
-- options propres à chaque module ;
-- formats de date et d'heure ;
-- nombre et apparence des espaces de travail ;
-- indicateurs d'application et icônes de fenêtres ;
-- dock : position, taille, zoom, masquage et applications épinglées ;
-- widgets de bureau : horloge, météo, calendrier, visualiseur et notes ;
-- position et visibilité des widgets par écran ;
-- comportement du Control Center, de l'OSD et des notifications.
+- position, size, margins and screen of the bar;
+- persistent bar or smart hiding;
+- transparency, rounds and Wayland layer;
+- composition by left, center and right zones;
+- order of modules by drag and drop;
+- workspaces, active window, open applications, media, clock,
+  weather, battery, network, Bluetooth, audio, keyboard, system monitors,
+  updates and tray;
+- options specific to each module;
+- date and time formats;
+- number and appearance of workspaces;
+- application indicators and window icons;
+- dock: position, size, zoom, hiding and pinned applications;
+- desktop widgets: clock, weather, calendar, viewer and notes;
+- position and visibility of widgets per screen;
+- behavior of Control Center, OSD and notifications.
 
 ### Animations
 
-- activation globale et réduction des mouvements ;
-- profil fluide, précis ou cinématique ;
-- vitesse globale ;
-- ouverture, fermeture et déplacement des fenêtres ;
-- changement d'espace de travail ;
-- panneaux, tiroirs et popups morphiques ;
-- courbes et ressorts avancés ;
-- flou animé et déformation, avec mode performance ;
-- aperçu de chaque animation.
+- global activation and reduction of movements;
+- fluid, precise or kinematic profile;
+- overall speed;
+- opening, closing and moving windows;
+- change of workspace;
+- morphic panels, drawers and popups;
+- advanced curves and springs;
+- animated blur and distortion, with performance mode;
+- preview of each animation.
 
-### Écrans
+### Screens
 
-- représentation graphique et déplacement des moniteurs ;
-- activation et écran principal ;
-- résolution, fréquence, échelle et rotation ;
-- duplication ou extension ;
-- position et transformation ;
-- VRR, HDR et profondeur de couleur si disponibles ;
-- luminosité intégrée et DDC ;
-- gamma et température de couleur ;
-- lumière nocturne et programmation ;
-- profil multi-écrans enregistré ;
-- barre, widgets et fond d'écran configurables par moniteur.
+- graphic representation and movement of monitors;
+- activation and main screen;
+- resolution, frequency, scale and rotation;
+- duplication or extension;
+- position and transformation;
+- VRR, HDR and color depth if available;
+- integrated brightness and DDC;
+- gamma and color temperature;
+- night light and programming;
+- saved multi-screen profile;
+- bar, widgets and wallpaper configurable per monitor.
 
-### Son
+### Sound
 
-- périphérique de sortie par défaut ;
-- volume, mute et amplification maximale ;
-- profils et ports de sortie ;
-- périphérique d'entrée, gain et mute ;
-- réduction du bruit ;
-- volumes par application ;
-- lecteur média préféré ;
-- pas des touches de volume ;
-- OSD audio ;
-- sons d'interface optionnels.
+- default output device;
+- volume, mute and maximum amplification;
+- profiles and output ports;
+- input device, gain and mute;
+- noise reduction;
+- volumes per application;
+- favorite media player;
+- no volume keys;
+- Audio OSD;
+- optional interface sounds.
 
-### Connexions
+### Connections
 
-- activation Wi-Fi et liste des réseaux ;
-- connexion, oubli et modification d'un réseau ;
-- réseau caché ;
-- état Ethernet ;
-- point d'accès ;
-- VPN : ajout, connexion et suppression ;
-- activation Bluetooth ;
-- découverte, association et oubli d'appareils ;
-- niveau de batterie des appareils compatibles ;
-- mode avion.
+- Wi-Fi activation and list of networks;
+- connection, forgetting and modification of a network;
+- hidden network;
+- Ethernet status;
+- access point;
+- VPN: addition, connection and deletion;
+- Bluetooth activation;
+- discovery, association and forgetting of devices;
+- battery level of compatible devices;
+- airplane mode.
 
-### Entrées
+### Entries
 
-- disposition, variante et modèle du clavier ;
-- plusieurs dispositions et bascule ;
-- délai et vitesse de répétition ;
-- remappages courants ;
-- sensibilité et accélération de la souris ;
-- défilement naturel ;
-- vitesse et profil du pavé tactile ;
-- tap-to-click, clic secondaire et désactivation pendant la frappe ;
-- gestes multi-doigts ;
-- thème, taille, masquage et effets du curseur.
+- layout, variant and model of the keyboard;
+- several layouts and toggles;
+- repetition delay and speed;
+- common remappings;
+- mouse sensitivity and acceleration;
+- natural scrolling;
+- touchpad speed and profile;
+- tap-to-click, secondary click and mute while typing;
+- multi-finger gestures;
+- cursor theme, size, hiding and effects.
 
-### Raccourcis
+### Shortcuts
 
-- liste complète issue de la configuration active ;
-- recherche par action ou combinaison ;
-- modification et suppression ;
-- ajout de commandes personnalisées ;
-- catégories : applications, fenêtres, espaces, système et capture ;
-- détection des conflits ;
-- retour aux valeurs par défaut ;
-- aide visuelle ouvrable par raccourci.
+- complete list from the active configuration;
+- search by action or combination;
+- modification and deletion;
+- adding custom commands;
+- categories: applications, windows, spaces, system and capture;
+- conflict detection;
+- return to default values;
+- visual aid openable by shortcut.
 
-### Énergie et session
+### Energy and session
 
-- profil performance, équilibré ou économie ;
-- état et santé de la batterie ;
-- mode conservation Lenovo et seuils réellement supportés ;
-- comportement différent sur secteur et batterie ;
-- délai d'assombrissement, verrouillage, extinction et suspension ;
-- comportement à la fermeture du capot ;
-- inhibiteur de veille ;
-- suspension pendant une lecture ou un enregistrement ;
-- verrouillage et authentification ;
-- avatar, horloge, notifications et média sur l'écran verrouillé ;
-- menu de session et confirmations.
+- performance, balanced or economy profile;
+- battery status and health;
+- Lenovo conservation mode and thresholds actually supported;
+- different behavior on mains and battery;
+- darkening delay, locking, switching off and suspension;
+- behavior when closing the hood;
+- sleep inhibitor;
+- suspension during playback or recording;
+- locking and authentication;
+- avatar, clock, notifications and media on the locked screen;
+- session menu and confirmations.
 
-### Applications et services
+### Applications and services
 
-- applications par défaut : terminal, navigateur, fichiers, éditeur et média ;
-- applications au démarrage ;
-- services utilisateur et état systemd ;
-- notifications : position, durée, groupement et règles par application ;
-- presse-papiers et historique ;
-- capture d'écran et enregistrement vidéo ;
-- qualité, codec, FPS, audio et dossier de sortie ;
-- OCR, QR code et sélection de couleur ;
-- météo, ville et unités ;
-- langue, région, formats et fuseau horaire ;
-- imprimantes et comptes utilisateur, à considérer seulement si fiables.
+- default applications: terminal, browser, files, editor and media;
+- applications at startup;
+- user services and systemd state;
+- notifications: position, duration, grouping and rules by application;
+- clipboard and history;
+- screenshot and video recording;
+- quality, codec, FPS, audio and output folder;
+- OCR, QR code and color selection;
+- weather, city and units;
+- language, region, formats and time zone;
+- printers and user accounts, to be considered only if reliable.
 
-### Hyprland avancé
+### Hyprland advanced
 
-- disposition Dwindle ou Master ;
-- gaps, bordures, arrondis, ombres, flou et opacité ;
-- fenêtres flottantes, épinglées et pseudo-tiling ;
-- règles de fenêtres et règles de calques ;
-- espaces spéciaux ;
-- plugins Hyprland ;
-- variables d'environnement de session ;
-- commandes de démarrage ;
-- configuration par application ;
-- rechargement avec validation et retour arrière ;
-- affichage de la valeur réellement active.
+- Dwindle or Master layout;
+- gaps, borders, rounds, shadows, blur and opacity;
+- floating, pinned and pseudo-tiling windows;
+- window rules and layer rules;
+- special spaces;
+- plugins Hyprland;
+- session environment variables;
+- start commands;
+- configuration by application;
+- reloading with validation and backtracking;
+- display of the actually active value.
 
-### Maintenance et extensions
+### Maintenance and extensions
 
-- version du shell et composants ;
-- mises à jour avec notes de version ;
-- diagnostic des dépendances ;
-- journaux et erreurs récentes ;
-- sauvegarde, export et import ;
-- réinitialisation par section ;
-- plugins et widgets additionnels ;
-- vérification de compatibilité ;
-- informations et crédits.
+- shell version and components;
+- updates with release notes;
+- diagnosis of dependencies;
+- recent logs and errors;
+- backup, export and import;
+- reset by section;
+- additional plugins and widgets;
+- compatibility check;
+- information and credits.
 
-## Priorités pour Nord Violet
+## Priorities for Nord Violet
 
-### V1 — nécessaire
+### V1 — necessary
 
-- Apparence et aperçu en direct ;
-- Fonds d'écran et palette dynamique ;
-- Bureau et barre ;
-- Écrans ;
-- Son ;
-- Connexions ;
-- Entrées ;
-- Raccourcis ;
-- Énergie ;
-- sauvegarde explicite, annulation et restauration.
+- Appearance and live preview;
+- Wallpapers and dynamic palette;
+- Desk and bar;
+- Screens;
+- Her ;
+- Connections;
+- Entries;
+- Shortcuts;
+- Energy ;
+- explicit backup, undo and restore.
 
-### V2 — importante
+### V2 — important
 
-- animations détaillées ;
-- écran de verrouillage ;
-- notifications et OSD ;
-- applications par défaut et autostart ;
-- règles Hyprland ;
-- profils multi-écrans ;
-- recherche globale avec synonymes.
+- detailed animations;
+- lock screen;
+- notifications and OSD;
+- default applications and autostart;
+- rules Hyprland;
+- multi-screen profiles;
+- global search with synonyms.
 
-### V3 — facultative
+### V3 — optional
 
-- extensions et widgets tiers ;
-- fonds vidéo ;
-- profils partageables ;
-- imprimantes et utilisateurs ;
-- éditeur complet des variables d'environnement.
+- third-party extensions and widgets;
+- video funds;
+- shareable profiles;
+- printers and users;
+- complete editor of environment variables.
 
-## Garde-fous UX
+## UX guardrails
 
-- le Control Center reste réservé aux actions immédiates ;
-- les Réglages ne lancent aucune commande privilégiée sans explication ;
-- les options non supportées par la machine ne sont pas simulées ;
-- toute modification risquée possède une validation et un retour arrière ;
-- le mode Avancé cache la complexité sans cacher les fonctions courantes ;
-- chaque recherche ouvre directement le réglage trouvé ;
-- aucun réglage décoratif ne doit être présenté comme fonctionnel.
+- the Control Center remains reserved for immediate actions;
+- Settings do not launch any privileged command without explanation;
+- options not supported by the machine are not simulated;
+- any risky modification has validation and rollback;
+- Advanced mode hides complexity without hiding common functions;
+- each search directly opens the setting found;
+- no decorative adjustment must be presented as functional.

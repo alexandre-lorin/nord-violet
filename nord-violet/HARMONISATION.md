@@ -1,75 +1,75 @@
-# Nord Violet — harmonisation du 17 septembre 2026
+# Nord Violet — harmonization of September 17 2026
 
-Dernier choix explicite de Toubi : accent commun **#9b7cff**.
+Last explicit choice of Toubi: common accent **#9b7cff**.
 
-## État appliqué
+## Applied state
 
-- Hyprland : bordures actives et accent de `palette.conf` alignés ; alpha
-  de `accent_dim` conservé. La bordure de la session active a été mise à jour.
-- Control Center et Waybar : même accent, y compris les points des workspaces.
-- Mako : accent des notifications normales aligné ; rouge critique conservé.
-- Alacritty : ajout de `alacritty.toml` important la palette existante ; curseur
-  violet. Les couleurs ANSI Nord, dont le magenta `#b48ead`, gardent leur rôle.
-- GTK 3 et GTK 4 : Breeze-Dark, Papirus-Dark, curseur `breeze_cursors` taille 24,
-  Inter 10. Ces ressources sont installées. Les préférences GNOME correspondantes
-  sont alignées, avec `prefer-dark` et JetBrains Mono 10 pour le monospace.
-- GTK 4 importe la surcharge de couleurs GTK 3. Les anciennes définitions Breeze
-  claires restent sur disque mais ne sont plus importées. L'accent libadwaita
-  est également défini ; les fonds sélectionnés restent peu opaques.
-- Hyprlock : accent aligné et commentaire corrigé. Le fond de verrouillage reste
-  `halo-wallpaper-4k.jpg`, celui du bureau reste `wp1.png`.
-- Fuzzel et wlogout : accents existants alignés. Aucune configuration Rofi ajoutée.
+- Hyprland: active borders and accent of `palette.conf` aligned; alpha
+  of `accent_dim` retained. The active session border has been updated.
+- Control Center and Waybar: same emphasis, including workspace points.
+- Mako: focus of normal notifications aligned; critical red preserved.
+- Alacritty: added `alacritty.toml` importing the existing palette; cursor
+  purple. The ANSI Nord colors, including magenta `#b48ead`, retain their role.
+- GTK 3 and GTK 4: Breeze-Dark, Papirus-Dark, cursor `breeze_cursors` size 24,
+  Inter 10. These resources are installed. The corresponding GNOME preferences
+  are aligned, with `prefer-dark` and JetBrains Mono 10 for the minivan.
+- GTK 4 imports GTK 3 color overload. Old Breeze definitions
+  clear files remain on disk but are no longer imported. The Libadwaita accent
+  is also defined; the selected funds remain not very opaque.
+- Hyprlock: accent aligned and comment corrected. Lock bottom remains
+  `halo-wallpaper-4k.jpg`, the desktop one remains `wp1.png`.
+- Fuzzel and wlogout: existing accents aligned. No Rofi configuration added.
 
-## Synchronisation
+## Synchronization
 
-`~/.config/quickshell/nord-violet-cc/scripts/accentctl.sh` propage le choix
-des Réglages aux fichiers actifs existants : Hyprland, Hyprlock, Waybar, Mako,
-curseur Alacritty, GTK, Fuzzel et wlogout. Il ne génère pas les palettes complètes.
-Les couleurs de danger, succès et ANSI restent indépendantes.
+`~/.config/quickshell/nord-violet-cc/scripts/accentctl.sh` propagates choice
+Settings to existing active files: Hyprland, Hyprlock, Waybar, Mako,
+Alacritty slider, GTK, Fuzzel and wlogout. It does not generate full palettes.
+The danger, success and ANSI colors remain independent.
 
-Les liens symboliques Stow et permissions sont conservés. Le script valide les
-formats avant toute écriture, recharge Mako et Waybar et met à jour la bordure
-Hyprland. Les applications GTK peuvent nécessiter une réouverture ; Hyprlock
-applique ses couleurs au prochain verrouillage. Rouvrir les terminaux déjà
-lancés s'ils n'ont pas chargé le nouveau fichier principal.
+Stow and permissions symbolic links are preserved. The script validates the
+formats before any writing, reloads Mako and Waybar and updates the border
+Hyprland. GTK applications may need to be reopened; Hyprlock
+applies its colors to the next lock. Reopen terminals already
+launched if they have not loaded the new main file.
 
-Attention : `~/.config/hypr/hyprlock.conf`, `~/.config/waybar/` et
-`~/.config/gtk-4.0/` contiennent des fichiers actifs indépendants du dépôt.
-Ne pas écraser ces dossiers avec un ancien paquet Stow. Les copies existantes
-de `hyprlock.conf` et `waybar/colors.css` dans le dépôt ont été alignées pour
-cette intervention ; les changements d'accent ultérieurs ciblent les fichiers actifs.
+Attention: `~/.config/hypr/hyprlock.conf`, `~/.config/waybar/` and
+`~/.config/gtk-4.0/` contain repository-independent active files.
+Do not overwrite these folders with an old Stow package. Existing copies
+of `hyprlock.conf` and `waybar/colors.css` in the repository have been aligned to
+this intervention; subsequent emphasis changes target active files.
 
 ## Validation
 
-- Tests isolés du script : propagation, préservation des liens Stow et alpha,
-  couleurs sémantiques inchangées, rejet des arguments et formats invalides.
-- `bash -n` : script d'accent et points de workspaces valides.
-- `qmllint` : aucun diagnostic sur Colors.qml et AppearancePage.qml.
-- Quickshell : rechargement réel confirmé par `Configuration Loaded`.
-- Hyprland : aucune erreur de configuration ; bordure active `ff9b7cff`.
-- Mako : rechargement réussi.
-- GTK 3 et GTK 4 : CSS chargé sans erreur par les parseurs installés ; réglages
-  effectifs lus dans Gtk.Settings. Libadwaita confirme le mode sombre.
-- Alacritty : TOML valide, import accepté par `migrate --dry-run --silent`.
-- `git diff --check` : réussi. Aucun commit créé.
+- Isolated tests of the script: propagation, preservation of Stow and alpha links,
+  unchanged semantic colors, rejection of invalid arguments and formats.
+- `bash -n`: valid accent script and workspace points.
+- `qmllint`: no diagnostics on Colors.qml and AppearancePage.qml.
+- Quickshell: real reload confirmed by `Configuration Loaded`.
+- Hyprland: no configuration error; active border `ff9b7cff`.
+- Mako: successful reload.
+- GTK 3 and GTK 4: CSS loaded without error by the installed parsers; settings
+  effectives read in Gtk.Settings. Libadwaita confirms dark mode.
+- Alacritty: Valid TOML, import accepted by `migrate --dry-run --silent`.
+- `git diff --check`: succeeded. No commits created.
 
-La recette visuelle complète des applications et du verrouillage reste à faire.
-Le bac à sable signale son cache dconf en lecture seule ; les écritures via
-GSettings ont néanmoins réussi, et les valeurs ont été relues dans GTK.
+The full visual recipe for apps and locking remains to be done.
+The sandbox reports its dconf cache as read-only; the writings via
+GSettings nevertheless succeeded, and the values were read back into GTK.
 
-## Sauvegarde et reprise
+## Backup and recovery
 
-Sauvegarde avant intervention :
+Backup before intervention:
 `/home/toubi/.local/state/nord-violet/backups/20260917-221624/`.
 
-`files.json` indique les chemins, leurs cibles et leur existence avant intervention.
-`gsettings.json` conserve les anciennes valeurs des seules préférences modifiées.
-Pour restaurer, recopier les fichiers sauvegardés vers leurs cibles indiquées,
-en préservant les liens ; le fichier principal Alacritty était absent auparavant.
-Restaurer les préférences avec `gsettings set`, puis recharger les composants.
+`files.json` indicates the paths, their targets and their existence before intervention.
+`gsettings.json` keeps the old values ​​of only modified preferences.
+To restore, copy the backed up files to their indicated targets,
+by preserving the links; the main Alacritty file was missing before.
+Restore the preferences with `gsettings set`, then reload the components.
 
-La transmission Claude originale est conservée dans les téléchargements.
-Son `CONTEXT.md` et son `CHANGELOG.md` vont jusqu'à v46 ; son `HANDOFF.md`
-est ancien (v32). Le correctif audio v43 manque dans les trois fichiers actifs,
-et les validations des correctifs Alacritty/Swappy v44–v46 restent un chantier
-distinct, non modifié pendant cette harmonisation visuelle.
+The original Claude transmission is preserved in the downloads.
+Its `CONTEXT.md` and `CHANGELOG.md` go up to v46; sound `HANDOFF.md`
+is ancient (v32). Audio patch v43 is missing in all three active files,
+and the validations of the Alacritty/Swappy v44–v46 patches remain a work in progress
+distinct, not modified during this visual harmonization.

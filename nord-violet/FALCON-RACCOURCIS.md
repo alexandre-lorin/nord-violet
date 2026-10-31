@@ -1,63 +1,63 @@
-# Falcon — accès rapide et contrôles
+# Falcon — quick access and controls
 
-Intégration du 21 septembre 2026, approuvée par Toubi.
+Integration of 21 September 2026, approved by Toubi.
 
-| Raccourci | Action |
+| Shortcut | Action |
 |---|---|
-| Super+B | Afficher/masquer Falcon sur le moniteur actif |
-| Super+flèches | Focus entre fenêtres |
-| Super+Maj+flèches | Déplacer la fenêtre |
-| Super+Ctrl+flèches | Redimensionner par pas de 40 pixels |
-| Ctrl+N dans Falcon | Ajouter selon la rubrique : objectif/directive, session ou journal |
-| Ctrl+P dans Falcon | Saisir une commande |
-| Tab / Maj+Tab | Rubrique suivante/précédente, ou champ du formulaire |
-| Échap | Annuler, revenir à l’accueil, puis masquer le popup |
+| Super+B | Show/hide Falcon on active monitor |
+| Super+arrows | Focus between windows |
+| Super+Shift+arrows | Move window |
+| Super+Ctrl+arrows | Resize in steps of 40 pixels |
+| Ctrl+N in Falcon | Add according to section: objective/directive, session or journal |
+| Ctrl+P in Falcon | Enter an order |
+| Tab / Shift+Tab | Next/previous heading, or form field |
+| Escape | Cancel, return to home, then hide the popup |
 
-La barre conserve quatre surfaces : `m` Plan, `f` Focus/chrono, `j` Journal et
-`b` Bilan. `t` ouvre Today, `c` les Cycles et `?` l’aide. Toutes partagent
-directement les données de Folio.
+The bar maintains four surfaces: `m` Plane, `f` Focus/timeline, `j` Journal and
+`b` Balance sheet. `t` opens Today, `c` Cycles and `?` helps. They all share
+directly the data from Folio.
 
-Super+G reste le mode Travail/Jeu ; Super+D reste Discord. Les huit raccourcis
-Hyprland de déplacement/redimensionnement HJKL deviennent les flèches.
+Super+G remains Work/Game mode; Super+D remains Discord. The eight shortcuts
+Hyprland move/resize HJKL become the arrows.
 
-## Lanceur
+## Launcher
 
-Source : `../hypr/.config/hypr/scripts/falcon-popup.py`, liée à
-`~/.config/hypr/scripts/falcon-popup.py`. Dépendances déjà présentes : Python 3,
-Hyprland, Alacritty et `~/.local/bin/falcon`.
+Source: `../hypr/.config/hypr/scripts/falcon-popup.py`, linked to
+`~/.config/hypr/scripts/falcon-popup.py`. Dependencies already present: Python 3,
+Hyprland, Alacritty and `~/.local/bin/falcon`.
 
-Classe `falcon-popup`, espace spécial `nvfalcon`. La règle place la fenêtre
-silencieusement dans cet espace dès sa création, flottante et sans animation.
-Le lanceur calcule la taille dans la zone utilisable de l’écran, prépare la
-position pendant que l’espace est masqué, attend que Hyprland confirme la
-position et la taille, puis affiche et donne le focus. Il tient compte de la
-rotation, de l’échelle et des marges réservées. Taille maximale 1400×850 ;
-68 % de largeur et 75 % de hauteur utile sur les petits écrans.
+Class `falcon-popup`, special space `nvfalcon`. The rule places the window
+silently in this space from its creation, floating and without animation.
+The launcher calculates the size in the usable area of the screen, prepares the
+position while the space is hidden, waits for Hyprland to confirm the
+position and size, then displays and gives focus. It takes into account the
+rotation, scale and reserved margins. Maximum size 1400×850;
+68 % width and 75 % useful height on small screens.
 
-Un verrou empêche les appels simultanés de créer plusieurs instances. Un rappel
-sur l’autre écran déplace la même fenêtre ; masquer conserve la saisie et la
-session. `q` ferme réellement le processus. L’environnement `FALCON_POPUP=1`
-permet à Échap de masquer l’espace au lieu de quitter, uniquement dans le popup.
-Les animations globales ne sont pas modifiées.
+A lock prevents concurrent calls from creating multiple instances. A reminder
+on the other screen moves the same window; hiding preserves the input and the
+session. `q` actually closes the process. The environment `FALCON_POPUP=1`
+allows Escape to hide the space instead of exit, only in the popup.
+The overall animations are not changed.
 
-La configuration active `~/.config/hypr/windowrules.conf` est indépendante de
-sa copie Git. Les trois règles Falcon ont été ajoutées aux deux fichiers sans
-remplacer leurs autres différences. `keybinds.conf` reste un lien vers Git.
+The active configuration `~/.config/hypr/windowrules.conf` is independent of
+its Git copy. The three Falcon rules were added to both files without
+replace their other differences. `keybinds.conf` remains a link to Git.
 
-## Vérification et retour arrière
+## Verification and rollback
 
-Tests sans bureau : `python3 tests/test_falcon_popup.py` depuis ce dossier.
-Ils couvrent géométrie, changement d’écran, ordre placement/affichage et refus
-d’afficher une position non confirmée. La recette native vérifie également la
-même instance sur HDMI-A-1 puis eDP-1, les rappels rapides et Échap.
+Desktopless testing: `python3 tests/test_falcon_popup.py` from this folder.
+They cover geometry, screen switching, placement/display order and refusal
+to display an unconfirmed position. The native recipe also checks the
+same instance on HDMI-A-1 then eDP-1, quick recalls and Esc.
 
-Sauvegardes avant changement :
+Backups before change:
 `~/.local/state/falcon/backups/raccourcis-formulaires-20260921-200744/`.
-Elles contiennent les raccourcis, les deux fichiers de règles et les sources
-Falcon précédentes. Pour annuler uniquement les raccourcis, restaurer les lignes
-concernées depuis ces copies et retirer les trois règles Falcon, puis lancer
-`hyprctl reload`. Ne pas écraser aveuglément un fichier ayant reçu d’autres
-modifications depuis.
+They contain the shortcuts, the two rules files and the sources
+Previous Falcons. To undo only shortcuts, restore lines
+affected from these copies and remove the three Falcon rules, then launch
+`hyprctl reload`. Do not blindly overwrite a file that has received others
+changes since then.
 
-Le guide du premier démarrage et les limites fonctionnelles sont dans
-[README Falcon](</home/toubi/05 - Projets Perso/01 - En Cours/S-09/falcon/README.md>).
+The first start guide and functional limits are in
+README Falcon (local reference, not included in this repository).

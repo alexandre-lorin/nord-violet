@@ -1,58 +1,35 @@
-# dotfiles — structure stow
+# Nord Violet
 
-## Arborescence
+A dark Hyprland desktop configuration for Arch Linux, organized as GNU Stow packages. It combines Waybar, a Quickshell control center, launcher and notification styling, and desktop utilities.
 
-```
-~/dotfiles/
-├── hypr/.config/hypr/          → symlinké vers ~/.config/hypr
-├── waybar/.config/waybar/      → symlinké vers ~/.config/waybar
-├── rofi/.config/rofi/          → symlinké vers ~/.config/rofi
-├── mako/.config/mako/          → symlinké vers ~/.config/mako
-└── alacritty/.config/alacritty/→ symlinké vers ~/.config/alacritty
-```
+## Repository layout
 
-Chaque dossier top-level = un "package" stow. La structure interne reproduit
-exactement ce qui doit apparaître sous `~`.
+- `hypr/`: Hyprland configuration, key bindings and helper scripts.
+- `quickshell-cc/`: the Nord Violet control center and its components.
+- `waybar/`, `mako/`, `fuzzel/` and `alacritty/`: application configuration.
+- `nord-violet/`: integration notes, tests and additional desktop components.
+- `thunar/` and `yazi/`: file-manager configuration.
 
-## Setup initial
+## Installation
 
-```bash
+This is a snapshot of a particular desktop setup, not a universal installer. Review paths, monitor settings, hardware-specific options and commands before applying it. Back up your current configuration first.
+
+```sh
 sudo pacman -S stow git
-mkdir -p ~/dotfiles && cd ~/dotfiles
-git init
-# copie/déplace ta config actuelle dans la bonne arborescence ci-dessus
-```
-
-## Symlink tout d'un coup
-
-```bash
+git clone https://github.com/alexandre-lorin/nord-violet.git ~/dotfiles
 cd ~/dotfiles
-stow hypr waybar rofi mako alacritty
+stow --simulate --verbose --target="$HOME" hypr waybar mako alacritty
 ```
 
-Stow crée les symlinks. Si `~/.config/hypr` existe déjà en dur (pas un
-symlink), stow refuse — supprime/renomme l'ancien dossier avant.
+The last command is a dry run. After reviewing its output, remove `--simulate` to apply the selected packages. Stow may refuse conflicting files; preserve or move your existing configuration instead of deleting it blindly. Other components need their own dependencies and setup.
 
-## Retirer un package (désymlink proprement)
+## Documentation
 
-```bash
-stow -D hypr
-```
+- [Design and integration](nord-violet/HARMONISATION.md)
+- [Audio and session controls](nord-violet/AUDIO-WLOGOUT.md)
+- [Calendar](nord-violet/CALENDRIER.md)
+- [Bluetooth](nord-violet/BLUETOOTH.md)
+- [Calculator](nord-violet/CALCULATRICE.md)
+- [Validation record](nord-violet/BILAN-VALIDATION.md)
 
-## Après une modif de config
-
-Rien à faire. Tu édites directement dans `~/.config/hypr/...` (c'est un
-symlink vers `~/dotfiles/hypr/.config/hypr/...`), donc `git status` dans
-`~/dotfiles` voit direct la modif.
-
-```bash
-cd ~/dotfiles
-git add -A && git commit -m "hypr: ajout keybind screenshot"
-```
-
-## Pourquoi stow et pas un bare repo
-
-Bare repo (`git --bare` + alias `dotfiles`) marche aussi, mais stow est plus
-lisible pour toi vu que t'as déjà l'habitude de penser en modules séparés
-(comme ton PowerShell). Un package stow = un module = une appli. Cohérent
-avec ta façon de bosser.
+Validation notes describe the original machine and the date of each check. They do not certify every component on another system. Some application labels remain in French.

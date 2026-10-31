@@ -1,37 +1,37 @@
-# RK R98Pro et clavier intégré — 6 octobre 2026
+# RK R98Pro and integrated keyboard — 6 octobre 2026
 
-Périphériques RK reconnus par Hyprland : `rk-r98pro` et `rk-r98pro-keyboard`. Clavier intégré principal : `at-translated-set-2-keyboard` ; certaines commandes du portable passent aussi par ITE / video-bus.
+RK devices recognized by Hyprland: `rk-r98pro` and `rk-r98pro-keyboard`. Main integrated keyboard: `at-translated-set-2-keyboard` ; some laptop commands also go through ITE / video-bus.
 
-## Commandes
+## Orders
 
-Capture physique du 7 octobre : Fn+F5 du RK émet XF86Tools (keycode 179), F5 seul émet F5 (keycode 71). Binding XF86Tools ajouté uniquement pour les périphériques RK. spotify-focus.py lance Spotify si nécessaire puis affiche sa fenêtre existante (bureau 15), sans modifier F5 seul. 50 tests Python passent ; focus réel Spotify vérifié. Les anciens mappings média restent des variantes compatibles, pas la preuve du signal de ce modèle.
+Physical capture of 7 October: Fn+F5 from RK issues XF86Tools (keycode 179), F5 alone emits F5 (keycode 71). Binding XF86Tools added only for RK devices. spotify-focus.py launches Spotify if necessary then displays its existing window (desktop 15), without modifying F5 alone. 50 Python tests pass; real focus Spotify checked. Old media mappings remain compatible variants, not proof of the signal of this model.
 
-- Molette RK et `Fn+F11/F12` : volume −/+ par 1 %, plafonné à 100 %, commande wpctl directe pour préserver la fluidité. Waybar et le menu audio suivent leur mécanisme de synchronisation existant ; pas d’OSD séparé à chaque cran audio RK.
-- Clic molette / `Fn+F10` : mute, contrôle audio et OSD existants.
-- `Ctrl` + molette (ou `Ctrl+Fn+F11/F12`) : luminosité de l’écran focalisé par 5 points. Écran intégré via brightnessctl, externe via DDC/CI. Pas de repli silencieux vers l’écran intégré si l’externe n’est pas accessible.
-- `Fn+F7/F8/F9` : précédent / lecture-pause / suivant via playerctl ; `Fn+F6` : stop. Nécessite une application compatible MPRIS.
-- Touches natives volume/luminosité du portable : comportement précédent inchangé (5 %).
-- `Fn+F1` : Yazi ; `Fn+F2` : Firefox ; `Fn+F3` : gestionnaire mail configuré (actuellement Firefox, aucun client mail dédié installé) ; `Fn+F4` : calculatrice qalc en terminal ; `Fn+F5` : Spotify. F1..F12 seuls restent disponibles pour les applications.
-- Retouche luminosité : popup supprimé ; cache du bus DDC pendant 30 secondes, worker conservé 700 ms entre crans et écriture DDC sans relecture automatique systématique (`--noverify`). Délais matériels DDC standard conservés. Fluidité réelle à revalider par Toubi.
+- RK wheel and `Fn+F11/F12`: volume −/+ by 1%, capped at 100%, direct wpctl command to preserve fluidity. Waybar and audio menu follow their existing timing mechanism; no separate OSD at each RK audio notch.
+- Wheel click / `Fn+F10`: mute, audio control and existing OSD.
+- `Ctrl` + wheel (or `Ctrl+Fn+F11/F12`): brightness of the screen focused by 5 points. Integrated display via brightnessctl, external via DDC/CI. No silent fallback to the integrated screen if the external one is not accessible.
+- `Fn+F7/F8/F9`: previous / play-pause / next via playerctl; `Fn+F6`: stop. Requires MPRIS compatible app.
+- Native volume/brightness keys of the laptop: previous behavior unchanged (5 %).
+- `Fn+F1`: Yazi; `Fn+F2`: Firefox; `Fn+F3`: mail manager configured (currently Firefox, no dedicated mail client installed); `Fn+F4`: qalc calculator in terminal; `Fn+F5`: Spotify. Only F1..F12 remains available for applications.
+- Brightness retouch: popup removed; DDC bus cache during 30 seconds, worker preserved 700 ms between screens and DDC writing without systematic automatic rereading (`--noverify`). Standard DDC hardware deadlines preserved. Real fluidity to be revalidate by Toubi.
 
-Les événements audio de la molette et des touches Fn sont traités identiquement lorsqu’ils portent le même keysym. Les mappings visent le RK entier, pas exclusivement la molette.
+Audio events from the wheel and Fn keys are processed identically when they have the same keysym. The mappings target the entire RK, not exclusively the wheel.
 
-## Implémentation et validation
+## Implementation and validation
 
-### Portable Lenovo LOQ 15ARP9
+### Laptop Lenovo LOQ 15ARP9
 
-Capture réelle du 8 octobre : Fn+F9 → XF86Favorites (372), Fn+F10 → XF86TouchpadOff (540), Fn+F11 → Ctrl+Alt+Tab (Control_L puis Alt_L puis Tab). Mapping : F9 ouvre Omni ; TouchpadOff désactive ELAN, TouchpadOn le réactive (contrepartie prévue, événement On pas encore capturé) ; F11 ouvre Omni Windows. Pas de détournement de F9/F10/F11 seuls ni du RK. Commande Hyprland device[elan06fa:00-04f3:327e-touchpad]:enabled true testée avec succès. F8 reste en attente de vérification ; les notes spéculatives suivantes sont historiques.
+Actual capture of 8 octobre : Fn+F9 → XF86Favorites (372), Fn+F10 → XF86TouchpadOff (540), Fn+F11 → Ctrl+Alt+Tab (Control_L then Alt_L then Tab). Mapping: F9 opens Omni; TouchpadOff deactivates ELAN, TouchpadOn reactivates it (intended counterpart, On event not yet captured); F11 opens Omni Windows. No diversion of F9/F10/F11 alone or the RK. Order Hyprland device[elan06fa:00-04f3:327e-touchpad]:enabled true tested successfully. F8 remains awaiting verification; the following speculative notes are historical.
 
-Correction Alt+Tab : dans v0.56.2 le traducteur legacy de `cyclenext` ignore l’argument `all` (vérifié dans DispatcherTranslator.cpp). Les bindings utilisent désormais `window-cycle.py`, qui parcourt les fenêtres des bureaux normaux sur tous les écrans et exclut fenêtres cachées, non mappées, scratchpads et surfaces Nord Violet. Alt+Maj+Tab inverse le parcours. Ordre stable de la liste des clients, pas MRU ni aperçu Windows. Changement de fenêtre réel vérifié puis focus initial restauré ; 47 tests passent. La touche applications du portable est reliée à Omni Windows via Super+Tab / XF86TaskPane, à confirmer physiquement. Les notes cyclenext ci-dessous sont historiques.
+Correction Alt+Tab: in v0.56.2 the legacy translator of `cyclenext` ignores the argument `all` (checked in DispatcherTranslator.cpp). Bindings now use `window-cycle.py`, which cycles through normal desktop windows on all screens and excludes hidden, unmapped windows, scratchpads, and Nord Violet surfaces. Alt+Shift+Tab reverses the path. Stable order of client list, no MRU or Windows preview. Actual window change verified then initial focus restored; 47 tests pass. The laptop's applications key is connected to Omni Windows via Super+Tab / XF86TaskPane, to be confirmed physically. The cyclenext notes below are historical.
 
-Touches supplémentaires configurées séparément : XF86AudioMicMute → micro par défaut (wpctl), XF86Calculator → qalc, XF86Display ou Super+P provenant du portable → page Écrans. F1–F3 et F5–F6 utilisent les commandes audio/luminosité déjà présentes. Alt+Tab et Alt+Maj+Tab ajoutés globalement : cyclenext dans le bureau courant, sans interface de sélection ni ordre MRU Windows ; Super+W conserve la palette Omni Windows.
+Additional keys configured separately: XF86AudioMicMute → default mic (wpctl), XF86Calculator → qalc, F1–F3 and F5–F6 use the audio/brightness controls already present. Alt+Tab and Alt+Shift+Tab added globally: cyclenext in the current desktop, without selection interface or Windows MRU order; Super+W retains the Omni Windows palette.
 
-Selon [Lenovo](https://download.lenovo.com/pccbbs/pubs/loq_15_16/html_en/EN/ref_hotkey_icons.html), l’étoile S est Lenovo Smart Key, le sélecteur d’écrans règle les affichages, et F11 avec rectangles représente l’affichage des applications en vignettes (pas forcément Alt+Tab). F8 mode avion, F9 Smart Key, F10 pavé tactile et l’événement exact F11 restent à capturer physiquement avant de les remapper. Ne pas ajouter une seconde bascule rfkill sans vérifier celle du noyau. Ne pas présenter ces touches comme déjà validées.
+According to [Lenovo](https://download.lenovo.com/pccbbs/pubs/loq_15_16/html_en/EN/ref_hotkey_icons.html), the S star is Lenovo Smart Key, the screen selector adjusts the displays, and F11 with rectangles represents the display of applications in thumbnails (not necessarily Alt+Tab). F8 airplane mode, F9 Smart Key, F10 touchpad and the exact F11 event remain to be captured physically before remaping them. Do not add a second rfkill toggle without checking the kernel one. Do not present these keys as already validated.
 
-Configuration Hyprlang existante conservée. Le source de Hyprland **v0.56.2**, `src/config/legacy/ConfigManager.cpp`, confirme le drapeau `k` : liste de périphériques après la touche, noms séparés par des espaces ; préfixe `!` pour exclusion. Pas de migration Lua.
+Existing Hyprlang configuration retained. The source of Hyprland **v0.56.2**, `src/config/legacy/ConfigManager.cpp`, confirms the flag `k`: list of devices after the key, names separated by spaces; prefix `!` for exclusion. No Lua migration.
 
-`active-brightness.py` choisit le connecteur focalisé à chaque invocation, redétecte le bus DDC par connecteur et regroupe les crans concurrents avec deux verrous dans XDG_RUNTIME_DIR. Lecture matérielle initiale, calcul borné, puis une écriture par lot. Minimum interne 1 %, externe 0 %. Les erreurs matérielles donnent une notification, sans modifier un autre écran.
+`active-brightness.py` chooses the focused connector on each invocation, redetects the DDC bus per connector, and groups concurrent notches with two locks in XDG_RUNTIME_DIR. Initial hardware read, bounded calculation, then a batch write. Minimum internal 1%, external 0%. Hardware errors give a notification, without changing another screen.
 
-44 tests Python passent, dont sélection de l’écran actif, limites et conservation des crans concurrents. `hyprctl configerrors` vide après rechargement. Détection matérielle réelle : HDMI-A-1 sur i2c-4 ; écran intégré eDP-1 exclu de DDC. À valider par Toubi : tourner la molette seule, cliquer, puis tourner avec Ctrl ; vérifier que Ctrl ne change pas aussi le son, et vérifier les touches du portable. La persistance i2c-dev après redémarrage reste distincte.
+44 Python tests pass, including selection of the active screen, limits and conservation of concurrent screens. `hyprctl configerrors` empty after reloading. Actual hardware detection: HDMI-A-1 on i2c-4; integrated display eDP-1 excluded from DDC. To validate with Toubi: turn the wheel alone, click, then turn with Ctrl; check that Ctrl does not also change the sound, and check the laptop keys. i2c-dev persistence after reboot remains separate.
 
-Sources : [notice R98Pro](https://manuals.plus/m/74d361820f508dd0536c05f122a908724e0ee49a5b8e21c0c4cfafa5ba269888_optim.pdf), [parseur Hyprland v0.56.2](https://github.com/hyprwm/Hyprland/blob/v0.56.2/src/config/legacy/ConfigManager.cpp).
+Sources: [notice R98Pro](https://manuals.plus/m/74d361820f508dd0536c05f122a908724e0ee49a5b8e21c0c4cfafa5ba269888_optim.pdf), [parser Hyprland v0.56.2](https://github.com/hyprwm/Hyprland/blob/v0.56.2/src/config/legacy/ConfigManager.cpp).

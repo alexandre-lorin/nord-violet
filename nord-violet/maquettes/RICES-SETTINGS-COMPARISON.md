@@ -1,12 +1,12 @@
-# Comparatif des shells Hyprland / Wayland
+# Comparison of shells Hyprland / Wayland
 
-Ce document a été remplacé par l’audit complet fondé sur les dépôts importés :
+This document has been replaced by the full audit based on imported deposits:
 
-- [Synthèse et matrice fonctionnelle](audits/RICES-AUDIT-COMPLET.md)
-- [Inventaire Ryoku](audits/generated/RYOKU-INVENTORY.md)
-- [Inventaire Caelestia](audits/generated/CAELESTIA-INVENTORY.md)
-- [Inventaire Noctalia v5](audits/generated/NOCTALIA-INVENTORY.md)
-- [Inventaire DankMaterialShell](audits/generated/DMS-INVENTORY.md)
+- [Synthesis and functional matrix](audits/RICES-AUDIT-COMPLET.md)
+- [Ryoku Inventory](audits/generated/RYOKU-INVENTORY.md)
+- [Caelestia Inventory](audits/generated/CAELESTIA-INVENTORY.md)
+- [Noctalia inventory v5](audits/generated/NOCTALIA-INVENTORY.md)
+- [DankMaterialShell Inventory](audits/generated/DMS-INVENTORY.md)
 
-L’ancienne comparaison utilisait le dépôt historique de Noctalia et était trop
-partielle. Elle ne doit plus servir de base aux décisions de Nord Violet.
+The old comparison used the Noctalia historical repository and was too
+partial. It must no longer serve as a basis for Nord Violet decisions.

@@ -1,71 +1,71 @@
-# Date et calendrier — 19 septembre 2026
+# Date and calendar — 19 September 2026
 
-Choix validé par Toubi : **survol B + calendrier A**, d’après `maquettes/calendrier.html`.
+Choice validated by Toubi: **overview B + calendar A**, according to `maquettes/calendrier.html`.
 
-- Survol de l’heure : jour en grand, jour de semaine et mois/année en français.
-- Clic droit : calendrier compact de 332 × 372 px sur l’écran utilisé.
-- Semaine commençant lundi, jours voisins atténués, sélection violette discrète,
-  point sous aujourd’hui, flèches de mois et bouton Aujourd’hui.
-- Échap, clic extérieur ou nouveau clic droit sur l’heure : fermeture.
-- Flèches clavier : sélection du jour ; Page précédente/suivante : mois ;
-  Début : aujourd’hui. La sélection sert à consulter une date, sans agenda externe.
-- Un seul calendrier ouvert à la fois. Depuis un calendrier ouvert, un clic sur
-  l’autre écran le ferme ; le clic suivant ouvre celui de cet écran.
+- Time overview: day in large, day of week and month/year in French.
+- Right click: compact calendar of 332 × 372 px on the screen used.
+- Week starting Monday, attenuated neighboring days, discreet purple selection,
+  point under today, month arrows and Today button.
+- Escape, outside click or right click again on the time: close.
+- Keyboard arrows: day selection; Previous/next page: month;
+  Start: today. The selection is used to consult a date, without an external calendar.
+- Only one calendar open at a time. From an open calendar, clicking on
+  the other screen closes it; the next click opens that of this screen.
 
-## Intégration
+## Integration
 
-`CalendarHub.qml`, chargé par le shell du Control Center, crée une petite surface
-d’entrée transparente au-dessus de chaque horloge native Waybar. L’heure reste
-affichée par Waybar. Cette surface permet le vrai survol B à deux colonnes,
-que le tooltip Pango natif ne permet pas de composer proprement.
+`CalendarHub.qml`, loaded by the Control Center shell, creates a small area
+transparent input interface above each native Waybar clock. The time remains
+displayed by Waybar. This surface allows the real flyover B with two columns,
+that the native Pango tooltip does not allow you to compose properly.
 
-`CalendarClock.qml` gère le survol, le clic droit et les surfaces layer-shell.
-`CalendarCard.qml` et `CalendarButton.qml` utilisent les couleurs partagées de
-`theme/Theme.qml`. `CalendarMath.js` calcule les dates à midi local pour éviter
-les décalages lors des changements d’heure.
+`CalendarClock.qml` supports hover, right-click and layer-shell surfaces.
+`CalendarCard.qml` and `CalendarButton.qml` use the shared colors of
+`theme/Theme.qml`. `CalendarMath.js` calculates dates at local noon to avoid
+the differences during time changes.
 
-Le calendrier est ancré avant affichage : aucune fenêtre flottante à déplacer
-après ouverture. Aucun espace spécial supplémentaire. La fermeture extérieure
-utilise `HyprlandFocusGrab` sur le calendrier uniquement : inclure la surface
-de l’horloge dans la capture provoquait la perte du deuxième clic sans mouvement.
+The calendar is anchored before display: no floating window to move
+after opening. No extra special space. The exterior closure
+uses `HyprlandFocusGrab` on calendar only: include area
+of the clock in the capture was causing the second click to be lost without movement.
 
-Les deux fichiers Waybar actifs sont surveillés pour suivre la position haut/bas,
-la hauteur, les marges et la présence de l’horloge centrale. L’espacement entre
-barre et popup est de 12 px. La zone d’entrée mesure 66 px de large, adaptée au
-format actuel `HH:MM` ; revoir cette largeur si le format ou la police change.
-La configuration actuelle utilise des sorties nommées explicitement dans
-`config.jsonc`, reprises par le calendrier. Un changement vers des motifs de
-sortie Waybar demanderait d’adapter cette correspondance.
+Both active Waybar files are monitored to track up/down position,
+the height, the margins and the presence of the central clock. The spacing between
+bar and popup is 12 px. The input area is 66 px wide, suitable for
+current format `HH:MM`; review this width if the format or font changes.
+The current configuration uses explicitly named outputs in
+`config.jsonc`, taken up by the calendar. A shift towards motives of
+Waybar output would ask to adapt this correspondence.
 
-Le tooltip natif est désactivé dans le fichier actif
-`~/.config/waybar/modules-common.jsonc`. `opacity.css` n’a pas été modifié.
-Le dossier Waybar actif reste indépendant de sa copie ancienne dans Git.
+Native tooltip is disabled in active file
+`~/.config/waybar/modules-common.jsonc`. `opacity.css` has not been modified.
+The active Waybar folder remains independent of its old copy in Git.
 
 ## Validation
 
-- Six cycles réels sur HDMI-A-1 et eDP-1 : survol, clic droit, fermeture par
-  Échap / clic droit / clic extérieur. Positions contrôlées via le compositeur.
-- Navigation au mois suivant et retour à aujourd’hui vérifiés visuellement.
-- Passage entre écrans contrôlé : un seul calendrier visible.
-- Barre temporairement placée en haut : calendrier ancré à y=46, puis retour
-  exact au fichier et à la disposition d’origine.
-- Neuf tests de dates : années bissextiles, changement d’année, changement
-  d’heure, grille du lundi au dimanche et navigation au clavier.
-- Les huit tests existants de placement des flyouts passent également.
-- `qmllint` passe sur CalendarCard et CalendarButton. Sur CalendarClock et
-  CalendarHub, il quitte avec le code 255 sans diagnostic ; leur chargement réel
-  et les interactions ci-dessus ont été vérifiés sans nouvelle erreur QML.
-- Aucune erreur de configuration Hyprland ; `git diff --check` passe.
+- Six real cycles on HDMI-A-1 and eDP-1: hover, right click, close by
+  Escape/right click/outside click. Positions controlled via composer.
+- Navigation to the next month and return to today visually verified.
+- Controlled switching between screens: only one calendar visible.
+- Bar temporarily placed at the top: calendar anchored at y=46, then back
+  exact to the original file and layout.
+- Nine date tests: leap years, change of year, change
+  time, Monday to Sunday grid and keyboard navigation.
+- The eight existing flyout placement tests also pass.
+- `qmllint` changes to CalendarCard and CalendarButton. On CalendarClock and
+  CalendarHub, it exits with code 255 without diagnosis; their actual loading
+  and the above interactions have been verified without new QML errors.
+- No configuration error Hyprland; `git diff --check` passes.
 
-Commandes reproductibles depuis `/home/toubi/dotfiles` :
+Commands reproducible from `/home/toubi/dotfiles`:
 
 ```sh
 TZ=Europe/Paris node --test nord-violet/tests/test_calendar.cjs
 PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s nord-violet/tests -v
 ```
 
-Sauvegarde préalable :
+Prior backup:
 `~/.local/state/nord-violet/backups/20260919-224328-calendar/`.
-Les nouveaux composants Calendar et CalendarMath sont séparés des fichiers
-existants. Pour retirer l’intégration, restaurer `shell.qml`, `qmldir` et
-`modules-common.jsonc` depuis cette sauvegarde, puis recharger Waybar.
+New Calendar and CalendarMath components are separated from files
+existing. To remove the integration, restore `shell.qml`, `qmldir` and
+`modules-common.jsonc` from this save, then reload Waybar.

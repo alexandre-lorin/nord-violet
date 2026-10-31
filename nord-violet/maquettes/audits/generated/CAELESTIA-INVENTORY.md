@@ -1,9 +1,9 @@
-# Caelestia — inventaire extrait du code
+# Caelestia — inventory extracted from code
 
-Source locale : `/home/toubi/01 - Dev/00 - Projets à tester/qml-cpp--caelestia-shell`  
-Révision : `20e625d6bf1a9d0bb7625a4bb814797d187b075d`
+Local source: `/home/toubi/01 - Dev/00 - Projets à tester/qml-cpp--caelestia-shell`  
+Revision: `20e625d6bf1a9d0bb7625a4bb814797d187b075d`
 
-## Pages et sous-pages Nexus
+## Nexus pages and subpages
 
 - AboutPage.qml
 - AppsPage.qml
@@ -40,140 +40,140 @@ Révision : `20e625d6bf1a9d0bb7625a4bb814797d187b075d`
 - wallandstyle/WallpaperCategory.qml
 - wallandstyle/WallpaperSelect.qml
 
-## Libellés et descriptions déclarés par page
+## Labels and descriptions declared per page
 
 ### modules/nexus/pages/AboutPage.qml
 
-- `text: "Caelestia"`
-- `text: Tr.tr("Plugins"`
-- `text: Tr.tr("Software"`
-- `text: Tr.tr("System"`
-- `title: Tr.tr("About"`
+-`text: "Caelestia"`
+-`text: Tr.tr("Plugins"`
+-`text: Tr.tr("Software"`
+-`text: Tr.tr("System"`
+-`title: Tr.tr("About"`
 
 ### modules/nexus/pages/AppsPage.qml
 
-- `text: "favorite"`
-- `text: Tr.tr("All apps"`
-- `text: Tr.tr("Browse installed apps, set favourites and hidden"`
-- `text: Tr.tr("Default applications"`
-- `title: Tr.tr("Apps"`
+-`text: "favorite"`
+-`text: Tr.tr("All apps"`
+-`text: Tr.tr("Browse installed apps, set favourites and hidden"`
+-`text: Tr.tr("Default applications"`
+-`title: Tr.tr("Apps"`
 
 ### modules/nexus/pages/AudioPage.qml
 
-- `text: Tr.tr("App volumes"`
-- `title: Tr.tr("Audio"`
+-`text: Tr.tr("App volumes"`
+-`title: Tr.tr("Audio"`
 
 ### modules/nexus/pages/BluetoothPage.qml
 
-- `text: Tr.tr("Allow nearby devices to find this one"`
-- `text: Tr.tr("Allow nearby devices to pair with this one"`
-- `text: Tr.tr("Bluetooth"`
-- `text: Tr.tr("Pair new device"`
-- `title: Tr.tr("Connected devices"`
+-`text: Tr.tr("Allow nearby devices to find this one"`
+-`text: Tr.tr("Allow nearby devices to pair with this one"`
+-`text: Tr.tr("Bluetooth"`
+-`text: Tr.tr("Pair new device"`
+-`title: Tr.tr("Connected devices"`
 
 ### modules/nexus/pages/LanguageAndRegion.qml
 
-- `text: "map"`
-- `text: Tr.tr("12-hour"`
-- `text: Tr.tr("24-hour"`
-- `text: Tr.tr("Auto"`
-- `text: Tr.tr("Binary (KiB, MiB)"`
-- `text: Tr.tr("Choose your weather location on a map in a future update"`
-- `text: Tr.tr("Decimal (KB, MB)"`
-- `text: Tr.tr("How times are shown across the shell"`
-- `text: Tr.tr("K"`
-- `text: Tr.tr("Language"`
-- `text: Tr.tr("Location picker coming soon"`
-- `text: Tr.tr("The language used in the shell UI"`
-- `text: Tr.tr("Time & date"`
-- `text: Tr.tr("Units for CPU and GPU temperatures"`
-- `text: Tr.tr("Units for data sizes and network speeds"`
-- `text: Tr.tr("Units for weather temperatures"`
-- `text: Tr.tr("Units"`
-- `text: Tr.tr("Weather"`
-- `text: Tr.tr("°C"`
-- `text: Tr.tr("°F"`
-- `title: Tr.tr("Language & region"`
+-`text: "map"`
+-`text: Tr.tr("12-hour"`
+-`text: Tr.tr("24-hour"`
+-`text: Tr.tr("Auto"`
+-`text: Tr.tr("Binary (KiB, MiB)"`
+-`text: Tr.tr("Choose your weather location on a map in a future update"`
+-`text: Tr.tr("Decimal (KB, MB)"`
+-`text: Tr.tr("How times are shown across the shell"`
+-`text: Tr.tr("K"`
+-`text: Tr.tr("Language"`
+-`text: Tr.tr("Location picker coming soon"`
+-`text: Tr.tr("The language used in the shell UI"`
+-`text: Tr.tr("Time & date"`
+-`text: Tr.tr("Units for CPU and GPU temperatures"`
+-`text: Tr.tr("Units for data sizes and network speeds"`
+-`text: Tr.tr("Units for weather temperatures"`
+-`text: Tr.tr("Units"`
+-`text: Tr.tr("Weather"`
+-`text: Tr.tr("°C"`
+-`text: Tr.tr("°F"`
+-`title: Tr.tr("Language & region"`
 
 ### modules/nexus/pages/NetworkPage.qml
 
-- `text: Tr.tr("%1 ms"`
-- `text: Tr.tr("Add network"`
-- `text: Tr.tr("Add provider"`
-- `text: Tr.tr("Saved networks"`
-- `text: Tr.tr("Show all networks (%1)"`
-- `text: Tr.tr("VPN"`
-- `text: Tr.tr("Wi-Fi"`
-- `title: Tr.tr("Network"`
+-`text: Tr.tr("%1 ms"`
+-`text: Tr.tr("Add network"`
+-`text: Tr.tr("Add provider"`
+-`text: Tr.tr("Saved networks"`
+-`text: Tr.tr("Show all networks (%1)"`
+-`text: Tr.tr("VPN"`
+-`text: Tr.tr("Wi-Fi"`
+-`title: Tr.tr("Network"`
 
 ### modules/nexus/pages/PanelsPage.qml
 
-- `text: Tr.tr("Dashboard"`
-- `text: Tr.tr("Launcher"`
-- `text: Tr.tr("Sidebar"`
-- `text: Tr.tr("Taskbar"`
-- `text: Tr.tr("Utilities"`
-- `title: Tr.tr("Panels"`
+-`text: Tr.tr("Dashboard"`
+-`text: Tr.tr("Launcher"`
+-`text: Tr.tr("Sidebar"`
+-`text: Tr.tr("Taskbar"`
+-`text: Tr.tr("Utilities"`
+-`title: Tr.tr("Panels"`
 
 ### modules/nexus/pages/ServicesPage.qml
 
-- `text: "LRCLIB"`
-- `text: "NVIDIA"`
-- `text: "NetEase"`
-- `text: Tr.tr("Amount the brightness changes per scroll (%)"`
-- `text: Tr.tr("Amount the volume changes per scroll (%)"`
-- `text: Tr.tr("CPU, memory and GPU update interval (seconds)"`
-- `text: Tr.tr("Derive theme mode and variant from the wallpaper"`
-- `text: Tr.tr("How often available networks are rescanned (seconds)"`
-- `text: Tr.tr("How often the media position updates (ms)"`
-- `text: Tr.tr("Input increments"`
-- `text: Tr.tr("Media & lyrics"`
-- `text: Tr.tr("Notifications"`
-- `text: Tr.tr("Notifications, toasts, timeouts"`
-- `text: Tr.tr("Number of bars in the audio visualisers"`
-- `text: Tr.tr("Polling"`
-- `text: Tr.tr("Preferred media player when several are open"`
-- `text: Tr.tr("Service tuning"`
-- `text: Tr.tr("Smart colour scheme"`
-- `text: Tr.tr("Source used to fetch synced lyrics"`
-- `text: Tr.tr("Upper limit for output volume (%)"`
-- `title: Tr.tr("Services"`
+-`text: "LRCLIB"`
+-`text: "NVIDIA"`
+-`text: "NetEase"`
+-`text: Tr.tr("Amount the brightness changes per scroll (%)"`
+-`text: Tr.tr("Amount the volume changes per scroll (%)"`
+-`text: Tr.tr("CPU, memory and GPU update interval (seconds)"`
+-`text: Tr.tr("Derive theme mode and variant from the wallpaper"`
+-`text: Tr.tr("How often available networks are rescanned (seconds)"`
+-`text: Tr.tr("How often the media position updates (ms)"`
+-`text: Tr.tr("Input increments"`
+-`text: Tr.tr("Media & lyrics"`
+-`text: Tr.tr("Notifications"`
+-`text: Tr.tr("Notifications, toasts, timeouts"`
+-`text: Tr.tr("Number of bars in the audio visualisers"`
+-`text: Tr.tr("Polling"`
+-`text: Tr.tr("Preferred media player when several are open"`
+-`text: Tr.tr("Service tuning"`
+-`text: Tr.tr("Smart colour scheme"`
+-`text: Tr.tr("Source used to fetch synced lyrics"`
+-`text: Tr.tr("Upper limit for output volume (%)"`
+-`title: Tr.tr("Services"`
 
 ### modules/nexus/pages/WallpaperAndStyle.qml
 
-- `text: "hide_image"`
-- `text: Tr.tr("Base %1, layers %2"`
-- `text: Tr.tr("Colours"`
-- `text: Tr.tr("Dark theme"`
-- `text: Tr.tr("Display wallpaper"`
-- `text: Tr.tr("Transparency"`
-- `text: Tr.tr("Wallpaper disabled"`
-- `text: Tr.tr("Wallpapers"`
-- `title: Tr.tr("Wallpaper & style"`
+-`text: "hide_image"`
+-`text: Tr.tr("Base %1, layers %2"`
+-`text: Tr.tr("Colours"`
+-`text: Tr.tr("Dark theme"`
+-`text: Tr.tr("Display wallpaper"`
+-`text: Tr.tr("Transparency"`
+-`text: Tr.tr("Wallpaper disabled"`
+-`text: Tr.tr("Wallpapers"`
+-`title: Tr.tr("Wallpaper & style"`
 
 ### modules/nexus/pages/apps/AllApps.qml
 
-- `text: "chevron_right"`
-- `text: "favorite"`
-- `title: Tr.tr("All apps"`
+-`text: "chevron_right"`
+-`text: "favorite"`
+-`title: Tr.tr("All apps"`
 
 ### modules/nexus/pages/apps/AppInfo.qml
 
-- `text: Tr.tr("Details"`
-- `text: Tr.tr("Favourite"`
-- `text: Tr.tr("Hidden"`
-- `text: Tr.tr("Launcher"`
-- `title: Tr.tr("App info"`
+-`text: Tr.tr("Details"`
+-`text: Tr.tr("Favourite"`
+-`text: Tr.tr("Hidden"`
+-`text: Tr.tr("Launcher"`
+-`title: Tr.tr("App info"`
 
 ### modules/nexus/pages/audio/AppVolumes.qml
 
-- `text: Tr.tr("Adjust the volume of individual apps currently playing audio."`
-- `title: Tr.tr("App volumes"`
+-`text: Tr.tr("Adjust the volume of individual apps currently playing audio."`
+-`title: Tr.tr("App volumes"`
 
 ### modules/nexus/pages/bluetooth/BluetoothPairing.qml
 
-- `text: Tr.tr("Available devices"`
-- `title: Tr.tr("Pair new device"`
+-`text: Tr.tr("Available devices"`
+-`title: Tr.tr("Pair new device"`
 
 ### modules/nexus/pages/bluetooth/BtDeviceInfo.qml
 
@@ -360,51 +360,51 @@ Révision : `20e625d6bf1a9d0bb7625a4bb814797d187b075d`
 
 ### modules/nexus/pages/panels/taskbar/BarTray.qml
 
-- `text: Tr.tr("Popout on hover"`
-- `text: Tr.tr("Recolour icons"`
-- `text: Tr.tr("Show the tray menu popout when hovering"`
-- `title: Tr.tr("Tray"`
+-`text: Tr.tr("Popout on hover"`
+-`text: Tr.tr("Recolour icons"`
+-`text: Tr.tr("Show the tray menu popout when hovering"`
+-`title: Tr.tr("Tray"`
 
 ### modules/nexus/pages/panels/taskbar/BarWorkspaces.qml
 
-- `text: Tr.tr("Hide workspaces not on the current monitor"`
-- `text: Tr.tr("Number of workspaces displayed"`
-- `text: Tr.tr("Show icons of open windows on each workspace"`
-- `text: Tr.tr("Show workspaces that are inactive and empty"`
-- `title: Tr.tr("Workspaces"`
+-`text: Tr.tr("Hide workspaces not on the current monitor"`
+-`text: Tr.tr("Number of workspaces displayed"`
+-`text: Tr.tr("Show icons of open windows on each workspace"`
+-`text: Tr.tr("Show workspaces that are inactive and empty"`
+-`title: Tr.tr("Workspaces"`
 
 ### modules/nexus/pages/services/NotificationsPage.qml
 
-- `text: Tr.tr("Audio input changes"`
-- `text: Tr.tr("Audio output changes"`
-- `text: Tr.tr("Caps lock changes"`
-- `text: Tr.tr("Charging changes"`
-- `text: Tr.tr("Dismiss notifications after their timeout"`
-- `text: Tr.tr("Do not disturb changes"`
-- `text: Tr.tr("Expire automatically"`
-- `text: Tr.tr("Game mode changes"`
-- `text: Tr.tr("Keyboard layout changes"`
-- `text: Tr.tr("Maximum number of toasts shown at once"`
-- `text: Tr.tr("Notifications shown per group before collapsing"`
-- `text: Tr.tr("Notifications"`
-- `text: Tr.tr("Now playing"`
-- `text: Tr.tr("Num lock changes"`
-- `text: Tr.tr("Open expanded"`
-- `text: Tr.tr("Show notifications expanded by default"`
-- `text: Tr.tr("Time before a notification dismisses (ms)"`
-- `text: Tr.tr("Toast events"`
-- `text: Tr.tr("Toasts"`
-- `text: Tr.tr("VPN changes"`
-- `text: Tr.tr("Whether notifications appear over fullscreen apps"`
-- `text: Tr.tr("Whether toasts appear over fullscreen apps"`
-- `title: Tr.tr("Notifications"`
+-`text: Tr.tr("Audio input changes"`
+-`text: Tr.tr("Audio output changes"`
+-`text: Tr.tr("Caps lock changes"`
+-`text: Tr.tr("Charging changes"`
+-`text: Tr.tr("Dismiss notifications after their timeout"`
+-`text: Tr.tr("Do not disturb changes"`
+-`text: Tr.tr("Expire automatically"`
+-`text: Tr.tr("Game mode changes"`
+-`text: Tr.tr("Keyboard layout changes"`
+-`text: Tr.tr("Maximum number of toasts shown at once"`
+-`text: Tr.tr("Notifications shown per group before collapsing"`
+-`text: Tr.tr("Notifications"`
+-`text: Tr.tr("Now playing"`
+-`text: Tr.tr("Num lock changes"`
+-`text: Tr.tr("Open expanded"`
+-`text: Tr.tr("Show notifications expanded by default"`
+-`text: Tr.tr("Time before a notification dismisses (ms)"`
+-`text: Tr.tr("Toast events"`
+-`text: Tr.tr("Toasts"`
+-`text: Tr.tr("VPN changes"`
+-`text: Tr.tr("Whether notifications appear over fullscreen apps"`
+-`text: Tr.tr("Whether toasts appear over fullscreen apps"`
+-`title: Tr.tr("Notifications"`
 
 ### modules/nexus/pages/wallandstyle/ColourSelect.qml
 
-- `text: "handyman"`
-- `text: Tr.tr("Page under construction"`
-- `text: Tr.tr("This page will be available in a future update."`
-- `title: Tr.tr("Colours"`
+-`text: "handyman"`
+-`text: Tr.tr("Page under construction"`
+-`text: Tr.tr("This page will be available in a future update."`
+-`title: Tr.tr("Colours"`
 
 ### modules/nexus/pages/wallandstyle/WallpaperCategory.qml
 
@@ -412,17 +412,17 @@ Révision : `20e625d6bf1a9d0bb7625a4bb814797d187b075d`
 ### modules/nexus/pages/wallandstyle/WallpaperSelect.qml
 
 - `text: "hide_image"`
-- `text: Tr.tr("Browse"`
-- `text: Tr.tr("Featured wallpaper"`
-- `text: Tr.tr("Local wallpapers"`
-- `text: Tr.tr("No local wallpapers found"`
-- `text: Tr.tr("Random"`
-- `title: Tr.tr("Select an image"`
-- `title: Tr.tr("Wallpapers"`
+-`text: Tr.tr("Browse"`
+-`text: Tr.tr("Featured wallpaper"`
+-`text: Tr.tr("Local wallpapers"`
+-`text: Tr.tr("No local wallpapers found"`
+-`text: Tr.tr("Random"`
+-`title: Tr.tr("Select an image"`
+-`title: Tr.tr("Wallpapers"`
 
-## Modules du shell
+## Shell modules
 
-- areapicker
+-areapicker
 - background
 - bar
 - bar/components
@@ -438,11 +438,11 @@ Révision : `20e625d6bf1a9d0bb7625a4bb814797d187b075d`
 - launcher
 - launcher/items
 - launcher/services
-- lock
-- lock/center
-- lock/weather
-- nexus
-- nexus/common
+-lock
+-lock/center
+-lock/weather
+-nexus
+-nexus/common
 - nexus/navpane
 - nexus/pages
 - nexus/pages/apps
@@ -453,7 +453,7 @@ Révision : `20e625d6bf1a9d0bb7625a4bb814797d187b075d`
 - nexus/pages/services
 - nexus/pages/wallandstyle
 - notifications
-- osd
+-osd
 - session
 - sidebar
 - utilities
@@ -461,19 +461,19 @@ Révision : `20e625d6bf1a9d0bb7625a4bb814797d187b075d`
 - utilities/toasts
 - windowinfo
 
-## Services QML
+## QML Services
 
 - Audio.qml
 - Brightness.qml
-- Colours.qml
+- Colors.qml
 - GameMode.qml
 - Hypr.qml
 - IdleInhibitor.qml
 - Nmcli.qml
 - NotifData.qml
-- Notifs.qml
+- Notifications.qml
 - Players.qml
-- Recorder.qml
+-Recorder.qml
 - Screens.qml
 - ShellState.qml
 - Time.qml
@@ -481,7 +481,7 @@ Révision : `20e625d6bf1a9d0bb7625a4bb814797d187b075d`
 - Wallpapers.qml
 - Weather.qml
 
-## Services natifs du plugin
+## Native services of the plugin
 
 - audiocollector.hpp
 - audioprovider.hpp
@@ -503,7 +503,7 @@ Révision : `20e625d6bf1a9d0bb7625a4bb814797d187b075d`
 - storage.hpp
 - tickingservice.hpp
 
-## Nœuds de configuration
+## Configuration nodes
 
 - appearanceconfig.hpp
 - backgroundconfig.hpp

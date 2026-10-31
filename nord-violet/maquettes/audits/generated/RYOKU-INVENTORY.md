@@ -1,9 +1,9 @@
-# Ryoku — inventaire extrait du code
+# Ryoku — inventory extracted from code
 
-Source locale : `/home/toubi/01 - Dev/00 - Projets à tester/qml-go--ryoku`  
-Révision : `06091d40d742552e85ab0745152b4b07f6ff2201`
+Local source: `/home/toubi/01 - Dev/00 - Projets à tester/qml-go--ryoku`  
+Revision: `06091d40d742552e85ab0745152b4b07f6ff2201`
 
-## Pages du Hub
+## Hub Pages
 
 - AddonsPage.qml
 - AnimationsPage.qml
@@ -18,8 +18,8 @@ Révision : `06091d40d742552e85ab0745152b4b07f6ff2201`
 - GlobalPage.qml
 - GpuPage.qml
 - HeroEditor.qml
-- ImportPage.qml
-- InputPage.qml
+-ImportPage.qml
+-InputPage.qml
 - KeybindsPage.qml
 - LauncherPage.qml
 - LayerRulesPage.qml
@@ -30,64 +30,64 @@ Révision : `06091d40d742552e85ab0745152b4b07f6ff2201`
 - ProfilePage.qml
 - ProfileToolbar.qml
 - RashinPage.qml
-- RecordingPage.qml
-- SessionPage.qml
-- StoreWidgetCard.qml
+-RecordingPage.qml
+-SessionPage.qml
+-StoreWidgetCard.qml
 - UpdatesPage.qml
 - WidgetsPage.qml
-- WindowManagerPage.qml
+-WindowManagerPage.qml
 - WindowRulesPage.qml
 
-## Réglages déclarés dans les schémas
+## Settings declared in diagrams
 
 ### AddonsPage
 
-- `"tab": "detail"`
-- `"group": "Placement"`
-- `"key": "<pluginId>.enabled"`
-- `"label": "Enabled"`
-- `"desc": "Runs the add-on; off keeps it installed but idle"`
-- `"tab": "detail"`
-- `"group": "Placement"`
-- `"key": "<pluginId>.host"`
-- `"label": "Show as"`
-- `"desc": "Where it appears: popout, wallpaper tile or bar glyph"`
-- `"tab": "detail"`
+-`"tab": "detail"`
+-`"group": "Placement"`
+-`"key": "<pluginId>.enabled"`
+-`"label": "Enabled"`
+-`"desc": "Runs the add-on; off keeps it installed but idle"`
+-`"tab": "detail"`
+-`"group": "Placement"`
+-`"key": "<pluginId>.host"`
+-`"label": "Show as"`
+-`"desc": "Where it appears: popout, wallpaper tile or bar glyph"`
+-`"tab": "detail"`
 - `"group": "(plugin-declared, from manifest.metadata.settings[].group - group headers are rendered by PluginSettingsForm itself, one per distinct `group` string, in schema order; fields with group \"\" get no header)"`
-- `"key": "<pluginId>.settings.<field.key>"`
-- `"label": "(plugin-declared, field.label, falling back to field.key)"`
-- `"desc": "Each add-on defines its own; applied live"`
-- `"tab": "Plugins"`
-- `"group": "Management"`
-- `"key": ""`
-- `"label": "Update / Remove"`
-- `"desc": "Refreshes or removes it; placement stays as set"`
-- `"tab": "Bundles"`
-- `"group": "Management"`
-- `"key": ""`
-- `"label": "Remove component / bundle"`
-- `"desc": "Shows every component state, with a terminal"`
-- `"tab": ""`
-- `"group": "OTHER"`
-- `"key": ""`
-- `"label": "Browse RyoStore"`
-- `"desc": "Opens the matching plugin or bundle catalogue"`
+-`"key": "<pluginId>.settings.<field.key>"`
+-`"label": "(plugin-declared, field.label, falling back to field.key)"`
+-`"desc": "Each add-on defines its own; applied live"`
+-`"tab": "Plugins"`
+-`"group": "Management"`
+-`"key": ""`
+-`"label": "Update / Remove"`
+-`"desc": "Refreshes or removes it; placement stays as set"`
+-`"tab": "Bundles"`
+-`"group": "Management"`
+-`"key": ""`
+-`"label": "Remove component / bundle"`
+-`"desc": "Shows every component state, with a terminal"`
+-`"tab": ""`
+-`"group": "OTHER"`
+-`"key": ""`
+-`"label": "Browse RyoStore"`
+-`"desc": "Opens the matching plugin or bundle catalogue"`
 
 ### AnimationsPage
 
-- `"tab": ""`
-- `"group": "GLOBAL"`
-- `"key": "desktop.appearance.animations"`
-- `"label": "Animations"`
-- `"desc": "Master switch for desktop motion"`
+-`"tab": ""`
+-`"group": "GLOBAL"`
+-`"key": "desktop.appearance.animations"`
+-`"label": "Animations"`
+-`"desc": "Master switch for desktop motion"`
 
 ### AppOverridesPage
 
-- `"tab": ""`
-- `"group": "Match row (card header, above the LOOK divider - no SettingSection)"`
-- `"key": "desktop.appOverrides"`
-- `"label": "App overrides"`
-- `"desc": "Per-app look on top of the global Appearance"`
+-`"tab": ""`
+-`"group": "Match row (card header, above the LOOK divider - no SettingSection)"`
+-`"key": "desktop.appOverrides"`
+-`"label": "App overrides"`
+-`"desc": "Per-app look on top of the global Appearance"`
 
 ### BarStudioPage
 
@@ -1579,108 +1579,108 @@ Révision : `06091d40d742552e85ab0745152b4b07f6ff2201`
 - `"key": "desktop.appearance.shadowRange"`
 - `"label": "Shadow range"`
 - `"desc": "How far the shadow spreads from the window"`
-- `"tab": "Look"`
-- `"group": "SHADOWS"`
-- `"key": "desktop.appearance.shadowSpread"`
-- `"label": "Spread"`
-- `"desc": "Grows the shadow outward before its soft edge begins"`
-- `"tab": "Look"`
-- `"group": "SHADOWS"`
-- `"key": "desktop.appearance.shadowOffsetX"`
-- `"label": "Horizontal offset"`
-- `"desc": "Shifts the shadow sideways, as if lit from one side"`
-- `"tab": "Look"`
-- `"group": "SHADOWS"`
-- `"key": "desktop.appearance.shadowOffsetY"`
-- `"label": "Vertical offset"`
-- `"desc": "Shifts the shadow up or down; positive is below"`
-- `"tab": "Look"`
-- `"group": "SHADOWS"`
-- `"key": "desktop.appearance.shadowPower"`
-- `"label": "Shadow sharpness"`
-- `"desc": "Higher pulls the shadow in tight, lower leaves a wide haze"`
-- `"tab": "Look"`
-- `"group": "SHADOWS"`
-- `"key": "desktop.appearance.shadowSharp"`
-- `"label": "Sharp shadow"`
-- `"desc": "Draw the shadow with hard edges instead of a soft falloff"`
-- `"tab": "Look"`
-- `"group": "SHADOWS"`
-- `"key": "desktop.appearance.shadowScale"`
-- `"label": "Shadow scale"`
-- `"desc": "Scale of the drop shadow, 1 matches the window"`
-- `"tab": "Look"`
-- `"group": "SHADOWS"`
-- `"key": "desktop.appearance.shadowColor"`
-- `"label": "Shadow color"`
-- `"desc": ""`
-- `"tab": "Look"`
-- `"group": "GLOW"`
-- `"key": "desktop.appearance.glowEnabled"`
-- `"label": "Glow behind windows"`
-- `"desc": "A coloured halo cast behind every window"`
-- `"tab": "Look"`
-- `"group": "GLOW"`
-- `"key": "desktop.appearance.glowRange"`
-- `"label": "Range"`
-- `"desc": "How far the halo reaches past the window edge"`
-- `"tab": "Look"`
-- `"group": "GLOW"`
-- `"key": "desktop.appearance.glowColor"`
-- `"label": "Colour"`
-- `"desc": "The halo's tint, picked here, not taken from the theme"`
+-`"tab": "Look"`
+-`"group": "SHADOWS"`
+-`"key": "desktop.appearance.shadowSpread"`
+-`"label": "Spread"`
+-`"desc": "Grows the shadow outward before its soft edge begins"`
+-`"tab": "Look"`
+-`"group": "SHADOWS"`
+-`"key": "desktop.appearance.shadowOffsetX"`
+-`"label": "Horizontal offset"`
+-`"desc": "Shifts the shadow sideways, as if lit from one side"`
+-`"tab": "Look"`
+-`"group": "SHADOWS"`
+-`"key": "desktop.appearance.shadowOffsetY"`
+-`"label": "Vertical offset"`
+-`"desc": "Shifts the shadow up or down; positive is below"`
+-`"tab": "Look"`
+-`"group": "SHADOWS"`
+-`"key": "desktop.appearance.shadowPower"`
+-`"label": "Shadow sharpness"`
+-`"desc": "Higher pulls the shadow in tight, lower leaves a wide haze"`
+-`"tab": "Look"`
+-`"group": "SHADOWS"`
+-`"key": "desktop.appearance.shadowSharp"`
+-`"label": "Sharp shadow"`
+-`"desc": "Draw the shadow with hard edges instead of a soft falloff"`
+-`"tab": "Look"`
+-`"group": "SHADOWS"`
+-`"key": "desktop.appearance.shadowScale"`
+-`"label": "Shadow scale"`
+-`"desc": "Scale of the drop shadow, 1 matches the window"`
+-`"tab": "Look"`
+-`"group": "SHADOWS"`
+-`"key": "desktop.appearance.shadowColor"`
+-`"label": "Shadow color"`
+-`"desc": ""`
+-`"tab": "Look"`
+-`"group": "GLOW"`
+-`"key": "desktop.appearance.glowEnabled"`
+-`"label": "Glow behind windows"`
+-`"desc": "A coloured halo cast behind every window"`
+-`"tab": "Look"`
+-`"group": "GLOW"`
+-`"key": "desktop.appearance.glowRange"`
+-`"label": "Range"`
+-`"desc": "How far the halo reaches past the window edge"`
+-`"tab": "Look"`
+-`"group": "GLOW"`
+-`"key": "desktop.appearance.glowColor"`
+-`"label": "Colour"`
+-`"desc": "The halo's tint, picked here, not taken from the theme"`
+-`"tab": "Borders"`
+-`"group": "THICKNESS"`
+-`"key": "desktop.appearance.borderSize"`
+-`"label": "Border thickness"`
+-`"desc": "Width of the frame around every window, 0 removes it"`
+-`"tab": "Borders"`
+-`"group": "THICKNESS"`
+-`"key": "desktop.appearance.borderPartOfWindow"`
+-`"label": "Border inside window"`
+-`"desc": "Count the border as part of the window size"`
 - `"tab": "Borders"`
-- `"group": "THICKNESS"`
-- `"key": "desktop.appearance.borderSize"`
-- `"label": "Border thickness"`
-- `"desc": "Width of the frame around every window, 0 removes it"`
-- `"tab": "Borders"`
-- `"group": "THICKNESS"`
-- `"key": "desktop.appearance.borderPartOfWindow"`
-- `"label": "Border inside window"`
-- `"desc": "Count the border as part of the window size"`
-- `"tab": "Borders"`
-- `"group": "COLOUR"`
-- `"key": "desktop.appearance.borderFollowsPalette"`
-- `"label": "Follow the wallpaper"`
-- `"desc": "Colour the border from the wallpaper palette; off keeps the colours below"`
-- `"tab": "Borders"`
-- `"group": "COLOUR"`
-- `"key": "desktop.appearance.activeBorder"`
-- `"label": "Active border"`
-- `"desc": "Colour of the frame around the window you are using"`
-- `"tab": "Borders"`
-- `"group": "COLOUR"`
-- `"key": "desktop.appearance.inactiveBorder"`
-- `"label": "Inactive border"`
-- `"desc": "Colour of the frame around windows you are not using"`
-- `"tab": "Borders"`
-- `"group": "ANIMATED"`
-- `"key": "desktop.appearance.animatedBorder"`
-- `"label": "Rotating gradient border"`
-- `"desc": "Sweeps accent colours around the frame; needs a border"`
-- `"tab": "Borders"`
-- `"group": "ANIMATED"`
-- `"key": "desktop.appearance.borderAngleSpeed"`
-- `"label": "Rotation speed"`
-- `"desc": "How fast the gradient circles the window"`
-- `"tab": "Motion"`
-- `"group": "MOTION"`
-- `"key": "desktop.appearance.animations"`
-- `"label": "Animations"`
-- `"desc": "Motion for open, close, move, workspaces; off snaps"`
-- `"tab": "Motion"`
-- `"group": "MOTION"`
-- `"key": "desktop.appearance.wobblyWindows"`
-- `"label": "Wobbly windows"`
-- `"desc": "Dragged windows overshoot and spring back"`
-- `"tab": "Motion"`
-- `"group": "MOTION"`
-- `"key": "desktop.appearance.windowStyle"`
-- `"label": "Open / close"`
-- `"desc": "Open and close motion: pop, slide, or GNOME"`
+-`"group": "COLOUR"`
+-`"key": "desktop.appearance.borderFollowsPalette"`
+-`"label": "Follow the wallpaper"`
+-`"desc": "Colour the border from the wallpaper palette; off keeps the colours below"`
+-`"tab": "Borders"`
+-`"group": "COLOUR"`
+-`"key": "desktop.appearance.activeBorder"`
+-`"label": "Active border"`
+-`"desc": "Colour of the frame around the window you are using"`
+-`"tab": "Borders"`
+-`"group": "COLOUR"`
+-`"key": "desktop.appearance.inactiveBorder"`
+-`"label": "Inactive border"`
+-`"desc": "Colour of the frame around windows you are not using"`
+-`"tab": "Borders"`
+-`"group": "ANIMATED"`
+-`"key": "desktop.appearance.animatedBorder"`
+-`"label": "Rotating gradient border"`
+-`"desc": "Sweeps accent colours around the frame; needs a border"`
+-`"tab": "Borders"`
+-`"group": "ANIMATED"`
+-`"key": "desktop.appearance.borderAngleSpeed"`
+-`"label": "Rotation speed"`
+-`"desc": "How fast the gradient circles the window"`
+-`"tab": "Motion"`
+-`"group": "MOTION"`
+-`"key": "desktop.appearance.animations"`
+-`"label": "Animations"`
+-`"desc": "Motion for open, close, move, workspaces; off snaps"`
+-`"tab": "Motion"`
+-`"group": "MOTION"`
+-`"key": "desktop.appearance.wobblyWindows"`
+-`"label": "Wobbly windows"`
+-`"desc": "Dragged windows overshoot and spring back"`
+-`"tab": "Motion"`
+-`"group": "MOTION"`
+-`"key": "desktop.appearance.windowStyle"`
+-`"label": "Open / close"`
+-`"desc": "Open and close motion: pop, slide, or GNOME"`
 
-## Modules visibles du shell
+## Visible shell modules
 
 - bar
 - bar/barstyles
@@ -1705,18 +1705,18 @@ Révision : `06091d40d742552e85ab0745152b4b07f6ff2201`
 - launcher/shared
 - launcher/variants
 - notifications
-- osd
+-osd
 - overview
 - overview/Singletons
-- stage
+- internship
 - stage/Singletons
-- visualizer
+- visualize
 - visualizer/Singletons
-- wallpaper
+-wallpaper
 - wallpaper/Singletons
 - wallpaper/skwd
 
-## Backends du Hub
+## Hub Backends
 
 - apps.go
 - aura.go
@@ -1762,7 +1762,7 @@ Révision : `06091d40d742552e85ab0745152b4b07f6ff2201`
 - voxtype.go
 - wm.go
 
-## Sous-systèmes livrés
+## Subsystems delivered
 
 - apps
 - apps/bash

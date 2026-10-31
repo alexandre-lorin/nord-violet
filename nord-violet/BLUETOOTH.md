@@ -1,28 +1,28 @@
-# Bluetooth — 7 octobre 2026
+# Bluetooth — 7 October 2026
 
-## Mise à jour — 9 octobre 2026 (prioritaire)
+## Update — 9 October 2026 (priority)
 
-- Recherche explicite 20 secondes via bluetoothctl, liste rafraîchie toutes les 3 secondes.
-- Distinction appareils détectés/appairés ; action Appairer ou Connecter/Déconnecter.
-- Oublier un appareil avec second clic de confirmation ; aucune suppression automatique.
-- Agent BlueZ Gio dédié via bluetooth-pair.py, enregistré uniquement pendant l'appairage demandé, sans devenir agent par défaut. Dialogues Zenity pour PIN, code numérique, comparaison de code et autorisations ; refus des demandes pour un autre appareil, aucune acceptation automatique. Appairage ne connecte pas automatiquement et ne marque pas l'appareil Trusted.
-- Gio et Zenity déjà installés, aucune dépendance ajoutée. Les dialogues ne sont pas encore intégrés visuellement en QML.
-- Syntaxe Python/QML, refus d'adresse invalide, 4 tests Node Bluetooth et 58 tests Python vérifiés. Ces tests ne valident PAS le protocole réel de l'agent avec du matériel ; recherche/appairage/confirmation/refus/connexion/suppression restent à tester par Toubi. Aucun appareil manipulé pendant les contrôles.
+- Explicit search 20 seconds via bluetoothctl, list refreshed every 3 seconds.
+- Distinction of detected/paired devices; Pair or Connect/Disconnect action.
+- Forget a device with second click of confirmation; no automatic deletion.
+- Dedicated BlueZ Gio agent via bluetooth-pair.py, registered only during requested pairing, without becoming agent by default. Zenity dialogs for PIN, digital code, code comparison and permissions; refusal of requests for another device, no automatic acceptance. Pairing does not automatically connect or mark the device Trusted.
+- Gio and Zenity already installed, no dependencies added. The dialogs are not yet visually integrated in QML.
+- Python/QML syntax, invalid address denial, 4 Node Bluetooth tests and 58 Python tests checked. These tests do NOT validate the agent's actual protocol with hardware; search/pairing/confirmation/refusal/connection/deletion remain to be tested by Toubi. No devices manipulated during checks.
 
-Référence API : https://github.com/bluez/bluez/blob/master/doc/org.bluez.Agent.rst
+API reference: https://github.com/bluez/bluez/blob/master/doc/org.bluez.Agent.rst
 
-Les notes ci-dessous décrivent l'ancienne interface.
+The notes below describe the old interface.
 
-Page Réglages → Connexions affinée sans dépendance supplémentaire.
+Settings → Connections page refined without additional dependencies.
 
-- Lecture du contrôleur, alimentation et liste réelle des appareils connus.
-- Lecture séparée des connexions avec `bluetoothctl devices Connected` (commande confirmée dans la version installée).
-- Appareil connecté : action Déconnecter ; sinon Connecter. Liste regroupée dans une carte, état vide explicite.
-- Actions désactivées pendant une commande et lorsque le contrôleur est indisponible/éteint ; pas d'activation automatique d'un appareil.
-- Messages de progression et d'échec conservés séparément de l'état du contrôleur. Détection de « Failed » même si bluetoothctl retourne 0.
-- Actualisation visible toutes les 5 secondes, sans relancer les processus déjà actifs.
-- Appairage : console bluetoothctl existante, pas de nouveau dialogue natif ni d'agent d'appairage implémenté cette passe.
+- Controller reading, power and actual list of known devices.
+- Separate reading of connections with `bluetoothctl devices Connected` (command confirmed in installed version).
+- Connected device: Disconnect action; otherwise Connect. List grouped in a map, explicit empty state.
+- Actions disabled during a command and when the controller is unavailable/turned off; no automatic activation of a device.
+- Progress and failure messages kept separate from controller state. Detection of “Failed” even if bluetoothctl returns 0.
+- Refresh visible every 5 seconds, without restarting already active processes.
+- Pairing: existing bluetoothctl console, no new native dialog or pairing agent implemented this pass.
 
-Validation : service bluetooth actif, contrôleur réellement détecté et Powered=yes ; aucune connexion, déconnexion ou bascule d'alimentation déclenchée pendant les tests. qmllint sans avertissement pour ConnectionsPage.qml ; 4 tests Node de parsing Bluetooth, 47 tests Python et 9 tests calendrier passent. Quickshell recharge la configuration sans erreur QML (avertissement de portail préexistant).
+Validation: bluetooth service active, controller actually detected and Powered=yes; No connections, disconnects, or power toggles triggered during testing. qmllint without warning for ConnectionsPage.qml; 4 Node Bluetooth parsing tests, 47 Python tests and 9 calendar tests pass. Quickshell reloads the configuration without QML error (pre-existing portal warning).
 
-Recette utilisateur : Réglages → Connexions ; vérifier le nom et l'état d'un appareil connu ; connecter un appareil déjà appairé puis déconnecter. Confirmer le message et la mise à jour de la ligne. Ne pas tester la coupure globale si un périphérique de saisie Bluetooth est indispensable.
+User recipe: Settings → Connections; check the name and status of a known device; connect an already paired device then disconnect. Confirm the message and update the line. Do not test global cutoff if a Bluetooth input device is essential.

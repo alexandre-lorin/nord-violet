@@ -1,15 +1,15 @@
-# Volume à la molette — 6 octobre 2026
+# Volume wheel — 6 October 2026
 
-## État final : contrôle natif Waybar rétabli
+## Final state: Waybar native control restored
 
-Après nouveau retour de saccades, `custom/audio` est remplacé par `pulseaudio` natif dans les deux configurations. `scroll-step: 1`, `max-volume: 100`, aucune commande `on-scroll-up/down` : pas de lancement Python/wpctl ni de flux JSON supplémentaire pendant la molette. Clic gauche mute, clic molette flyout, clic droit pavucontrol conservés. Capture après rechargement : 53 % dans Waybar, 53 % sur la sortie par défaut, non muet. Une barre par écran. Le script `waybar-watch` demeure disponible mais n’est plus utilisé par Waybar. Le ressenti doit être validé par l’utilisateur.
+After further return of jerks, `custom/audio` is replaced by native `pulseaudio` in both configurations. `scroll-step: 1`, `max-volume: 100`, no commands `on-scroll-up/down`: No Python/wpctl launch or additional JSON stream during scroll. Left click mute, flyout wheel click, pavucontrol right click retained. Capture after reload: 53% in Waybar, 53% on default output, unmuted. One bar per screen. The `waybar-watch` script remains available but is no longer used by Waybar. The feeling must be validated by the user.
 
-Retouche après signalement de blocages : flux Waybar regroupé par rafales (maximum une lecture par 35 ms, dernière mise à jour conservée). Centre de contrôle et vue générale des settings : polling arrêté lorsqu’ils sont fermés ; notifications sink-input sans effet sur le volume global ignorées ; lectures audio du flyout regroupées et non concurrentes. 36 tests Python réussis, validation QML et rechargement réel du shell réussis. Pas de saturation mémoire constatée ; le lag global n’a pas été reproduit et ne peut pas être déclaré entièrement résolu sans retour utilisateur.
+Retouching after reporting blockages: Waybar flow grouped in bursts (maximum one reading per 35 ms, last update kept). Control center and general view of settings: polling stopped when closed; sink-input notifications with no effect on overall volume ignored; grouped and non-competing flyout audio playbacks. 36 Python tests passed, QML validation and real shell reload passed. No memory saturation observed; the overall lag was not reproduced and cannot be declared fully resolved without user feedback.
 
-Le premier correctif plafonnait le volume avec trois appels pactl successifs sous verrou. Il provoquait une file d’attente lors du défilement rapide ; Waybar affichait l’état avec un intervalle d’une seconde.
+The first fix capped the volume with three successive pactl calls under lock. It caused a queue when fast scrolling; Waybar displayed the status with an interval of one second.
 
-La variation utilise désormais un seul appel `wpctl set-volume --limit 1.0 @DEFAULT_AUDIO_SINK@ 1%+` (ou `1%-`). Les mêmes commandes bornées servent aussi aux touches volume via le script audio commun.
+The variation now uses a single call `wpctl set-volume --limit 1.0 @DEFAULT_AUDIO_SINK@ 1%+` (or `1%-`). The same limited controls are also used for the volume keys via the common audio script.
 
-Waybar utilise `audio-devices.py waybar-watch`, un flux JSON alimenté par `pactl subscribe`, sans polling d’une seconde. Mise à jour sur événements de sortie et changement de serveur ; états identiques filtrés ; processus abonné arrêté à la fermeture. `restart-interval: 1` permet à Waybar de relancer le flux si l’abonnement se coupe.
+Waybar uses `audio-devices.py waybar-watch`, a JSON feed powered by `pactl subscribe`, with no 1-second polling. Update on release events and server change; identical states filtered; subscriber process stopped on exit. `restart-interval: 1` allows Waybar to restart the flow if the subscription is cut.
 
-Validation : 34 tests Python réussis, sortie JSON du flux contrôlée sur le serveur audio réel, volume et mute conservés (test de variation nulle), une surface Waybar par écran après rechargement. Pas de test sonore ni de défilement manuel effectué à la place de l’utilisateur.
+Validation: 34 Python tests passed, JSON output of the stream controlled on the real audio server, volume and mute preserved (zero variation test), one Waybar surface per screen after reload. No sound testing or manual scrolling done for the user.

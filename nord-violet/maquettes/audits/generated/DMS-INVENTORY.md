@@ -1,13 +1,13 @@
-# DankMaterialShell — inventaire extrait du code
+# DankMaterialShell — inventory extracted from code
 
-Source locale : `/home/toubi/01 - Dev/00 - Projets à tester/qml-go--dank-material-shell`  
-Révision : `65dbb9fc58a6796f81444ffeb8a5689461fddca5`
+Local source: `/home/toubi/01 - Dev/00 - Projets à tester/qml-go--dank-material-shell`  
+Revision: `65dbb9fc58a6796f81444ffeb8a5689461fddca5`
 
-Le catalogue de recherche contient **786 entrées**. Les doublons de libellé sont conservés lorsqu’ils appartiennent à des pages différentes.
+The search catalog contains **786 entries**. Duplicate labels are retained when they belong to different pages.
 
-## sans-page — 673 entrées
+## no-page — 673 entries
 
-### Sans catégorie
+### Uncategorized
 
 - **Active color** (`barWidgetOption:AppsDockOptions.qml:24`)
 - **Adaptive width** (`barWidgetOption:MusicOptions.qml:2`)
@@ -111,50 +111,50 @@ Le catalogue de recherche contient **786 entrées**. Les doublons de libellé so
 - **Visual effects** (`barWidgetOption:AppsDockOptions.qml:20`)
 - **Workspace count** (`barWidgetOption:WorkspaceSwitcherOptions.qml:12`)
 
-## sans-page — 673 entrées
+## no-page — 673 entries
 
 ### About
 
 - **About** (`_tab_13`) — Version, links, diagnostics
 
-## sans-page — 673 entrées
+## no-page — 673 entries
 
 ### Accounts
 
 - **Accounts** (`_tab_35`) — Users
 - **Refreshing...** (`usersList`)
 
-## sans-page — 673 entrées
+## no-page — 673 entries
 
 ### Advanced
 
 - **Advanced** (`_tab_59`) — Layers, fullscreen, exclusive zone
 - **Displays** (`dockAdvancedDisplays`)
-- **Exclusive zone offset** (`dockExclusiveZone`)
+- **Exclusive offset zone** (`dockExclusiveZone`)
 - **Isolate displays** (`dockIsolateDisplays`)
 - **Layers** (`dockAdvanced`)
 - **Over fullscreen** (`dockShowOnFullscreen`)
-- **Restore special workspace** (`dockRestoreSpecialWorkspaceOnClick`) — condition : `isHyprland`
-- **Show on overview** (`dockOpenOnOverview`) — condition : `isNiri`
+- **Restore special workspace** (`dockRestoreSpecialWorkspaceOnClick`) — condition: `isHyprland`
+- **Show on overview** (`dockOpenOnOverview`) — condition: `isNiri`
 - **Use overlay layer** (`dockUseOverlayLayer`)
 
-## sans-page — 673 entrées
+## no-page — 673 entries
 
 ### App theming
 
 - **Alacritty** (`matugenTemplateAlacritty`)
 - **App theming** (`_tab_50`) — GTK, Qt, portal, matugen templates
-- **Dark mode base** (`matugenTemplateNeovimSettings`)
+- **Dark basic mode** (`matugenTemplateNeovimSettings`)
 - **Emacs** (`matugenTemplateEmacs`)
 - **Fcitx5** (`matugenTemplateFcitx5`)
 - **Firefox** (`matugenTemplateFirefox`)
 - **Follow DMS background color** (`matugenTemplateNeovimSetBackground`)
 - **GTK** (`matugenTemplateGtk`)
-- **GTK & Qt** (`systemAppTheming`) — condition : `matugenAvailable`
+- **GTK & Qt** (`systemAppTheming`) — condition: `matugenAvailable`
 - **Ghostty** (`matugenTemplateGhostty`)
 - **Hyprland** (`matugenTemplateHyprland`)
 - **KColorScheme** (`matugenTemplateKcolorscheme`)
-- **Matugen templates** (`matugenTemplates`) — condition : `matugenAvailable`
+- **Matugen templates** (`matugenTemplates`) — condition: `matugenAvailable`
 - **Portal & terminals** (`applications`)
 - **Run DMS templates** (`runDmsMatugenTemplates`)
 - **Run user templates** (`runUserMatugenTemplates`)
@@ -178,73 +178,73 @@ Le catalogue de recherche contient **786 entrées**. Les doublons de libellé so
 - **vesktop** (`matugenTemplateVesktop`)
 - **zenbrowser** (`matugenTemplateZenBrowser`)
 
-## sans-page — 673 entrées
+## no-page — 673 entries
 
 ### Appearance
 
 - **Background** (`barNoBackground`)
 - **Background** (`barSurfaceColor`)
-- **Background** (`islandSatelliteBackground`) — condition : `islandEnabled`
+- **Background** (`islandSatelliteBackground`) — condition: `islandEnabled`
 - **Background** (`widgetBackgroundColor`)
-- **Bar inset padding** (`frameBarInsetPadding`) — condition : `frameEnabled`
-- **Bar size** (`frameBarSize`) — condition : `frameEnabled`
+- **Bar inset padding** (`frameBarInsetPadding`) — condition: `frameEnabled`
+- **Bar size** (`frameBarSize`) — condition: `frameEnabled`
 - **Bar: Appearance** (`_tab_6`) — Background, corners, spacing, widget style
-- **Battery** (`islandBatteryColorMode`) — condition : `islandEnabled`
-- **Battery style** (`islandBatteryStyle`) — condition : `islandEnabled`
-- **Blur** (`frameBlurEnabled`) — condition : `frameEnabled`
+- **Battery** (`islandBatteryColorMode`) — condition: `islandEnabled`
+- **Battery style** (`islandBatteryStyle`) — condition: `islandEnabled`
+- **Blur** (`frameBlurEnabled`) — condition: `frameEnabled`
 - **Border** (`barBorder`)
 - **Border** (`dockBorder`)
-- **Brightness style** (`islandHomeBrightnessDisplay`) — condition : `islandEnabled`
-- **Clock style** (`islandHomeClockDisplay`) — condition : `islandEnabled`
-- **Compact pill** (`islandHomeCompactTight`) — condition : `islandEnabled`
-- **Compact width** (`islandCompactThickness`) — condition : `islandEnabled`
-- **Control Center** (`islandHomeStatusContent`) — condition : `islandEnabled`
+- **Brightness style** (`islandHomeBrightnessDisplay`) — condition: `islandEnabled`
+- **Clock style** (`islandHomeClockDisplay`) — condition: `islandEnabled`
+- **Compact pill** (`islandHomeCompactTight`) — condition: `islandEnabled`
+- **Compact width** (`islandCompactThickness`) — condition: `islandEnabled`
+- **Control Center** (`islandHomeStatusContent`) — condition: `islandEnabled`
 - **Corner style** (`barCornerStyle`)
 - **Custom blend** (`widgetBackgroundCustomStrength`)
 - **Dock: Appearance** (`_tab_58`) — Size, padding, opacity, borders
 - **Font scale** (`barFontScale`)
-- **Frame** (`frameBorder`) — condition : `frameEnabled`
-- **Gap** (`islandSatelliteGap`) — condition : `islandEnabled`
-- **Goth corner radius** (`islandSatelliteSwoopRadius`) — condition : `islandEnabled`
+- **Frame** (`frameBorder`) — condition: `frameEnabled`
+- **Gap** (`islandSatelliteGap`) — condition: `islandEnabled`
+- **Goth corner radius** (`islandSatelliteSwoopRadius`) — condition: `islandEnabled`
 - **Goth corners** (`barGothCorners`)
-- **Goth corners** (`islandSatelliteGothCorners`) — condition : `islandEnabled`
+- **Goth corners** (`islandSatelliteGothCorners`) — condition: `islandEnabled`
 - **Height** (`barLengthMode`)
-- **High contrast** (`islandHighContrast`) — condition : `islandEnabled`
-- **Home compact** (`islandActivities`) — condition : `islandEnabled`
+- **High contrast** (`islandHighContrast`) — condition: `islandEnabled`
+- **Home compact** (`islandActivities`) — condition: `islandEnabled`
 - **Icon scale** (`barIconScale`)
 - **Icon size** (`dockIconSize`)
 - **Length padding** (`barLengthPadding`)
 - **Margin** (`dockMargin`)
 - **Maximize widget icons** (`barMaximizeWidgetIcons`)
-- **Maximize widget text** (`barMaximizeWidgetText`)
-- **Opacity** (`islandSatelliteTransparency`) — condition : `islandEnabled`
+- **Maximize text widget** (`barMaximizeWidgetText`)
+- **Opacity** (`islandSatelliteTransparency`) — condition: `islandEnabled`
 - **Padding** (`dockSpacing`)
-- **Palette** (`islandPalette`) — condition : `islandEnabled`
+- **Pallet** (`islandPalette`) — condition: `islandEnabled`
 - **Percentage** (`barLengthPercent`)
-- **Position** (`islandSatellitePosition`) — condition : `islandEnabled`
-- **Radius** (`frameRounding`) — condition : `frameEnabled`
-- **Satellites** (`islandSatellites`) — condition : `islandEnabled`
-- **Show** (`islandSatellitesEnabled`) — condition : `islandEnabled`
+- **Position** (`islandSatellitePosition`) — condition: `islandEnabled`
+- **Radius** (`frameRounding`) — condition: `frameEnabled`
+- **Satellites** (`islandSatellites`) — condition: `islandEnabled`
+- **Show** (`islandSatellitesEnabled`) — condition: `islandEnabled`
 - **Size** (`barSize`)
 - **Size** (`dockSizing`)
 - **Size & spacing** (`barSpacing`)
 - **Spacing** (`dockItemSpacing`)
-- **Surface** (`barCorners`)
+- **Area** (`barCorners`)
 - **Text style** (`widgetColorMode`)
-- **Volume style** (`islandHomeVolumeDisplay`) — condition : `islandEnabled`
+- **Volume style** (`islandHomeVolumeDisplay`) — condition: `islandEnabled`
 - **Widget colors** (`widgetStyling`)
 - **Widget outline** (`barWidgetOutline`)
 - **Widget style** (`barWidgetStyle`)
 - **Widgets** (`barWidgets`)
-- **Width** (`frameThickness`) — condition : `frameEnabled`
+- **Width** (`frameThickness`) — condition: `frameEnabled`
 
-## sans-page — 673 entrées
+## no-page — 673 entries
 
 ### Apps & widgets
 
 - **Apps & widgets** (`dockWidgets`)
 
-## sans-page — 673 entrées
+## no-page — 673 entries
 
 ### Audio
 
@@ -253,16 +253,16 @@ Le catalogue de recherche contient **786 entrées**. Les doublons de libellé so
 - **Output devices** (`audioOutputDevices`)
 - **Show virtual devices** (`audioShowStreamDevices`)
 
-## sans-page — 673 entrées
+## no-page — 673 entries
 
 ### Authentication
 
-- **Authentication** (`greeterAuth`) — DMS removes its managed block from /etc/pam.d/greetd and stops write services — condition : `greeterAvailable`
-- **Fingerprint at login** (`greeterEnableFprint`) — condition : `greeterAvailable`
-- **Security key at login** (`greeterEnableU2f`) — condition : `greeterAvailable`
-- **Use system PAM authentication** (`greeterPamExternallyManaged`) — DMS removes its managed block from /etc/pam.d/greetd and stops write services — condition : `greeterAvailable`
+- **Authentication** (`greeterAuth`) — DMS removes its managed block from /etc/pam.d/greetd and stops write services — condition: `greeterAvailable`
+- **Fingerprint at login** (`greeterEnableFprint`) — condition: `greeterAvailable`
+- **Security key at login** (`greeterEnableU2f`) — condition: `greeterAvailable`
+- **Use system PAM authentication** (`greeterPamExternallyManaged`) — DMS removes its managed block from /etc/pam.d/greetd and stops write services — condition: `greeterAvailable`
 
-## sans-page — 673 entrées
+## no-page — 673 entries
 
 ### Automatic cycling
 
@@ -273,7 +273,7 @@ Le catalogue de recherche contient **786 entrées**. Les doublons de libellé so
 - **No wallpaper selected** (`wallpaperCycling`)
 - **Random order** (`wallpaperCyclingRandom`)
 
-## sans-page — 673 entrées
+## no-page — 673 entries
 
 ### Autostart apps
 
@@ -282,19 +282,19 @@ Le catalogue de recherche contient **786 entrées**. Les doublons de libellé so
 - **Entries** (`autostartEntries`)
 - **Tray icon fix** (`autostartTrayIconFix`)
 
-## sans-page — 673 entrées
+## no-page — 673 entries
 
 ### Bar widgets
 
 - **Bar widgets** (`_tab_22`) — Add, remove, reorder and configure
 
-## sans-page — 673 entrées
+## no-page — 673 entries
 
 ### Battery
 
-- **Alert style** (`batteryChargeLimitNotificationType`)
-- **Alert style** (`batteryCriticalNotificationType`)
-- **Alert style** (`batteryLowNotificationType`)
+- **Style alert** (`batteryChargeLimitNotificationType`)
+- **Style Alert** (`batteryCriticalNotificationType`)
+- **Style alert** (`batteryLowNotificationType`)
 - **Alerts** (`batteryAlerts`)
 - **Auto power saver** (`batteryAutoPowerSaver`)
 - **Battery** (`_tab_42`) — Charge limit, alerts, power profiles
@@ -313,42 +313,42 @@ Le catalogue de recherche contient **786 entrées**. Les doublons de libellé so
 - **Protection** (`batteryProtection`)
 - **Status** (`batteryStatusCard`)
 
-## sans-page — 673 entrées
+## no-page — 673 entries
 
 ### Cellular
 
-- **Cellular** (`_tab_47`) — Modem and mobile data — condition : `cellularAvailable`
-- **Saved configurations** (`networkCellularProfiles`) — condition : `cellularAvailable`
+- **Cellular** (`_tab_47`) — Modem and mobile data — condition: `cellularAvailable`
+- **Saved configurations** (`networkCellularProfiles`) — condition: `cellularAvailable`
 
-## sans-page — 673 entrées
+## no-page — 673 entries
 
 ### Clipboard
 
-- **Advanced** (`clipboardRememberTypeFilter`) — condition : `dmsConnected`
-- **Appearance** (`clipboardAppearance`) — condition : `dmsConnected`
-- **Auto-clear after** (`autoClearDays`) — condition : `dmsConnected`
-- **Behavior** (`clipboardClickToPaste`) — condition : `dmsConnected`
-- **Clear at startup** (`clearAtStartup`) — condition : `dmsConnected`
-- **Clipboard** (`_tab_23`) — History size, retention, paste behavior — condition : `dmsConnected`
-- **Enter to paste** (`clipboardEnterToPaste`) — condition : `dmsConnected`
-- **History** (`disabled`) — condition : `dmsConnected`
-- **Maximum entries** (`maxHistory`) — condition : `dmsConnected`
-- **Maximum entry size** (`maxEntrySize`) — condition : `dmsConnected`
-- **Maximum pinned entries** (`maxPinned`) — condition : `dmsConnected`
-- **Size** (`clipboardSize`) — condition : `dmsConnected`
-- **Use overlay layer** (`clipboardUseOverlayLayer`) — condition : `dmsConnected`
-- **Visible entry actions** (`clipboardVisibleEntryActions`) — condition : `dmsConnected`
+- **Advanced** (`clipboardRememberTypeFilter`) — condition: `dmsConnected`
+- **Appearance** (`clipboardAppearance`) — condition: `dmsConnected`
+- **Auto-clear after** (`autoClearDays`) — condition: `dmsConnected`
+- **Behavior** (`clipboardClickToPaste`) — condition: `dmsConnected`
+- **Clear at startup** (`clearAtStartup`) — condition: `dmsConnected`
+- **Clipboard** (`_tab_23`) — History size, retention, paste behavior — condition: `dmsConnected`
+- **Enter to paste** (`clipboardEnterToPaste`) — condition: `dmsConnected`
+- **History** (`disabled`) — condition: `dmsConnected`
+- **Maximum entries** (`maxHistory`) — condition: `dmsConnected`
+- **Maximum entry size** (`maxEntrySize`) — condition: `dmsConnected`
+- **Maximum pinned entries** (`maxPinned`) — condition: `dmsConnected`
+- **Size** (`clipboardSize`) — condition: `dmsConnected`
+- **Use overlay layer** (`clipboardUseOverlayLayer`) — condition: `dmsConnected`
+- **Visible entry actions** (`clipboardVisibleEntryActions`) — condition: `dmsConnected`
 
-## sans-page — 673 entrées
+## no-page — 673 entries
 
-### Configuration
+### Setup
 
 - **Arrangement** (`displaySnapToEdge`) — Dragged displays line up with neighboring edges without overlapping
 - **Configuration** (`_tab_24`) — Arrangement, resolution, scale, profiles
-- **Name format** (`displayNameMode`) — condition : `isMango`
+- **Name format** (`displayNameMode`) — condition: `isMango`
 - **Profiles** (`displayProfileAutoSelect`) — Connected
 
-## sans-page — 673 entrées
+## no-page — 673 entries
 
 ### Create user
 
@@ -356,7 +356,7 @@ Le catalogue de recherche contient **786 entrées**. Les doublons de libellé so
 - **Create user** (`createUser`) — Adds them to the %1 group so they can use sudo
 - **Grant administrator privileges** (`createUserAdmin`) — Adds them to the %1 group so they can use sudo
 
-## sans-page — 673 entrées
+## no-page — 673 entries
 
 ### Dark mode
 
@@ -365,7 +365,7 @@ Le catalogue de recherche contient **786 entrées**. Les doublons de libellé so
 - **Next Transition** (`themeSchedule`) — Using shared settings from Gamma Control
 - **Share gamma control settings** (`themeModeShareGammaSettings`) — Using shared settings from Gamma Control
 
-## sans-page — 673 entrées
+## no-page — 673 entries
 
 ### Dashboard
 
@@ -376,7 +376,7 @@ Le catalogue de recherche contient **786 entrées**. Les doublons de libellé so
 - **Tabs** (`dashTabs`)
 - **Weather** (`dashWeatherSettings`)
 
-## sans-page — 673 entrées
+## no-page — 673 entries
 
 ### Default apps
 
@@ -386,65 +386,65 @@ Le catalogue de recherche contient **786 entrées**. Les doublons de libellé so
 - **Multimedia** (`defaultAppsMultimedia`)
 - **Utilities** (`defaultAppsUtilities`)
 
-## sans-page — 673 entrées
+## no-page — 673 entries
 
 ### Desktop widgets
 
 - **Desktop widgets** (`_tab_27`) — Clocks, system monitors, plugins
 - **Groups** (`desktopWidgetGroups`)
 
-## sans-page — 673 entrées
+## no-page — 673 entries
 
 ### Display assignment
 
 - **Display assignment** (`_tab_26`) — Which displays show the dock, popups, OSDs and wallpaper
 
-## sans-page — 673 entrées
+## no-page — 673 entries
 
 ### Dot
 
-- **Background** (`dotSurfaceColor`) — condition : `dotEnabled`
-- **Behavior** (`dotBehavior`) — Routes launcher, dash, control center and notification shortcuts — condition : `dotEnabled`
-- **Clear badge on open** (`dotNotificationBadgeClearOnOpen`) — condition : `dotEnabled`
-- **Displays** (`dotDisplays`) — condition : `dotEnabled`
-- **Dot** (`dotSize`) — condition : `dotEnabled`
-- **Expand by default** (`dotNotificationExpand`) — condition : `dotEnabled`
-- **High contrast** (`dotHighContrast`) — condition : `dotEnabled`
-- **Idle delay** (`islandFreeIdleDelay`) — condition : `dotEnabled`
-- **Idle opacity** (`islandFreeIdleOpacity`) — condition : `dotEnabled`
-- **Idle size** (`islandFreeIdleScale`) — condition : `dotEnabled`
-- **Notifications** (`dotNotifications`) — condition : `dotEnabled`
-- **Opacity** (`dotOpacity`) — condition : `dotEnabled`
-- **Palette** (`dotPalette`) — condition : `dotEnabled`
-- **Reduce motion** (`dotReducedMotion`) — condition : `dotEnabled`
-- **Shared shortcuts** (`dotSharedRouting`) — Routes launcher, dash, control center and notification shortcuts — condition : `dotEnabled`
-- **Size** (`islandFreeSize`) — condition : `dotEnabled`
-- **Spring damping** (`dotSpringDamping`) — condition : `dotEnabled`
-- **Spring mass** (`dotSpringMass`) — condition : `dotEnabled`
-- **Spring stiffness** (`dotSpringStiffness`) — condition : `dotEnabled`
-- **Surface** (`dotSurface`) — condition : `dotEnabled`
-- **Use standard popups** (`dotNotificationPopups`) — condition : `dotEnabled`
+- **Background** (`dotSurfaceColor`) — condition: `dotEnabled`
+- **Behavior** (`dotBehavior`) — Routes launcher, dash, control center and notification shortcuts — condition: `dotEnabled`
+- **Clear badge on open** (`dotNotificationBadgeClearOnOpen`) — condition: `dotEnabled`
+- **Displays** (`dotDisplays`) — condition: `dotEnabled`
+- **Dot** (`dotSize`) — condition: `dotEnabled`
+- **Expand by default** (`dotNotificationExpand`) — condition: `dotEnabled`
+- **High contrast** (`dotHighContrast`) — condition: `dotEnabled`
+- **Idle delay** (`islandFreeIdleDelay`) — condition: `dotEnabled`
+- **Idle opacity** (`islandFreeIdleOpacity`) — condition: `dotEnabled`
+- **Idle size** (`islandFreeIdleScale`) — condition: `dotEnabled`
+- **Notifications** (`dotNotifications`) — condition: `dotEnabled`
+- **Opacity** (`dotOpacity`) — condition: `dotEnabled`
+- **Pallet** (`dotPalette`) — condition: `dotEnabled`
+- **Reduce motion** (`dotReducedMotion`) — condition: `dotEnabled`
+- **Shared shortcuts** (`dotSharedRouting`) — Routes launcher, dash, control center and notification shortcuts — condition: `dotEnabled`
+- **Size** (`islandFreeSize`) — condition: `dotEnabled`
+- **Spring damping** (`dotSpringDamping`) — condition: `dotEnabled`
+- **Spring mass** (`dotSpringMass`) — condition: `dotEnabled`
+- **Spring stiffness** (`dotSpringStiffness`) — condition: `dotEnabled`
+- **Surface** (`dotSurface`) — condition: `dotEnabled`
+- **Use standard popups** (`dotNotificationPopups`) — condition: `dotEnabled`
 
-## sans-page — 673 entrées
+## no-page — 673 entries
 
 ### Ethernet
 
-- **Ethernet** (`_tab_39`) — Adapters and saved configurations — condition : `networkAvailable`
+- **Ethernet** (`_tab_39`) — Adapters and saved configurations — condition: `networkAvailable`
 
-## sans-page — 673 entrées
+## no-page — 673 entries
 
 ### Fonts & motion
 
 - **Advanced** (`typographyAdvanced`)
 - **Animations** (`animations`)
-- **Aqueous typography** (`aqueousTypography`) — condition : `isAqueous`
+- **Aqueous typography** (`aqueousTypography`) — condition: `isAqueous`
 - **Display family** (`displayFontFamily`)
 - **Duration** (`animationDuration`)
 - **Family** (`fontFamily`)
 - **Font** (`typography`)
 - **Fonts & motion** (`_tab_14`) — Family, weight, scale, animation speed
 - **Modals** (`modalAnimationDuration`)
-- **Monospace family** (`monoFontFamily`)
+- **Minivan family** (`monoFontFamily`)
 - **Panel motion** (`motionEffect`)
 - **Popouts** (`popoutAnimationDuration`)
 - **Quality** (`textRenderQuality`)
@@ -456,7 +456,7 @@ Le catalogue de recherche contient **786 entrées**. Les doublons de libellé so
 - **Sync popouts and modals** (`syncComponentAnimationSpeeds`)
 - **Weight** (`fontWeight`)
 
-## sans-page — 673 entrées
+## no-page — 673 entries
 
 ### Gamma control
 
@@ -467,120 +467,120 @@ Le catalogue de recherche contient **786 entrées**. Les doublons de libellé so
 - **Mode** (`nightModeTransitionMinutes`)
 - **Night mode** (`nightModeTemperature`) — Gamma control not available. Requires DMS API v6+.
 
-## sans-page — 673 entrées
+## no-page — 673 entries
 
 ### General
 
 - **Advanced** (`barAdvanced`)
-- **Arc extender** (`frameLauncherArcExtender`) — condition : `frameEnabled`
+- **Arc extender** (`frameLauncherArcExtender`) — condition: `frameEnabled`
 - **Auto-hide** (`barAutoHide`)
 - **Auto-hide** (`dockAutoHide`)
 - **Bar: General** (`_tab_3`) — Position, displays, auto-hide, behavior
-- **Behavior** (`islandInteraction`) — Routes launcher, dash, control center and notification shortcuts — condition : `islandEnabled`
-- **Clear badge on open** (`islandNotificationBadgeClearOnOpen`) — condition : `islandEnabled`
+- **Behavior** (`islandInteraction`) — Routes launcher, dash, control center and notification shortcuts — condition: `islandEnabled`
+- **Clear badge on open** (`islandNotificationBadgeClearOnOpen`) — condition: `islandEnabled`
 - **Click through** (`barClickThrough`)
 - **Displays** (`barDisplay`)
 - **Displays** (`dockDisplays`)
 - **Dock: General** (`_tab_5`) — Displays, taskbar, auto-hide
-- **Edge hover reveal** (`frameLauncherEdgeHover`) — condition : `frameEnabled`
-- **Edge margin** (`islandFreeEdgeMargin`) — condition : `islandEnabled`
+- **Edge hover reveal** (`frameLauncherEdgeHover`) — condition: `frameEnabled`
+- **Edge margin** (`islandFreeEdgeMargin`) — condition: `islandEnabled`
 - **Edit mode** (`dockEditMode`)
-- **Exclusive zone offset** (`barExclusiveZone`)
-- **Expand by default** (`islandNotificationExpand`) — condition : `islandEnabled`
-- **Expansion mode** (`islandInteractionMode`) — condition : `islandEnabled`
-- **Expose the arcs** (`frameCloseGaps`) — condition : `frameEnabled`
-- **Frame** (`frameEnabled`) — condition : `frameEnabled`
-- **Hide delay** (`islandHoverCloseDelay`) — condition : `islandEnabled`
-- **Hide when windows open** (`barHideWhenWindowsOpen`) — condition : `windowRulesCapable`
+- **Exclusive offset zone** (`barExclusiveZone`)
+- **Expand by default** (`islandNotificationExpand`) — condition: `islandEnabled`
+- **Expansion mode** (`islandInteractionMode`) — condition: `islandEnabled`
+- **Expose the arcs** (`frameCloseGaps`) — condition: `frameEnabled`
+- **Frame** (`frameEnabled`) — condition: `frameEnabled`
+- **Hide delay** (`islandHoverCloseDelay`) — condition: `islandEnabled`
+- **Hide when windows open** (`barHideWhenWindowsOpen`) — condition: `windowRulesCapable`
 - **Hover popouts** (`hoverPopouts`)
-- **Keep clock with media** (`islandMediaClockVisible`) — condition : `islandEnabled`
-- **Launcher emerge side** (`frameLauncherEmergeSide`) — condition : `frameEnabled`
+- **Keep clock with media** (`islandMediaClockVisible`) — condition: `islandEnabled`
+- **Launcher emerge side** (`frameLauncherEmergeSide`) — condition: `frameEnabled`
 - **Layout** (`dockLayout`)
 - **Manual show/hide** (`barManualVisibility`)
-- **Maximize detection** (`barMaximizeDetection`) — condition : `windowRulesCapable`
-- **Notifications** (`islandNotifications`) — condition : `islandEnabled`
-- **Open delay** (`islandHoverOpenDelay`) — condition : `islandEnabled`
-- **Orientation** (`islandFreeOrientation`) — condition : `islandEnabled`
-- **Outer gap** (`islandOuterGap`) — condition : `islandEnabled`
-- **Placement** (`islandPlacement`) — condition : `islandEnabled`
+- **Maximize detection** (`barMaximizeDetection`) — condition: `windowRulesCapable`
+- **Notifications** (`islandNotifications`) — condition: `islandEnabled`
+- **Open delay** (`islandHoverOpenDelay`) — condition: `islandEnabled`
+- **Orientation** (`islandFreeOrientation`) — condition: `islandEnabled`
+- **Outer gap** (`islandOuterGap`) — condition: `islandEnabled`
+- **Placement** (`islandPlacement`) — condition: `islandEnabled`
 - **Position** (`barPosition`)
-- **Reduce motion** (`islandReducedMotion`) — condition : `islandEnabled`
-- **Reserved width** (`islandReserveThickness`) — condition : `islandEnabled`
+- **Reduce motion** (`islandReducedMotion`) — condition: `islandEnabled`
+- **Reserved width** (`islandReserveThickness`) — condition: `islandEnabled`
 - **Right-click empty space to edit** (`dockEditOnRightClick`)
 - **Scroll wheel** (`barScrollWheel`)
-- **Shared shortcuts** (`islandSharedRouting`) — Routes launcher, dash, control center and notification shortcuts — condition : `islandEnabled`
-- **Show on overview** (`barOpenOnOverview`) — condition : `nativeOverviewCapable`
-- **Show on overview** (`frameShowOnOverview`) — condition : `nativeOverviewCapable`
-- **Smart auto-hide** (`dockSmartAutoHide`) — Hides only while a window overlaps the dock — condition : `smartDockCapable`
-- **Spring damping** (`islandSpringDamping`) — condition : `islandEnabled`
-- **Spring mass** (`islandSpringMass`) — condition : `islandEnabled`
-- **Spring stiffness** (`islandSpringStiffness`) — condition : `islandEnabled`
+- **Shared shortcuts** (`islandSharedRouting`) — Routes launcher, dash, control center and notification shortcuts — condition: `islandEnabled`
+- **Show on overview** (`barOpenOnOverview`) — condition: `nativeOverviewCapable`
+- **Show on overview** (`frameShowOnOverview`) — condition: `nativeOverviewCapable`
+- **Smart auto-hide** (`dockSmartAutoHide`) — Hides only while a window overlaps the dock — condition: `smartDockCapable`
+- **Spring damping** (`islandSpringDamping`) — condition: `islandEnabled`
+- **Spring mass** (`islandSpringMass`) — condition: `islandEnabled`
+- **Spring stiffness** (`islandSpringStiffness`) — condition: `islandEnabled`
 - **Strict auto-hide** (`barAutoHideStrict`)
-- **Surfaces** (`frameModeSelector`) — condition : `frameEnabled`
+- **Surfaces** (`frameModeSelector`) — condition: `frameEnabled`
 - **Use overlay layer** (`barUseOverlayLayer`)
-- **Use overlay layer** (`islandUseOverlayLayer`) — condition : `islandEnabled`
-- **Use standard popups** (`islandNotificationPopups`) — condition : `islandEnabled`
-- **Vertical offset** (`islandAlongOffset`) — condition : `islandEnabled`
+- **Use overlay layer** (`islandUseOverlayLayer`) — condition: `islandEnabled`
+- **Use standard popups** (`islandNotificationPopups`) — condition: `islandEnabled`
+- **Vertical offset** (`islandAlongOffset`) — condition: `islandEnabled`
 - **Visibility** (`barVisibility`)
 - **Visibility** (`dockAutoHideCard`) — Hides only while a window overlaps the dock
 
-## sans-page — 673 entrées
+## no-page — 673 entries
 
 ### Greeter
 
-- **Appearance** (`greeterAppearance`) — condition : `greeterAvailable`
-- **Auto-login on startup** (`greeterAutoLogin`) — Skip the greeter password after boot until you sign out. Lock screen unlock is unchanged. Takes effect on the next reboot after sync. — condition : `greeterAvailable`
-- **Behavior** (`greeterBehavior`) — Skip the greeter password after boot until you sign out. Lock screen unlock is unchanged. Takes effect on the next reboot after sync. — condition : `greeterAvailable`
-- **Dependencies & documentation** (`greeterDeps`) — condition : `greeterAvailable`
-- **Greeter** (`_tab_31`) — Login screen appearance and authentication — condition : `greeterAvailable`
-- **Remember last session** (`greeterRememberLastSession`) — condition : `greeterAvailable`
-- **Remember last user** (`greeterRememberLastUser`) — condition : `greeterAvailable`
-- **Status** (`greeterStatus`) — condition : `greeterAvailable`
+- **Appearance** (`greeterAppearance`) — condition: `greeterAvailable`
+- **Auto-login on startup** (`greeterAutoLogin`) — Skip the greeter password after boot until you sign out. Lock screen unlock is unchanged. Takes effect on the next reboot after sync. — condition: `greeterAvailable`
+- **Behavior** (`greeterBehavior`) — Skip the greeter password after boot until you sign out. Lock screen unlock is unchanged. Takes effect on the next reboot after sync. — condition: `greeterAvailable`
+- **Dependencies & documentation** (`greeterDeps`) — condition: `greeterAvailable`
+- **Greeter** (`_tab_31`) — Login screen appearance and authentication — condition: `greeterAvailable`
+- **Remember last session** (`greeterRememberLastSession`) — condition: `greeterAvailable`
+- **Remember last user** (`greeterRememberLastUser`) — condition: `greeterAvailable`
+- **Status** (`greeterStatus`) — condition: `greeterAvailable`
 
-## sans-page — 673 entrées
+## no-page — 673 entries
 
-### Injected palettes
+### Injected pallets
 
-- **Injected palettes** (`paletteInject`) — condition : `matugenAvailable`
+- **Injected pallets** (`paletteInject`) — condition: `matugenAvailable`
 
-## sans-page — 673 entrées
+## no-page — 673 entries
 
 ### Interface style
 
 - **Interface style** (`_tab_48`) — Opacity, borders, blur, shadows, corners
 
-## sans-page — 673 entrées
+## no-page — 673 entries
 
 ### Keyboard
 
-- **Behavior** (`keyboardBehaviorSettings`) — condition : `isNiri`
-- **Keyboard** (`_tab_45`) — Layouts, repeat rate, num lock — condition : `isNiri`
-- **Layouts** (`keyboardLayoutsSettings`) — Comma-separated list of layout names. Leave empty to use the system keyboard settings. — condition : `isNiri`
-- **Num Lock at startup** (`keyboardNumlock`) — condition : `isNiri`
-- **Remember layout** (`keyboardTrackLayout`) — condition : `isNiri`
-- **Repeat delay** (`keyboardRepeatDelay`) — condition : `isNiri`
-- **Repeat rate** (`keyboardRepeatRate`) — condition : `isNiri`
-- **Switch layout shortcut** (`keyboardOptions`) — condition : `isNiri`
+- **Behavior** (`keyboardBehaviorSettings`) — condition: `isNiri`
+- **Keyboard** (`_tab_45`) — Layouts, repeat rate, num lock — condition: `isNiri`
+- **Layouts** (`keyboardLayoutsSettings`) — Comma-separated list of layout names. Leave empty to use the system keyboard settings. — condition: `isNiri`
+- **Num Lock at startup** (`keyboardNumlock`) — condition: `isNiri`
+- **Remember layout** (`keyboardTrackLayout`) — condition: `isNiri`
+- **Repeat delay** (`keyboardRepeatDelay`) — condition: `isNiri`
+- **Repeat rate** (`keyboardRepeatRate`) — condition: `isNiri`
+- **Switch layout shortcut** (`keyboardOptions`) — condition: `isNiri`
 
-## sans-page — 673 entrées
+## no-page — 673 entries
 
 ### Keyboard shortcuts
 
-- **Keyboard shortcuts** (`_tab_2`) — Compositor and shell key bindings — condition : `keybindsAvailable`
+- **Keyboard shortcuts** (`_tab_2`) — Compositor and shell key bindings — condition: `keybindsAvailable`
 
-## sans-page — 673 entrées
+## no-page — 673 entries
 
 ### Launcher
 
 - **Advanced** (`launcherAdvanced`)
-- **App actions** (`searchAppActions`)
+- **Actions app** (`searchAppActions`)
 - **App customizations** (`appOverrides`)
 - **Appearance** (`dankLauncherV2Appearance`)
 - **Border** (`dankLauncherV2BorderEnabled`)
 - **Built-in apps** (`launcherBuiltInApps`)
 - **Built-in plugins** (`launcherBuiltInPlugins`)
 - **Color** (`dankLauncherV2BorderColor`)
-- **Darken modal background** (`modalDarkenBackground`)
+- **Dark modal background** (`modalDarkenBackground`)
 - **Default action** (`launcherStyle`)
 - **Grid columns** (`appLauncherGridColumns`)
 - **Hidden apps** (`hiddenApps`)
@@ -592,14 +592,14 @@ Le catalogue de recherche contient **786 entrées**. Les doublons de libellé so
 - **Opens** (`launcherStyleSelector`)
 - **Opens** (`niriOverviewLauncherStyle`)
 - **Overlay** (`niriOverviewOverlayEnabled`) — Typing in the overview opens the launcher
-- **Overview** (`launcherNiriOverview`) — Typing in the overview opens the launcher — condition : `isNiri`
+- **Overview** (`launcherNiriOverview`) — Typing in the overview opens the launcher — condition: `isNiri`
 - **Plugin visibility** (`pluginVisibility`)
 - **Recently used apps** (`recentApps`)
 - **Remember last mode** (`rememberLastMode`)
 - **Remember last query** (`rememberLastQuery`)
 - **Search** (`searchOptions`)
 - **Show footer** (`dankLauncherV2ShowFooter`)
-- **Show mode chips** (`spotlightBarShowModeChips`)
+- **Show chips mode** (`spotlightBarShowModeChips`)
 - **Show package source badges** (`dankLauncherV2ShowSourceBadges`)
 - **Size** (`dankLauncherV2Size`)
 - **Sort alphabetically** (`sortAppsAlphabetically`)
@@ -609,15 +609,15 @@ Le catalogue de recherche contient **786 entrées**. Les doublons de libellé so
 - **Unload on close** (`dankLauncherV2UnloadOnClose`)
 - **Use overlay layer** (`launcherUseOverlayLayer`)
 
-## sans-page — 673 entrées
+## no-page — 673 entries
 
-### Locale
+### Local
 
 - **General** (`locale`)
 - **Locale** (`_tab_30`) — Language, time and date locale
 - **Time and date** (`timeLocale`)
 
-## sans-page — 673 entrées
+## no-page — 673 entries
 
 ### Lock screen
 
@@ -656,7 +656,7 @@ Le catalogue de recherche contient **786 entrées**. Les doublons de libellé so
 - **Weather** (`lockScreenShowWeather`)
 - **loginctl integration** (`loginctlLockIntegration`) — Disable when using an external lock screen
 
-## sans-page — 673 entrées
+## no-page — 673 entries
 
 ### Manage Registries
 
@@ -664,7 +664,7 @@ Le catalogue de recherche contient **786 entrées**. Les doublons de libellé so
 - **Manage Registries** (`_tab_28`) — Plugin directory and registries
 - **Registries** (`pluginRegistries`)
 
-## sans-page — 673 entrées
+## no-page — 673 entries
 
 ### Media player
 
@@ -678,36 +678,36 @@ Le catalogue de recherche contient **786 entrées**. Les doublons de libellé so
 - **Media player** (`_tab_16`) — Visualizer, album art, excluded players
 - **Scroll song title** (`mediaScrollTitle`)
 
-## sans-page — 673 entrées
+## no-page — 673 entries
 
 ### Mouse & touchpad
 
-- **Acceleration profile** (`mouseAccelProfile`) — condition : `pointerCapable`
-- **Acceleration profile** (`touchpadAccelProfile`) — condition : `pointerCapable`
-- **Click method** (`touchpadClickMethod`) — condition : `pointerCapable`
-- **Disable while typing** (`touchpadDisableWhileTyping`) — condition : `pointerCapable`
-- **Disable with external mouse** (`touchpadDisableOnExternalMouse`) — condition : `pointerCapable`
-- **Drag lock** (`touchpadDragLock`) — condition : `pointerCapable`
-- **Left-handed** (`mouseLeftHanded`) — condition : `pointerCapable`
-- **Middle click emulation** (`mouseMiddleEmulation`) — condition : `pointerCapable`
-- **Middle click emulation** (`touchpadMiddleEmulation`) — condition : `pointerCapable`
-- **Mouse** (`mouseSettings`) — condition : `isNiri`
-- **Mouse & touchpad** (`_tab_44`) — Speed, scrolling, tap to click — condition : `pointerCapable`
-- **Natural scrolling** (`mangoTrackpadNaturalScrolling`) — condition : `pointerCapable`
-- **Natural scrolling** (`mouseNaturalScroll`) — condition : `pointerCapable`
-- **Natural scrolling** (`touchpadNaturalScroll`) — condition : `pointerCapable`
-- **Pointer speed** (`mouseAccelSpeed`) — condition : `pointerCapable`
-- **Pointer speed** (`touchpadAccelSpeed`) — condition : `pointerCapable`
-- **Scroll method** (`mouseScrollMethod`) — condition : `pointerCapable`
-- **Scroll method** (`touchpadScrollMethod`) — condition : `pointerCapable`
-- **Scroll speed** (`mouseScrollFactor`) — condition : `pointerCapable`
-- **Scroll speed** (`touchpadScrollFactor`) — condition : `pointerCapable`
-- **Tap and drag** (`touchpadTapAndDrag`) — condition : `pointerCapable`
-- **Tap to click** (`touchpadTapToClick`) — condition : `pointerCapable`
-- **Touchpad** (`mangoTouchpadSettings`) — condition : `isMango`
-- **Touchpad** (`touchpadSettings`) — condition : `isNiri`
+- **Acceleration profile** (`mouseAccelProfile`) — condition: `pointerCapable`
+- **Acceleration profile** (`touchpadAccelProfile`) — condition: `pointerCapable`
+- **Click method** (`touchpadClickMethod`) — condition: `pointerCapable`
+- **Disable while typing** (`touchpadDisableWhileTyping`) — condition: `pointerCapable`
+- **Disable with external mouse** (`touchpadDisableOnExternalMouse`) — condition: `pointerCapable`
+- **Drag lock** (`touchpadDragLock`) — condition: `pointerCapable`
+- **Left-handed** (`mouseLeftHanded`) — condition: `pointerCapable`
+- **Middle click emulation** (`mouseMiddleEmulation`) — condition: `pointerCapable`
+- **Middle click emulation** (`touchpadMiddleEmulation`) — condition: `pointerCapable`
+- **Mouse** (`mouseSettings`) — condition: `isNiri`
+- **Mouse & touchpad** (`_tab_44`) — Speed, scrolling, tap to click — condition: `pointerCapable`
+- **Natural scrolling** (`mangoTrackpadNaturalScrolling`) — condition: `pointerCapable`
+- **Natural scrolling** (`mouseNaturalScroll`) — condition: `pointerCapable`
+- **Natural scrolling** (`touchpadNaturalScroll`) — condition: `pointerCapable`
+- **Pointer speed** (`mouseAccelSpeed`) — condition: `pointerCapable`
+- **Pointer speed** (`touchpadAccelSpeed`) — condition: `pointerCapable`
+- **Scroll method** (`mouseScrollMethod`) — condition: `pointerCapable`
+- **Scroll method** (`touchpadScrollMethod`) — condition: `pointerCapable`
+- **Scroll speed** (`mouseScrollFactor`) — condition: `pointerCapable`
+- **Scroll speed** (`touchpadScrollFactor`) — condition: `pointerCapable`
+- **Tap and drag** (`touchpadTapAndDrag`) — condition: `pointerCapable`
+- **Tap to click** (`touchpadTapToClick`) — condition: `pointerCapable`
+- **Touchpad** (`mangoTouchpadSettings`) — condition: `isMango`
+- **Touchpad** (`touchpadSettings`) — condition: `isNiri`
 
-## sans-page — 673 entrées
+## no-page — 673 entries
 
 ### Multiplexers
 
@@ -716,13 +716,13 @@ Le catalogue de recherche contient **786 entrées**. Les doublons de libellé so
 - **Session filter** (`muxSessionFilter`) — Comma-separated list of session names to hide. Wrap in slashes for regex (e.g., /^_.*/).
 - **Terminal** (`muxUseCustomCommand`) — The custom command used when attaching to sessions (receives the session name as the first argument)
 
-## sans-page — 673 entrées
+## no-page — 673 entries
 
 ### Notifications
 
 - **Notifications** (`_tab_17`) — Popups, do not disturb, rules
 
-## sans-page — 673 entrées
+## no-page — 673 entries
 
 ### On-screen displays
 
@@ -743,19 +743,19 @@ Le catalogue de recherche contient **786 entrées**. Les doublons de libellé so
 - **Volume** (`osdVolumeEnabled`)
 - **Workspace Switch** (`osdWorkspaceEnabled`)
 
-## sans-page — 673 entrées
+## no-page — 673 entries
 
 ### Plugins
 
 - **Plugins** (`_tab_12`) — Browse, install, registries
 
-## sans-page — 673 entrées
+## no-page — 673 entries
 
 ### Power & sleep
 
 - **Automatically lock after** (`lockTimeout`)
 - **Confirmation** (`powerConfirmation`)
-- **Custom commands** (`customPowerActions`)
+- **Custom orders** (`customPowerActions`)
 - **Default selected action** (`powerMenuDefaultAction`)
 - **Display fade grace period** (`fadeToDpmsGracePeriod`)
 - **Fade** (`idleFade`)
@@ -773,27 +773,27 @@ Le catalogue de recherche contient **786 entrées**. Les doublons de libellé so
 - **Turn off displays after** (`monitorTimeout`)
 - **Turn off displays after lock** (`postLockMonitorTimeout`)
 
-## sans-page — 673 entrées
+## no-page — 673 entries
 
 ### Printers
 
-- **Printers** (`_tab_8`) — CUPS printers, jobs and classes — condition : `cupsAvailable`
+- **Printers** (`_tab_8`) — CUPS printers, jobs and classes — condition: `cupsAvailable`
 
-## sans-page — 673 entrées
+## no-page — 673 entries
 
 ### Rules
 
 - **Muted apps** (`mutedApps`)
 - **Rules** (`notificationRules`)
 
-## sans-page — 673 entrées
+## no-page — 673 entries
 
 ### Running apps
 
-- **App ID substitutions** (`appIdSubstitutions`) — condition : `isHyprlandOrNiri`
-- **Running apps** (`_tab_19`) — App ID substitutions — condition : `isHyprlandOrNiri`
+- **App ID substitutions** (`appIdSubstitutions`) — condition: `isHyprlandOrNiri`
+- **Running apps** (`_tab_19`) — App ID substitutions — condition: `isHyprlandOrNiri`
 
-## sans-page — 673 entrées
+## no-page — 673 entries
 
 ### Shadows
 
@@ -804,7 +804,7 @@ Le catalogue de recherche contient **786 entrées**. Les doublons de libellé so
 - **Color** (`m3ElevationColorMode`)
 - **Custom color** (`m3ElevationEnabled`)
 - **Direction** (`barShadowDirectionManual`)
-- **Direction source** (`barShadowDirectionSource`)
+- **Source direction** (`barShadowDirectionSource`)
 - **Intensity** (`m3ElevationIntensity`)
 - **Light direction** (`m3ElevationLightDirection`)
 - **Modals** (`modalElevationEnabled`)
@@ -813,71 +813,71 @@ Le catalogue de recherche contient **786 entrées**. Les doublons de libellé so
 - **Popouts** (`popoutElevationEnabled`)
 - **Shadows** (`m3ElevationToggle`)
 
-## sans-page — 673 entrées
+## no-page — 673 entries
 
 ### Sounds
 
-- **Login** (`soundLogin`) — condition : `soundsAvailable`
-- **Mute during media playback** (`muteSoundsWhenMediaPlaying`) — condition : `soundsAvailable`
-- **New notification** (`soundNewNotification`) — condition : `soundsAvailable`
-- **Plugged in** (`soundPluggedIn`) — condition : `soundsAvailable`
-- **Sound theme** (`soundTheme`) — condition : `soundsAvailable`
-- **Sounds** (`_tab_15`) — System sound theme and events — condition : `soundsAvailable`
-- **System sounds** (`soundsEnabled`) — condition : `soundsAvailable`
-- **System sounds** (`systemSounds`) — condition : `soundsAvailable`
-- **Volume changed** (`soundVolumeChanged`) — condition : `soundsAvailable`
+- **Login** (`soundLogin`) — condition: `soundsAvailable`
+- **Mute during media playback** (`muteSoundsWhenMediaPlaying`) — condition: `soundsAvailable`
+- **New notification** (`soundNewNotification`) — condition: `soundsAvailable`
+- **Plugged in** (`soundPluggedIn`) — condition: `soundsAvailable`
+- **Sound theme** (`soundTheme`) — condition: `soundsAvailable`
+- **Sounds** (`_tab_15`) — System sound theme and events — condition: `soundsAvailable`
+- **System sounds** (`soundsEnabled`) — condition: `soundsAvailable`
+- **System sounds** (`systemSounds`) — condition: `soundsAvailable`
+- **Volume changed** (`soundVolumeChanged`) — condition: `soundsAvailable`
 
-## sans-page — 673 entrées
+## no-page — 673 entries
 
 ### Status
 
-- **Backend** (`networkStatus`) — condition : `networkAvailable`
-- **Status** (`_tab_7`) — Backend and connection preference — condition : `networkAvailable`
+- **Backend** (`networkStatus`) — condition: `networkAvailable`
+- **Status** (`_tab_7`) — Backend and connection preference — condition: `networkAvailable`
 
-## sans-page — 673 entrées
+## no-page — 673 entries
 
 ### System & integrations
 
-- **Border size** (`hyprlandLayoutBorderSize`) — condition : `layoutCapable`
-- **Border size** (`mangoLayoutBorderSize`) — condition : `layoutCapable`
-- **Border size** (`niriLayoutBorderSize`) — condition : `layoutCapable`
-- **Close on window focus** (`closeNiriOverviewOnWindowFocus`) — condition : `layoutCapable`
-- **Column Width** (`hyprlandScrollingColumnWidth`) — condition : `layoutCapable`
-- **Direction** (`hyprlandScrollingDirection`) — condition : `layoutCapable`
-- **Follow focus** (`hyprlandScrollingFollowFocus`) — condition : `layoutCapable`
-- **Force split** (`hyprlandDwindleForceSplit`) — condition : `layoutCapable`
-- **Frame xray** (`hyprlandLayoutBarXrayEnabled`) — Blur against the wallpaper even with xray off — condition : `isHyprland`
-- **Frame xray** (`niriLayoutBarXrayEnabled`) — Blur against the wallpaper even with xray off — condition : `isNiri`
-- **Fullscreen single column** (`hyprlandScrollingFullscreenOneColumn`) — condition : `layoutCapable`
-- **Gaps** (`hyprlandLayoutGapsMode`) — condition : `layoutCapable`
-- **Gaps** (`mangoLayoutGapsMode`) — Auto follows bar spacing, Off keeps your %1 config — condition : `layoutCapable`
-- **Gaps** (`niriLayoutGapsMode`) — Auto follows bar spacing, Off keeps your %1 config — condition : `layoutCapable`
-- **Inner gaps** (`hyprlandLayoutGapsOverride`) — condition : `layoutCapable`
-- **Inner gaps** (`mangoLayoutGapsOverride`) — condition : `layoutCapable`
-- **Layout overrides** (`hyprlandLayout`) — Blurred surfaces show the wallpaper, not the windows beneath — condition : `isHyprland`
-- **Layout overrides** (`mangoLayout`) — Auto follows bar spacing, Off keeps your %1 config — condition : `isMango`
-- **Layout overrides** (`niriLayout`) — Auto follows bar spacing, Off keeps your %1 config — condition : `isNiri`
-- **Master position** (`hyprlandMasterOrientation`) — condition : `layoutCapable`
-- **Master size** (`hyprlandMasterSize`) — condition : `layoutCapable`
-- **New windows** (`hyprlandMasterNewStatus`) — condition : `layoutCapable`
-- **New windows on top of the stack** (`hyprlandMasterNewOnTop`) — condition : `layoutCapable`
-- **Notifications** (`compositorNotifications`) — condition : `isNiri`
-- **Outer gaps** (`hyprlandLayoutGapsOutOverride`) — condition : `layoutCapable`
-- **Outer gaps** (`mangoLayoutGapsOutOverride`) — condition : `layoutCapable`
-- **Override border size** (`hyprlandLayoutBorderSizeEnabled`) — condition : `layoutCapable`
-- **Override border size** (`mangoLayoutBorderSizeEnabled`) — condition : `layoutCapable`
-- **Override border size** (`niriLayoutBorderSizeEnabled`) — condition : `layoutCapable`
-- **Overview** (`niriOverview`) — condition : `isNiri`
-- **Preserve split** (`hyprlandDwindlePreserveSplit`) — Split direction stays fixed when the container resizes — condition : `layoutCapable`
-- **Resize on border** (`hyprlandResizeOnBorder`) — condition : `layoutCapable`
-- **Show \** (`showConfigReloadToast`) — condition : `layoutCapable`
-- **Smart split** (`hyprlandDwindleSmartSplit`) — Split direction follows the cursor position in the window — condition : `layoutCapable`
-- **Tiling layout** (`hyprlandTilingLayout`) — Split direction stays fixed when the container resizes — condition : `isHyprland`
-- **Window gaps** (`niriLayoutGapsOverride`) — condition : `layoutCapable`
-- **Xray blur** (`hyprlandLayoutXrayEnabled`) — Blurred surfaces show the wallpaper, not the windows beneath — condition : `isHyprland`
-- **Xray blur** (`niriLayoutXrayEnabled`) — Blurred surfaces show the wallpaper, not the windows beneath — condition : `isNiri`
+- **Border size** (`hyprlandLayoutBorderSize`) — condition: `layoutCapable`
+- **Border size** (`mangoLayoutBorderSize`) — condition: `layoutCapable`
+- **Border size** (`niriLayoutBorderSize`) — condition: `layoutCapable`
+- **Close on window focus** (`closeNiriOverviewOnWindowFocus`) — condition: `layoutCapable`
+- **Column Width** (`hyprlandScrollingColumnWidth`) — condition: `layoutCapable`
+- **Direction** (`hyprlandScrollingDirection`) — condition: `layoutCapable`
+- **Follow focus** (`hyprlandScrollingFollowFocus`) — condition: `layoutCapable`
+- **Force split** (`hyprlandDwindleForceSplit`) — condition: `layoutCapable`
+- **Frame xray** (`hyprlandLayoutBarXrayEnabled`) — Blur against the wallpaper even with xray off — condition: `isHyprland`
+- **Frame xray** (`niriLayoutBarXrayEnabled`) — Blur against the wallpaper even with xray off — condition: `isNiri`
+- **Fullscreen single column** (`hyprlandScrollingFullscreenOneColumn`) — condition: `layoutCapable`
+- **Gaps** (`hyprlandLayoutGapsMode`) — condition: `layoutCapable`
+- **Gaps** (`mangoLayoutGapsMode`) — Auto follows bar spacing, Off keeps your %1 config — condition: `layoutCapable`
+- **Gaps** (`niriLayoutGapsMode`) — Auto follows bar spacing, Off keeps your %1 config — condition: `layoutCapable`
+- **Inner gaps** (`hyprlandLayoutGapsOverride`) — condition: `layoutCapable`
+- **Inner gaps** (`mangoLayoutGapsOverride`) — condition: `layoutCapable`
+- **Layout overrides** (`hyprlandLayout`) — Blurred surfaces show the wallpaper, not the windows beneath — condition: `isHyprland`
+- **Layout overrides** (`mangoLayout`) — Auto follows bar spacing, Off keeps your %1 config — condition: `isMango`
+- **Layout overrides** (`niriLayout`) — Auto follows bar spacing, Off keeps your %1 config — condition: `isNiri`
+- **Master position** (`hyprlandMasterOrientation`) — condition: `layoutCapable`
+- **Master size** (`hyprlandMasterSize`) — condition: `layoutCapable`
+- **New windows** (`hyprlandMasterNewStatus`) — condition: `layoutCapable`
+- **New windows on top of the stack** (`hyprlandMasterNewOnTop`) — condition: `layoutCapable`
+- **Notifications** (`compositorNotifications`) — condition: `isNiri`
+- **Outer gaps** (`hyprlandLayoutGapsOutOverride`) — condition: `layoutCapable`
+- **Outer gaps** (`mangoLayoutGapsOutOverride`) — condition: `layoutCapable`
+- **Override border size** (`hyprlandLayoutBorderSizeEnabled`) — condition: `layoutCapable`
+- **Override border size** (`mangoLayoutBorderSizeEnabled`) — condition: `layoutCapable`
+- **Override border size** (`niriLayoutBorderSizeEnabled`) — condition: `layoutCapable`
+- **Overview** (`niriOverview`) — condition: `isNiri`
+- **Preserve split** (`hyprlandDwindlePreserveSplit`) — Split direction stays fixed when the container resizes — condition: `layoutCapable`
+- **Resize on border** (`hyprlandResizeOnBorder`) — condition: `layoutCapable`
+- **Show \** (`showConfigReloadToast`) — condition: `layoutCapable`
+- **Smart split** (`hyprlandDwindleSmartSplit`) — Split direction follows the cursor position in the window — condition: `layoutCapable`
+- **Tiling layout** (`hyprlandTilingLayout`) — Split direction stays fixed when the container resizes — condition: `isHyprland`
+- **Window gaps** (`niriLayoutGapsOverride`) — condition: `layoutCapable`
+- **Xray blur** (`hyprlandLayoutXrayEnabled`) — Blurred surfaces show the wallpaper, not the windows beneath — condition: `isHyprland`
+- **Xray blur** (`niriLayoutXrayEnabled`) — Blurred surfaces show the wallpaper, not the windows beneath — condition: `isNiri`
 
-## sans-page — 673 entrées
+## no-page — 673 entries
 
 ### System updater
 
@@ -891,27 +891,27 @@ Le catalogue de recherche contient **786 entrées**. Les doublons de libellé so
 - **System updater** (`_tab_20`) — Check interval, ignored packages, custom command
 - **Use custom command** (`systemUpdaterCustomCommand`)
 
-## sans-page — 673 entrées
+## no-page — 673 entries
 
 ### Theme & colors
 
 - **Contrast** (`matugenContrast`)
 - **Derived color** (`matugenSeedColor`)
 - **Generate Theme at Startup** (`generateThemeAtStartup`) — Regenerate matugen colors when DMS starts, even if nothing changed.
-- **Material palette** (`matugenSpec`)
-- **Matugen palette** (`matugenScheme`)
+- **Material pallet** (`matugenSpec`)
+- **Matugen pallet** (`matugenScheme`)
 - **Source color** (`matugenSourceMode`)
-- **Startup Behavior** (`themeStartupBehavior`) — Regenerate matugen colors when DMS starts, even if nothing changed. — condition : `matugenAvailable`
+- **Startup Behavior** (`themeStartupBehavior`) — Regenerate matugen colors when DMS starts, even if nothing changed. — condition: `matugenAvailable`
 - **Theme** (`themeColor`)
 - **Theme & colors** (`_tab_10`) — Theme, light and dark, matugen
 
-## sans-page — 673 entrées
+## no-page — 673 entries
 
 ### Time & weather
 
 - **Bar format** (`clockDateFormat`) — Preview: %1
 - **Calendar** (`calendarSettings`)
-- **Calendar backend** (`calendarBackend`)
+- **Backend calendar** (`calendarBackend`)
 - **Date** (`dateFormat`) — Preview: %1
 - **Default task list** (`defaultTaskCalendarId`)
 - **First day of week** (`firstDayOfWeek`)
@@ -924,46 +924,46 @@ Le catalogue de recherche contient **786 entrées**. Les doublons de libellé so
 - **Time & weather** (`_tab_1`) — Clock format, calendar, weather location
 - **Weather** (`weather`)
 
-## sans-page — 673 entrées
+## no-page — 673 entries
 
 ### Users & accounts
 
 - **Users & accounts** (`_tab_60`)
 
-## sans-page — 673 entrées
+## no-page — 673 entries
 
 ### VPN
 
-- **Delete VPN** (`networkVpn`) — condition : `networkAvailable`
-- **VPN** (`_tab_41`) — Connections and autoconnect — condition : `networkAvailable`
+- **Delete VPN** (`networkVpn`) — condition: `networkAvailable`
+- **VPN** (`_tab_41`) — Connections and autoconnect — condition: `networkAvailable`
 
-## sans-page — 673 entrées
+## no-page — 673 entries
 
 ### Wallpaper & colors
 
 - **Wallpaper & colors** (`_tab_0`)
 
-## sans-page — 673 entrées
+## no-page — 673 entries
 
 ### Weather
 
-- **Auto location** (`useAutoLocation`)
+- **Auto rental** (`useAutoLocation`)
 - **Display** (`weatherDisplay`)
 - **Imperial units** (`useFahrenheit`)
-- **Location** (`weatherLocation`)
+- **Rental** (`weatherLocation`)
 - **Weather** (`weatherEnabled`)
 - **Wind speed in m/s** (`windSpeedUnit`)
 
-## sans-page — 673 entrées
+## no-page — 673 entries
 
 ### Wi-Fi
 
-- **Forget network** (`networkWifi`) — condition : `networkAvailable`
-- **Hotspot** (`networkHotspot`) — condition : `networkAvailable`
-- **Saved networks** (`networkSavedWifi`) — condition : `networkAvailable`
-- **Wi-Fi** (`_tab_40`) — Networks, saved networks, hotspot — condition : `networkAvailable`
+- **Forget network** (`networkWifi`) — condition: `networkAvailable`
+- **Hotspot** (`networkHotspot`) — condition: `networkAvailable`
+- **Saved networks** (`networkSavedWifi`) — condition: `networkAvailable`
+- **Wi-Fi** (`_tab_40`) — Networks, saved networks, hotspot — condition: `networkAvailable`
 
-## sans-page — 673 entrées
+## no-page — 673 entries
 
 ### Widget settings
 
@@ -971,16 +971,16 @@ Le catalogue de recherche contient **786 entrées**. Les doublons de libellé so
 - **Desktop widgets: Widget settings** (`_tab_63`) — Options of one widget instance
 - **Show in dock** (`barWidgetGeneral`)
 
-## sans-page — 673 entrées
+## no-page — 673 entries
 
 ### Window rules
 
-- **Window Rules** (`windowRules`) — Define compositor rules for window behavior — condition : `windowRulesCapable`
-- **Window rules** (`_tab_38`) — Floating, opacity and placement rules per app — condition : `windowRulesCapable`
+- **Window Rules** (`windowRules`) — Define composer rules for window behavior — condition: `windowRulesCapable`
+- **Window rules** (`_tab_38`) — Floating, opacity and placement rules per app — condition: `windowRulesCapable`
 
-## applications — 1 entrées
+## applications — 1 entries
 
-### Applications
+### Apps
 
 - **Applications** (`_hub_applications`)
 
@@ -1143,7 +1143,7 @@ Le catalogue de recherche contient **786 entrées**. Les doublons de libellé so
 
 ### Interface style
 
-- **Background blur** (`blurEnabled`) — Your compositor does not support background blur (ext-background-effect-v1)
+- **Background blur** (`blurEnabled`) — Your composer does not support background blur (ext-background-effect-v1)
 - **Border** (`blurBorderEnabled`)
 - **Border color** (`blurBorderColor`)
 - **Border opacity** (`blurBorderOpacity`)
@@ -1166,15 +1166,15 @@ Le catalogue de recherche contient **786 entrées**. Les doublons de libellé so
 - **Opacity** (`popupTransparency`)
 - **Open floating** (`dmsWindowsFloating`)
 - **Override** (`floatingWindowSyncGlobal`)
-- **Radius strength** (`radiusStrength`) — 50 uses Material shapes. Lower values reduce rounding; higher values increase it.
+- **Radius strength** (`radiusStrength`) — 50 uses Material shapes. Lower values ​​reduce rounding; higher values ​​increase it.
 - **Shadows** (`m3ElevationLink`)
-- **Surfaces** (`surfaceStyling`) — Your compositor does not support background blur (ext-background-effect-v1)
+- **Surfaces** (`surfaceStyling`) — Your composer does not support background blur (ext-background-effect-v1)
 - **Thickness** (`focusRingWidth`)
 - **Tile color** (`controlCenterTileColorMode`)
 - **Window radius** (`windowRadius`)
-- **Xray options are in Compositor → Layout** (`blurXrayLink`) — condition : `isNiri`
+- **Xray options are in Compositor → Layout** (`blurXrayLink`) — condition: `isNiri`
 
-## user_accounts — 2 entrées
+## user_accounts — 2 entries
 
 ### Users & accounts
 
@@ -1182,11 +1182,11 @@ Le catalogue de recherche contient **786 entrées**. Les doublons de libellé so
 - **Users & accounts** (`_hub_user_accounts`)
 
 
-## Modules du shell
+## Shell modules
 
-- AppDrawer
-- BuiltinDesktopPlugins
-- ColorPicker
+-AppDrawer
+-BuiltinDesktopPlugins
+-ColorPicker
 - ControlCenter
 - ControlCenter/BuiltinPlugins
 - ControlCenter/Components
@@ -1194,30 +1194,30 @@ Le catalogue de recherche contient **786 entrées**. Les doublons de libellé so
 - ControlCenter/Models
 - ControlCenter/Widgets
 - ControlCenter/utils
-- DankBar
+-DankBar
 - DankBar/Popouts
 - DankBar/Widgets
-- DankDash
-- DankDash/Media
-- DankDash/Overview
-- DankDash/Weather
+-DankDash
+-DankDash/Media
+-DankDash/Overview
+-DankDash/Weather
 - DankDash/utils
 - DankIsland
 - DankIsland/Activities
-- Dock
-- Frame
+-Dock
+-Frame
 - Greetd
 - Greetd/assets
-- Lock
+-Lock
 - Network
-- Notepad
+-Notepad
 - Notifications
 - Notifications/Center
-- Notifications/Popup
-- OSD
+- Notifications/Popups
+-OSD
 - Plugins
 - PowerMenu
-- ProcessList
+-ProcessList
 - Settings
 - Settings/BarWidgetOptions
 - Settings/DesktopWidgetSettings
